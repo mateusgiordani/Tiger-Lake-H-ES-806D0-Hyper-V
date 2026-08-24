@@ -1,0 +1,56 @@
+﻿
+Gerenciador de Inicialização de Firmware
+----------------------------------------
+identificador           {a5a30fa2-3d06-4e9f-b5f4-a01df9d1fcba}
+displayorder            {0ac5d8d7-b466-11f0-94f3-806e6f6e6963}
+                        {9dea862c-5cdd-4e70-acc1-f32b344d4795}
+                        {5cbe73c4-b469-11f0-9ffb-c2e7dda09ff1}
+                        {0d51fc8f-7b43-11f1-96d4-806e6f6e6963}
+                        {8d1fbefd-427a-11f1-965f-806e6f6e6963}
+timeout                 1
+
+Gerenciador de Inicialização do Windows
+---------------------------------------
+identificador           {9dea862c-5cdd-4e70-acc1-f32b344d4795}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\MICROSOFT\BOOT\BOOTMGFW.EFI
+description             Windows Boot Manager
+locale                  pt-BR
+inherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}
+default                 {5cbe73c6-b469-11f0-9ffb-c2e7dda09ff1}
+resumeobject            {5cbe73c5-b469-11f0-9ffb-c2e7dda09ff1}
+displayorder            {5cbe73c6-b469-11f0-9ffb-c2e7dda09ff1}
+toolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}
+timeout                 30
+
+Aplicativo de Firmware (101fffff)
+---------------------------------
+identificador           {0ac5d8d7-b466-11f0-94f3-806e6f6e6963}
+device                  partition=\Device\HarddiskVolume10
+path                    \EFI\KDE\SHIMX64.EFI
+description             KDE neon 6.2
+
+Aplicativo de Firmware (101fffff)
+---------------------------------
+identificador           {0d51fc8f-7b43-11f1-96d4-806e6f6e6963}
+device                  partition=G:
+description             UEFI: SanDisk, Partition 1
+
+Aplicativo de Firmware (101fffff)
+---------------------------------
+identificador           {5cbe73c3-b469-11f0-9ffb-c2e7dda09ff1}
+device                  partition=\Device\HarddiskVolume10
+path                    \EFI\neon\grubx64.efi
+description             Ubuntu
+
+Aplicativo de Firmware (101fffff)
+---------------------------------
+identificador           {5cbe73c4-b469-11f0-9ffb-c2e7dda09ff1}
+device                  partition=\Device\HarddiskVolume10
+path                    \EFI\BOOT\BOOTX64.EFI
+description             UEFI OS
+
+Aplicativo de Firmware (101fffff)
+---------------------------------
+identificador           {8d1fbefd-427a-11f1-965f-806e6f6e6963}
+description             UEFI: Built-in EFI Shell

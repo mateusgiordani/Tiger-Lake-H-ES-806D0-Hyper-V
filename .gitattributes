@@ -1,0 +1,13 @@
+﻿*.bin filter=lfs diff=lfs merge=lfs -text
+*.rom filter=lfs diff=lfs merge=lfs -text
+*.fd filter=lfs diff=lfs merge=lfs -text
+*.cap filter=lfs diff=lfs merge=lfs -text
+*.efi filter=lfs diff=lfs merge=lfs -text
+*.EFI filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.7z filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+*.bcd filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.dat filter=lfs diff=lfs merge=lfs -text

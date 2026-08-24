@@ -1,0 +1,127 @@
+﻿{
+    "CollectedAt":  "2026-08-24T15:57:33.3911488-03:00",
+    "Note":  "Read-only inventory. These root-partition drivers load after hvloader transfers control to hvix64.",
+    "Components":  [
+                       {
+                           "Name":  "vmbus",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\vmbus.sys",
+                           "Start":  0,
+                           "Group":  "System Bus Extender",
+                           "Version":  "10.0.26100.4066 (WinBuild.160101.0800)",
+                           "Length":  210424,
+                           "SHA256":  "3CC7F47ADAAE3840FD4DA88185F3E10A9F783E04ED9ABC8104923D22FCF1F2BA",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "storvsc",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\storvsc.sys",
+                           "Start":  0,
+                           "Group":  "Base",
+                           "Version":  "10.0.26100.8972 (WinBuild.160101.0800)",
+                           "Length":  95704,
+                           "SHA256":  "F9C05A262B74A03EF68725ABCAC2D329C63D9B189ADD4C68D5F3A9D90CC73B68",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "vpci",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\vpci.sys",
+                           "Start":  0,
+                           "Group":  "System Bus Extender",
+                           "Version":  "10.0.26100.8972 (WinBuild.160101.0800)",
+                           "Length":  169464,
+                           "SHA256":  "5582D06D0CAE7C1E2D4DF659824EC9E7434C64B3F17738EF723C82DB08F389EC",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "Vid",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\Vid.sys",
+                           "Start":  1,
+                           "Group":  "Extended Base",
+                           "Version":  "10.0.26100.8972 (WinBuild.160101.0800)",
+                           "Length":  910816,
+                           "SHA256":  "0E4A4E121BFF67928BDB23241CA21A7594241E45BF4F9D8C560754868ECA4B57",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "hvservice",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\hvservice.sys",
+                           "Start":  3,
+                           "Group":  null,
+                           "Version":  "10.0.26100.8737 (WinBuild.160101.0800)",
+                           "Length":  99808,
+                           "SHA256":  "DE4919F9AE85B2B127F181EEFDE1A03970AED4B2B88958A05A8101F4E156A23B",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "hvcrash",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\hvcrash.sys",
+                           "Start":  4,
+                           "Group":  null,
+                           "Version":  "10.0.26100.3912 (WinBuild.160101.0800)",
+                           "Length":  75168,
+                           "SHA256":  "4624F76E07B9E7F5A6427ED25BE14E15E9AE78B453803E0D6F39BDFDF0DE2568",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "hyperkbd",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\hyperkbd.sys",
+                           "Start":  3,
+                           "Group":  "Extended Base",
+                           "Version":  "10.0.26100.1150 (WinBuild.160101.0800)",
+                           "Length":  62784,
+                           "SHA256":  "1A5592CFBC576FD90569D219B5A1E21B9F6A062B54CD6A5974504C393D4549DB",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "HyperVideo",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\HyperVideo.sys",
+                           "Start":  3,
+                           "Group":  "Video",
+                           "Version":  "10.0.26100.1150 (WinBuild.160101.0800)",
+                           "Length":  79160,
+                           "SHA256":  "59513BD70E155ECF5FB02CFC40D6E747446B4FED57CA4AC3BC7C028B600DF1D4",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "netvsc",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\netvsc.sys",
+                           "Start":  3,
+                           "Group":  "Extended Base",
+                           "Version":  "10.0.26100.1 (WinBuild.160101.0800)",
+                           "Length":  398808,
+                           "SHA256":  "0E7FF5AE75372CED3A4640D890CEB0B5CA7E018CAD491A1F541F9A620B7A0D76",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "vmbushid",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\vmbushid.sys",
+                           "Start":  3,
+                           "Group":  "Extended Base",
+                           "Version":  "10.0.26100.1150 (WinBuild.160101.0800)",
+                           "Length":  71072,
+                           "SHA256":  "67380E2DC050C74B04F48238C11CF7A57E9DAB2C89CA9DF66117D57B69EAAF29",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       },
+                       {
+                           "Name":  "vmgid",
+                           "Path":  "C:\\WINDOWS\\System32\\drivers\\vmgid.sys",
+                           "Start":  3,
+                           "Group":  null,
+                           "Version":  "10.0.26100.1150 (WinBuild.160101.0800)",
+                           "Length":  58784,
+                           "SHA256":  "2066F124E18B277595CA72BC205CEFF7F42E4CC226B5DDAD29933FBA20DAFE7E",
+                           "SignatureStatus":  "Valid",
+                           "Signer":  "CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+                       }
+                   ]
+}

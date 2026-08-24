@@ -1,0 +1,10 @@
+select disk 4
+clean
+convert mbr
+create partition primary size=8192
+format fs=fat32 quick label=BIOS_BACKUP
+assign letter=G
+create partition primary
+format fs=exfat quick label=PS5_DATA unit=128K
+assign letter=H
+exit

@@ -1,0 +1,96 @@
+{
+  "purpose": "Reversible in-memory diagnostic patch for Polestar MADT NMI UIDs",
+  "warning": "Staging tree only; no physical USB, BCD, registry, or firmware was modified",
+  "source_madt": "C:\\Users\\estum\\OneDrive\\\u00c1rea de Trabalho\\projeto conserto bios\\analysis\\acpi-runtime\\apic.dat",
+  "source_madt_sha256": "8156FC0F85D4910F72D105C2B12AA92853EC6FB1DEEE35C9E7C3B6C3BD6C9612",
+  "madt": {
+    "signature": "APIC",
+    "length": 300,
+    "revision": 4,
+    "oem_id_ascii": "ALASKA",
+    "oem_table_id_hex": "41204D2049200000",
+    "nmi_sequence_offset_hex": "0xCC",
+    "nmi_uids_before": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "nmi_uids_after": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "find_hex": "04060105000104060205000104060305000104060405000104060505000104060605000104060705000104060805000104060905000104060A05000104060B05000104060C05000104060D05000104060E05000104060F050001040610050001",
+    "replace_hex": "04060005000104060105000104060205000104060305000104060405000104060505000104060605000104060705000104060805000104060905000104060A05000104060B05000104060C05000104060D05000104060E05000104060F050001",
+    "replacement_count": 1
+  },
+  "opencore_source": "C:\\Users\\estum\\OneDrive\\\u00c1rea de Trabalho\\projeto conserto bios\\analysis\\tools\\OpenCore-1.0.7-RELEASE",
+  "files": [
+    {
+      "path": "EFI/BOOT/BOOTx64.efi",
+      "size": 24576,
+      "sha256": "59B63DF1712B3AB42781FF78B39D30B991148F0711724D7987859425C65C86A4"
+    },
+    {
+      "path": "EFI/OC/OpenCore.efi",
+      "size": 626688,
+      "sha256": "8E83A3DD984A4196C1FD9E40D75A6550111A959E44C0668BD9E08098BF0A1AE6"
+    },
+    {
+      "path": "EFI/OC/Drivers/OpenRuntime.efi",
+      "size": 24576,
+      "sha256": "C88586F482E8948BFE69208AE77C0F6DEFBC7841852DED078C5AD2D0ADEE7AD0"
+    },
+    {
+      "path": "EFI/OC/config.plist",
+      "size": 12885,
+      "sha256": "A541BA6A79F73F9A5A932BFE105B712B446553C579A2DAAC8F4FADC5765D6B64"
+    },
+    {
+      "path": "EFI/OC/config-patch-enabled.plist",
+      "size": 12885,
+      "sha256": "A541BA6A79F73F9A5A932BFE105B712B446553C579A2DAAC8F4FADC5765D6B64"
+    },
+    {
+      "path": "EFI/OC/config-control-disabled.plist",
+      "size": 12886,
+      "sha256": "B537E45232F88F8D9124AB94E68D5F29381EC6D6CC47472BA6C0138F62B511C8"
+    },
+    {
+      "path": "patched-apic-reference.dat",
+      "size": 300,
+      "sha256": "DEC804620606536ED5BEFD269E0EB4646732057CD355A9BE2006FDB67C119067"
+    },
+    {
+      "path": "LEIA-ME-TESTE-MADT.md",
+      "size": 7858,
+      "sha256": "96DDD9927AA32A7686106C74E890C2D9E3035BFB1E6BF507D12C01AEE0FBC662"
+    }
+  ]
+}

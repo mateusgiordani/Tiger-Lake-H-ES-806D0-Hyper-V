@@ -1,0 +1,11 @@
+﻿{
+    "CreatedAt":  "2026-08-24T17:54:38.4503050-03:00",
+    "BcdBackup":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-opencore-20260824-175438.bcd",
+    "BeforeText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\current-before-opencore-20260824-175438.txt",
+    "AfterText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\current-after-opencore-20260824-175438.txt",
+    "DefaultEntry":  "{current}",
+    "HypervisorLaunchType":  "off",
+    "VsmLaunchType":  "off",
+    "RebootScheduled":  false,
+    "HyperVEntryCreated":  false
+}

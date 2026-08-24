@@ -1,0 +1,20 @@
+﻿{
+    "CreatedAt":  "2026-08-24T18:01:01.4920744-03:00",
+    "BcdBackup":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-hyperv-test-20260824-180101.bcd",
+    "SafeDefault":  "{current}",
+    "SafeHypervisorLaunchType":  "off",
+    "SafeVsmLaunchType":  "off",
+    "TestEntry":  {
+                      "Identifier":  "{5cbe73ca-b469-11f0-9ffb-c2e7dda09ff1}",
+                      "Description":  "Windows - HYPERV MADT PATCH",
+                      "HypervisorLaunchType":  "auto",
+                      "VsmLaunchType":  "off"
+                  },
+    "TimeoutSeconds":  15,
+    "BootSequenceScheduled":  false,
+    "RebootScheduled":  false,
+    "PatchedMadtEvidence":  {
+                                "Path":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\acpi-after-opencore-patch.dat",
+                                "Sha256":  "DEC804620606536ED5BEFD269E0EB4646732057CD355A9BE2006FDB67C119067"
+                            }
+}

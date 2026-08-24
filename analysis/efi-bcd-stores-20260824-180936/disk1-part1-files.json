@@ -1,0 +1,890 @@
+﻿[
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\memtest.efi",
+        "Length":  2603984,
+        "LastWriteTime":  "2026-08-11T14:39:36.0000000-03:00",
+        "Sha256":  "27A1665329E9F6F803E6C9B65045690E2A6C81C3B93880E9468B50752C711E37"
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\boot.stl",
+        "Length":  12009,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_1137.dll",
+        "Length":  71064,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_1414.dll",
+        "Length":  99752,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_14e4.dll",
+        "Length":  284048,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_15ad.dll",
+        "Length":  58792,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_15b3.dll",
+        "Length":  91552,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_1969.dll",
+        "Length":  83328,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_19a2.dll",
+        "Length":  71056,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_1af4.dll",
+        "Length":  62864,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_8086.dll",
+        "Length":  361872,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_07_1415.dll",
+        "Length":  58784,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_0C_8086.dll",
+        "Length":  87440,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\SecureBootRecovery.efi",
+        "Length":  174584,
+        "LastWriteTime":  "2026-07-16T12:48:42.0000000-03:00",
+        "Sha256":  "E690F975F6FDE4E5C821225D379432D98D3096DA906C6BB22F72AD88EDAC839C"
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\winsipolicy.p7b",
+        "Length":  10341,
+        "LastWriteTime":  "2024-04-01T04:22:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\bootmgfw.efi",
+        "Length":  3086728,
+        "LastWriteTime":  "2026-07-16T12:48:42.0000000-03:00",
+        "Sha256":  "B6F5FF8A5F605840796875259BBA555D0642745A7AC8A5B38D16603768B22570"
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\bootmgr.efi",
+        "Length":  3069432,
+        "LastWriteTime":  "2026-07-16T12:48:42.0000000-03:00",
+        "Sha256":  "95EF62A98A677EF2A511DD6CD455125421C2812B41C0E6A47D7F2CD2CE2B8D48"
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kdstub.dll",
+        "Length":  87536,
+        "LastWriteTime":  "2026-07-16T12:48:42.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kdnet_uart16550.dll",
+        "Length":  58776,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_10df.dll",
+        "Length":  71072,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_10ec.dll",
+        "Length":  562592,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\kd_02_1d0f.dll",
+        "Length":  83328,
+        "LastWriteTime":  "2025-12-10T16:36:20.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\BOOTSTAT.DAT",
+        "Length":  65536,
+        "LastWriteTime":  "2026-08-12T22:22:30.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\BCD",
+        "Length":  36864,
+        "LastWriteTime":  "2026-08-24T17:57:06.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\BCD.LOG",
+        "Length":  65536,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\BCD.LOG1",
+        "Length":  0,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\BCD.LOG2",
+        "Length":  0,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\boot.pnd.stl",
+        "Length":  12521,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\bg-BG\\bootmgfw.efi.mui",
+        "Length":  94760,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\bg-BG\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\CIPolicies\\Active\\{5DAC656C-21AD-4A02-AB49-649917162E70}.cip",
+        "Length":  10564,
+        "LastWriteTime":  "2024-04-01T04:22:36.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\CIPolicies\\Active\\{82443e1e-8a39-4b4a-96a8-f40ddc00b9f3}.cip",
+        "Length":  32508,
+        "LastWriteTime":  "2025-09-15T16:39:26.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\CIPolicies\\Active\\{CDD5CB55-DB68-4D71-AA38-3DF2B6473A52}.cip",
+        "Length":  10972,
+        "LastWriteTime":  "2024-04-01T04:22:42.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\cs-CZ\\memtest.efi.mui",
+        "Length":  46496,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\cs-CZ\\bootmgfw.efi.mui",
+        "Length":  93736,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\cs-CZ\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\da-DK\\memtest.efi.mui",
+        "Length":  46496,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\da-DK\\bootmgfw.efi.mui",
+        "Length":  92672,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\da-DK\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:44.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\de-DE\\memtest.efi.mui",
+        "Length":  47008,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\de-DE\\bootmgfw.efi.mui",
+        "Length":  97320,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\de-DE\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\el-GR\\memtest.efi.mui",
+        "Length":  47520,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\el-GR\\bootmgfw.efi.mui",
+        "Length":  97792,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\el-GR\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\en-GB\\bootmgfw.efi.mui",
+        "Length":  90112,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\en-GB\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\en-US\\memtest.efi.mui",
+        "Length":  45984,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\en-US\\bootmgfw.efi.mui",
+        "Length":  90112,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\en-US\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\es-ES\\memtest.efi.mui",
+        "Length":  47024,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\es-ES\\bootmgfw.efi.mui",
+        "Length":  94720,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\es-ES\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\es-MX\\bootmgfw.efi.mui",
+        "Length":  94720,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\es-MX\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\et-EE\\bootmgfw.efi.mui",
+        "Length":  91136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\et-EE\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fi-FI\\memtest.efi.mui",
+        "Length":  46512,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fi-FI\\bootmgfw.efi.mui",
+        "Length":  93696,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fi-FI\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fr-CA\\bootmgfw.efi.mui",
+        "Length":  97320,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fr-CA\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fr-FR\\memtest.efi.mui",
+        "Length":  47024,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fr-FR\\bootmgfw.efi.mui",
+        "Length":  96768,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\fr-FR\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\hr-HR\\bootmgfw.efi.mui",
+        "Length":  93696,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\hr-HR\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\hu-HU\\memtest.efi.mui",
+        "Length":  47008,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\hu-HU\\bootmgfw.efi.mui",
+        "Length":  96816,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\hu-HU\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\it-IT\\memtest.efi.mui",
+        "Length":  46384,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\it-IT\\bootmgfw.efi.mui",
+        "Length":  94248,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\it-IT\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ja-JP\\memtest.efi.mui",
+        "Length":  43824,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ja-JP\\bootmgfw.efi.mui",
+        "Length":  81408,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ja-JP\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ko-KR\\memtest.efi.mui",
+        "Length":  43952,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ko-KR\\bootmgfw.efi.mui",
+        "Length":  80936,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ko-KR\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\lt-LT\\bootmgfw.efi.mui",
+        "Length":  92672,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\lt-LT\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\lv-LV\\bootmgfw.efi.mui",
+        "Length":  92160,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\lv-LV\\bootmgr.efi.mui",
+        "Length":  90144,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nb-NO\\memtest.efi.mui",
+        "Length":  46512,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nb-NO\\bootmgfw.efi.mui",
+        "Length":  92160,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nb-NO\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nl-NL\\memtest.efi.mui",
+        "Length":  46496,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nl-NL\\bootmgfw.efi.mui",
+        "Length":  94768,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\nl-NL\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pl-PL\\memtest.efi.mui",
+        "Length":  47008,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pl-PL\\bootmgfw.efi.mui",
+        "Length":  95792,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pl-PL\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-BR\\memtest.efi.mui",
+        "Length":  46400,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-BR\\bootmgfw.efi.mui",
+        "Length":  93696,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-BR\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-PT\\memtest.efi.mui",
+        "Length":  46912,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-PT\\bootmgfw.efi.mui",
+        "Length":  94208,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\pt-PT\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\qps-ploc\\memtest.efi.mui",
+        "Length":  55104,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\qps-plocm\\memtest.efi.mui",
+        "Length":  54704,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ro-RO\\bootmgfw.efi.mui",
+        "Length":  93184,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ro-RO\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ru-RU\\memtest.efi.mui",
+        "Length":  45872,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ru-RU\\bootmgfw.efi.mui",
+        "Length":  94208,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\ru-RU\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sk-SK\\bootmgfw.efi.mui",
+        "Length":  94248,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sk-SK\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sl-SI\\bootmgfw.efi.mui",
+        "Length":  93224,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sl-SI\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sr-Latn-RS\\bootmgfw.efi.mui",
+        "Length":  94208,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sr-Latn-RS\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sv-SE\\memtest.efi.mui",
+        "Length":  45888,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sv-SE\\bootmgfw.efi.mui",
+        "Length":  93184,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\sv-SE\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\tr-TR\\memtest.efi.mui",
+        "Length":  46496,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\tr-TR\\bootmgfw.efi.mui",
+        "Length":  92672,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\tr-TR\\bootmgr.efi.mui",
+        "Length":  90136,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\uk-UA\\bootmgfw.efi.mui",
+        "Length":  93736,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\uk-UA\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-CN\\memtest.efi.mui",
+        "Length":  43424,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-CN\\bootmgfw.efi.mui",
+        "Length":  76328,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-CN\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-TW\\memtest.efi.mui",
+        "Length":  43424,
+        "LastWriteTime":  "2024-04-01T04:22:14.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-TW\\bootmgfw.efi.mui",
+        "Length":  76800,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\zh-TW\\bootmgr.efi.mui",
+        "Length":  90096,
+        "LastWriteTime":  "2026-06-10T01:04:46.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\segmono_boot.ttf",
+        "Length":  45876,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\segoen_slboot.ttf",
+        "Length":  102708,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\segoe_slboot.ttf",
+        "Length":  103024,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\chs_boot.ttf",
+        "Length":  3696724,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\cht_boot.ttf",
+        "Length":  3879404,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\jpn_boot.ttf",
+        "Length":  1986884,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\kor_boot.ttf",
+        "Length":  2374004,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\malgunn_boot.ttf",
+        "Length":  199428,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\malgun_boot.ttf",
+        "Length":  201948,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\meiryon_boot.ttf",
+        "Length":  174172,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\meiryo_boot.ttf",
+        "Length":  176000,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\msjhn_boot.ttf",
+        "Length":  199160,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\msjh_boot.ttf",
+        "Length":  201336,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\msyhn_boot.ttf",
+        "Length":  187936,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\msyh_boot.ttf",
+        "Length":  189924,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Fonts\\wgl4_boot.ttf",
+        "Length":  50120,
+        "LastWriteTime":  "2025-11-12T19:48:18.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Resources\\bootres.dll",
+        "Length":  169392,
+        "LastWriteTime":  "2024-04-01T04:22:12.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Boot\\Resources\\pt-BR\\bootres.dll.mui",
+        "Length":  4608,
+        "LastWriteTime":  "2024-04-01T13:12:52.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Recovery\\BCD",
+        "Length":  16384,
+        "LastWriteTime":  "2026-08-12T07:09:54.0000000-03:00",
+        "Sha256":  "2DB2C9B63F8F509DCC7577F881BF7425B10FD441F2FD71D5C197120AC3D6C2B9"
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Recovery\\BCD.LOG",
+        "Length":  16384,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Recovery\\BCD.LOG1",
+        "Length":  0,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Microsoft\\Recovery\\BCD.LOG2",
+        "Length":  0,
+        "LastWriteTime":  "2025-10-28T22:48:28.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\Boot\\bootx64.efi",
+        "Length":  3086728,
+        "LastWriteTime":  "2026-07-16T12:48:42.0000000-03:00",
+        "Sha256":  "B6F5FF8A5F605840796875259BBA555D0642745A7AC8A5B38D16603768B22570"
+    }
+]

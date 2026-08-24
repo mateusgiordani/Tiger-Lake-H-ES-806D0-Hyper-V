@@ -1,0 +1,36 @@
+﻿{
+    "CreatedAt":  "2026-08-24T18:09:38.5510191-03:00",
+    "ReadOnlySourceOperations":  true,
+    "DefaultStoreExitCode":  0,
+    "DefaultStoreText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\efi-bcd-stores-20260824-180936\\default-store.txt",
+    "FirmwareEntriesExitCode":  0,
+    "FirmwareEntriesText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\efi-bcd-stores-20260824-180936\\firmware-entries.txt",
+    "Stores":  [
+                   {
+                       "DiskNumber":  2,
+                       "PartitionNumber":  4,
+                       "VolumePath":  "\\\\?\\Volume{8096f061-934f-4f8b-b5c0-dee261779c12}\\",
+                       "Size":  536870912,
+                       "IsSystem":  false,
+                       "BcdExists":  false,
+                       "BootManagerExists":  false,
+                       "FallbackExists":  true,
+                       "FileCount":  13,
+                       "FallbackSha256":  "6FE6E1BCBE6CF6BAEC8E056D40361CA1AA715CC04DDCC2855351DE060B84350B"
+                   },
+                   {
+                       "DiskNumber":  1,
+                       "PartitionNumber":  1,
+                       "VolumePath":  "\\\\?\\Volume{d2f26690-a30a-4a96-9aba-0e8a8293150b}\\",
+                       "Size":  209715200,
+                       "IsSystem":  true,
+                       "BcdExists":  true,
+                       "BootManagerExists":  true,
+                       "FallbackExists":  true,
+                       "FileCount":  148,
+                       "BcdSha256":  null,
+                       "BcdLastWriteTime":  "2026-08-24T17:57:06.0000000-03:00",
+                       "Error":  "O processo não pode acessar o arquivo \u0027\\\\?\\Volume{d2f26690-a30a-4a96-9aba-0e8a8293150b}\\EFI\\Microsoft\\Boot\\BCD\u0027 porque ele está sendo usado por outro processo."
+                   }
+               ]
+}

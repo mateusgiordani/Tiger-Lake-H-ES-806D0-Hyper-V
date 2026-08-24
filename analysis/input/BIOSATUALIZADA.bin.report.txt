@@ -1,0 +1,1165 @@
+        Type         |        Subtype        |   Base   |   Size   |  CRC32   |   Name 
+ Image               | Intel                 | 00000000 | 01000000 | 315BC043 |  Intel image
+ Region              | Descriptor            | 00000000 | 00001000 | 7B176207 | - Descriptor region
+ Region              | ME                    | 00001000 | 003FF000 | 88434441 | - ME region
+ IFWI header         |                       | 00001000 | 00000050 | B73D0141 | -- IFWI 1.7 header
+ Padding             | Empty (FFh)           | 00001050 | 00001FB0 | 12F667DF | -- Padding
+ IFWI partition      | Boot                  | 00003000 | 001A2000 | AAEE87F9 | -- Boot partition
+ BPDT store          |                       | 00003000 | 000000A8 | 36F678E1 | --- BPDT partition table
+ BPDT entry          |                       | 00003018 | 0000000C | E67CFCFE | ---- Debug Launch Module
+ BPDT entry          |                       | 00003024 | 0000000C | 91E22E0E | ---- IFP Bypass
+ BPDT entry          |                       | 00003030 | 0000000C | E376B17F | ---- Secondary BPDT
+ BPDT entry          |                       | 0000303C | 0000000C | 7F803C0F | ---- ROM Boot Extensions
+ BPDT entry          |                       | 00003048 | 0000000C | 7EDF8BEE | ---- UFS PHY Config
+ BPDT entry          |                       | 00003054 | 0000000C | E57AC781 | ---- UFS GPP LUN
+ BPDT entry          |                       | 00003060 | 0000000C | 759E27A8 | ---- OEM Key Manifest
+ BPDT entry          |                       | 0000306C | 0000000C | 3CA3E11C | ---- Bring Up
+ BPDT entry          |                       | 00003078 | 0000000C | D21C75EC | ---- PMC
+ BPDT entry          |                       | 00003084 | 0000000C | 58AEBD47 | ---- TCSS FW IOM
+ BPDT entry          |                       | 00003090 | 0000000C | 2BDDA3B1 | ---- TCSS FW PHY
+ BPDT entry          |                       | 0000309C | 0000000C | BA5103D4 | ---- PCH Config
+ Padding             | Empty (FFh)           | 000030A8 | 00000F58 | B169EE27 | --- Padding
+ BPDT partition      |                       | 00004000 | 00018000 | 744B426D | --- ROM Boot Extensions | ROM Boot Extensions
+ CPD store           |                       | 00004000 | 0000005C | 5ED58504 | ---- CPD partition table
+ CPD entry           |                       | 00004014 | 00000018 | 376BD256 | ----- RBEP.man
+ CPD entry           |                       | 0000402C | 00000018 | 768664A7 | ----- rbe
+ CPD entry           |                       | 00004044 | 00000018 | 5F4D85A0 | ----- rbe.met
+ CPD partition       | Manifest              | 0000405C | 000006AC | 8EF2E1F7 | ---- RBEP.man
+ CPD extension       |                       | 000043E0 | 00000078 | 2103708D | ----- Signed Package Info
+ CPD SPI entry       |                       | 000043E0 | 00000044 | 08A3DF0A | ------ rbe
+ CPD extension       |                       | 00004458 | 00000068 | 7F9C8F53 | ----- IFWI Partition Manifest
+ CPD extension       |                       | 000044C0 | 0000003C | F21F1A33 | ----- Golden Measurement File Body
+ CPD extension       |                       | 000044FC | 0000020C | EA24D189 | ----- Golden Measurement File Certificate
+ CPD partition       | Metadata              | 00004708 | 0000008C | E4357EA5 | ---- rbe.met
+ CPD extension       |                       | 00004708 | 00000048 | D3098F2C | ----- Module Attributes
+ CPD extension       |                       | 00004750 | 00000044 | E48518EB | ----- Process Attributes
+ Padding             | Empty (FFh)           | 00004794 | 0000086C | 21751E25 | ---- Padding
+ CPD partition       | Code                  | 00005000 | 00015578 | 9650E7D8 | ---- rbe
+ Padding             | Empty (FFh)           | 0001A578 | 00001A88 | 7FDD3FE9 | ---- Padding
+ BPDT partition      |                       | 0001C000 | 00040000 | 5C0769CE | --- PMC | PMC
+ CPD store           |                       | 0001C000 | 000000EC | 33D0E5C8 | ---- CPD partition table
+ CPD entry           |                       | 0001C014 | 00000018 | D7887D96 | ----- PMCP.man
+ CPD entry           |                       | 0001C02C | 00000018 | 6553E5DA | ----- PMCC000
+ CPD entry           |                       | 0001C044 | 00000018 | 62D33C96 | ----- PMCC000.met
+ CPD entry           |                       | 0001C05C | 00000018 | CF89781A | ----- FIVR
+ CPD entry           |                       | 0001C074 | 00000018 | 931EAA69 | ----- FIVR.met
+ CPD entry           |                       | 0001C08C | 00000018 | 9168B520 | ----- ERTABLE
+ CPD entry           |                       | 0001C0A4 | 00000018 | 6E74A0C5 | ----- ERTABLE.met
+ CPD entry           |                       | 0001C0BC | 00000018 | 18DA8D23 | ----- ConstDat
+ CPD entry           |                       | 0001C0D4 | 00000018 | E20E2F86 | ----- ConstDat.met
+ CPD partition       | Manifest              | 0001C0EC | 00000530 | DF76E1CE | ---- PMCP.man
+ CPD extension       |                       | 0001C470 | 00000144 | E160999C | ----- Signed Package Info
+ CPD SPI entry       |                       | 0001C470 | 00000044 | 93518E3A | ------ PMCC000
+ CPD SPI entry       |                       | 0001C4B4 | 00000044 | C5939512 | ------ FIVR
+ CPD SPI entry       |                       | 0001C4F8 | 00000044 | A51E81F6 | ------ ERTABLE
+ CPD SPI entry       |                       | 0001C53C | 00000044 | 0BCEFD0F | ------ ConstDat
+ CPD extension       |                       | 0001C5B4 | 00000068 | E4FE81E4 | ----- IFWI Partition Manifest
+ CPD partition       | Metadata              | 0001C61C | 00000048 | E88630B6 | ---- PMCC000.met
+ CPD extension       |                       | 0001C61C | 00000048 | E88630B6 | ----- Module Attributes
+ CPD partition       | Metadata              | 0001C664 | 00000048 | C6AD941C | ---- FIVR.met
+ CPD extension       |                       | 0001C664 | 00000048 | C6AD941C | ----- Module Attributes
+ CPD partition       | Metadata              | 0001C6AC | 00000048 | F1847D84 | ---- ERTABLE.met
+ CPD extension       |                       | 0001C6AC | 00000048 | F1847D84 | ----- Module Attributes
+ CPD partition       | Metadata              | 0001C6F4 | 00000048 | FB50C72D | ---- ConstDat.met
+ CPD extension       |                       | 0001C6F4 | 00000048 | FB50C72D | ----- Module Attributes
+ Padding             | Empty (FFh)           | 0001C73C | 00000004 | FFFFFFFF | ---- Padding
+ CPD partition       | Code                  | 0001C740 | 00019098 | D1505E07 | ---- PMCC000
+ Padding             | Empty (FFh)           | 000357D8 | 00000028 | 8CD04C73 | ---- Padding
+ CPD partition       | Code                  | 00035800 | 0000AD04 | FE083524 | ---- FIVR
+ Padding             | Empty (FFh)           | 00040504 | 0000003C | F48CF14D | ---- Padding
+ CPD partition       | Code                  | 00040540 | 00000F74 | 7E7C5459 | ---- ERTABLE
+ Padding             | Empty (FFh)           | 000414B4 | 0000000C | BB99FF8A | ---- Padding
+ CPD partition       | Code                  | 000414C0 | 00000694 | 0E743AF4 | ---- ConstDat
+ Padding             | Empty (FFh)           | 00041B54 | 0001A4AC | 1622E279 | ---- Padding
+ BPDT partition      |                       | 0005C000 | 00125000 | BE3C5F4F | --- Bring Up | Bring Up
+ CPD store           |                       | 0005C000 | 000002CC | 1986323F | ---- CPD partition table
+ CPD entry           |                       | 0005C014 | 00000018 | 60862DA7 | ----- FTPR.man
+ CPD entry           |                       | 0005C02C | 00000018 | 9901C8FD | ----- rot.key
+ CPD entry           |                       | 0005C044 | 00000018 | 89BDFA03 | ----- fitc.cfg
+ CPD entry           |                       | 0005C05C | 00000018 | D4C0C2C7 | ----- kernel
+ CPD entry           |                       | 0005C074 | 00000018 | 58424609 | ----- syslib
+ CPD entry           |                       | 0005C08C | 00000018 | E81FABD5 | ----- bup
+ CPD entry           |                       | 0005C0A4 | 00000018 | 55DC2C0E | ----- intl.cfg
+ CPD entry           |                       | 0005C0BC | 00000018 | DE686949 | ----- intl.cfg.met
+ CPD entry           |                       | 0005C0D4 | 00000018 | D8CF2204 | ----- pm
+ CPD entry           |                       | 0005C0EC | 00000018 | C9CE26EF | ----- vfs
+ CPD entry           |                       | 0005C104 | 00000018 | 84D6EC3C | ----- evtdisp
+ CPD entry           |                       | 0005C11C | 00000018 | 486A6609 | ----- loadmgr
+ CPD entry           |                       | 0005C134 | 00000018 | 182D102D | ----- busdrv
+ CPD entry           |                       | 0005C14C | 00000018 | 13EE0ECE | ----- prtc
+ CPD entry           |                       | 0005C164 | 00000018 | 5E869882 | ----- smbus
+ CPD entry           |                       | 0005C17C | 00000018 | F0B68CA9 | ----- crypto
+ CPD entry           |                       | 0005C194 | 00000018 | 589C4821 | ----- fpf
+ CPD entry           |                       | 0005C1AC | 00000018 | 439708EA | ----- storage
+ CPD entry           |                       | 0005C1C4 | 00000018 | AE0B4FA6 | ----- gpio
+ CPD entry           |                       | 0005C1DC | 00000018 | 6B67BBA5 | ----- ipc_drv
+ CPD entry           |                       | 0005C1F4 | 00000018 | 2634D254 | ----- sec_msg
+ CPD entry           |                       | 0005C20C | 00000018 | A4795F41 | ----- policy
+ CPD entry           |                       | 0005C224 | 00000018 | 08FDA5D6 | ----- heci
+ CPD entry           |                       | 0005C23C | 00000018 | 8CC867DD | ----- pmdrv
+ CPD entry           |                       | 0005C254 | 00000018 | 5862F21E | ----- maestro
+ CPD entry           |                       | 0005C26C | 00000018 | 1029AFB2 | ----- fwupdate
+ CPD entry           |                       | 0005C284 | 00000018 | 615A2A6A | ----- ptt
+ CPD entry           |                       | 0005C29C | 00000018 | F88C280A | ----- mca_boot
+ CPD entry           |                       | 0005C2B4 | 00000018 | 17DED8C8 | ----- mca_srv
+ CPD partition       | Manifest              | 0005C2CC | 00000580 | 1206058E | ---- FTPR.man
+ CPD extension       |                       | 0005C650 | 000000D4 | 785F506C | ----- System Info
+ CPD extension       |                       | 0005C724 | 00000030 | FAC6B8F7 | ----- Client System Info
+ CPD extension       |                       | 0005C754 | 00000018 | E51A2BB6 | ----- Feature Permissions
+ CPD extension       |                       | 0005C76C | 00000078 | A820FFDF | ----- Signed Package Info
+ CPD SPI entry       |                       | 0005C76C | 00000044 | 05A5FBC2 | ------ intl.cfg
+ CPD extension       |                       | 0005C7E4 | 00000068 | E169B3C9 | ----- IFWI Partition Manifest
+ CPD partition       | Metadata              | 0005C84C | 00000048 | 527724D3 | ---- intl.cfg.met
+ CPD extension       |                       | 0005C84C | 00000048 | 527724D3 | ----- Module Attributes
+ Padding             | Empty (FFh)           | 0005C894 | 0000076C | CF867314 | ---- Padding
+ CPD partition       | Code                  | 0005D000 | 000007EC | 12A07BA3 | ---- rot.key
+ Padding             | Empty (FFh)           | 0005D7EC | 00000814 | 03B7034E | ---- Padding
+ CPD partition       | Code                  | 0005E000 | 00013000 | 459E68B3 | ---- kernel
+ CPD partition       | Code                  | 00071000 | 0001C000 | 3A411D14 | ---- syslib
+ CPD partition       | Code                  | 0008D000 | 00038000 | 7FB469BF | ---- bup
+ CPD partition       | Code                  | 000C5000 | 00004BDA | E9B49CA0 | ---- intl.cfg
+ Padding             | Empty (FFh)           | 000C9BDA | 00000426 | 60D7296D | ---- Padding
+ CPD partition       | Code                  | 000CA000 | 00003000 | 7DB3B5FF | ---- pm
+ CPD partition       | Code                  | 000CD000 | 00011000 | 18A9B5A5 | ---- vfs
+ CPD partition       | Code                  | 000DE000 | 00003000 | 8BF8AFFE | ---- evtdisp
+ CPD partition       | Code                  | 000E1000 | 00005000 | EDA86A46 | ---- loadmgr
+ CPD partition       | Code                  | 000E6000 | 00002000 | 71B45735 | ---- busdrv
+ CPD partition       | Code                  | 000E8000 | 00001000 | 95E4C6BD | ---- prtc
+ CPD partition       | Code                  | 000E9000 | 00002075 | E6C3FBE6 | ---- smbus
+ Padding             | Empty (FFh)           | 000EB075 | 00000F8B | DDBCBD14 | ---- Padding
+ CPD partition       | Code                  | 000EC000 | 00026000 | F91AD8EE | ---- crypto
+ CPD partition       | Code                  | 00112000 | 00004000 | 7A65AE30 | ---- fpf
+ CPD partition       | Code                  | 00116000 | 0000C840 | 499E0EB3 | ---- storage
+ CPD partition       | Code                  | 00122840 | 00001840 | CFC14C28 | ---- gpio
+ CPD partition       | Code                  | 00124080 | 00002600 | 19AAA53B | ---- ipc_drv
+ CPD partition       | Code                  | 00126680 | 000008C0 | F3741E6D | ---- sec_msg
+ CPD partition       | Code                  | 00126F40 | 00005E40 | 7CBF4EDE | ---- policy
+ CPD partition       | Code                  | 0012CD80 | 00006280 | 0FD68E94 | ---- heci
+ CPD partition       | Code                  | 00133000 | 00001D80 | 20C32B73 | ---- pmdrv
+ CPD partition       | Code                  | 00134D80 | 00002700 | 349E8CAE | ---- maestro
+ CPD partition       | Code                  | 00137480 | 00006180 | BF09DC90 | ---- fwupdate
+ CPD partition       | Code                  | 0013D600 | 0001D140 | 541CACB1 | ---- ptt
+ CPD partition       | Code                  | 0015A740 | 00002640 | B53E74FB | ---- mca_boot
+ CPD partition       | Code                  | 0015CD80 | 00008000 | C78E5072 | ---- mca_srv
+ Padding             | Empty (FFh)           | 00164D80 | 0001C280 | 5BAD02AF | ---- Padding
+ BPDT partition      |                       | 00181000 | 00001000 | EF34E9D4 | --- OEM Key Manifest | OEM Key Manifest
+ CPD store           |                       | 00181000 | 0000002C | 21A11853 | ---- CPD partition table
+ CPD entry           |                       | 00181014 | 00000018 | 0F861959 | ----- OEMP.man
+ CPD partition       | Manifest              | 0018102C | 00000498 | 87228FAA | ---- OEMP.man
+ CPD extension       |                       | 001813B0 | 00000034 | C12EB570 | ----- Signed Package Info
+ CPD extension       |                       | 001813E4 | 00000068 | F904BA76 | ----- IFWI Partition Manifest
+ CPD extension       |                       | 0018144C | 00000078 | E8F17B79 | ----- Key Manifest
+ Padding             | Empty (FFh)           | 001814C4 | 00000B3C | 47E2624E | ---- Padding
+ BPDT partition      |                       | 00182000 | 00012000 | 556CC025 | --- TCSS FW IOM | TCSS FW IOM
+ CPD store           |                       | 00182000 | 0000008C | 93F000DF | ---- CPD partition table
+ CPD entry           |                       | 00182014 | 00000018 | 82A66EDB | ----- IOMP.man
+ CPD entry           |                       | 0018202C | 00000018 | A8B259F7 | ----- iom.met
+ CPD entry           |                       | 00182044 | 00000018 | 6026192C | ----- iom
+ CPD entry           |                       | 0018205C | 00000018 | E8F69993 | ----- iom.cd
+ CPD entry           |                       | 00182074 | 00000018 | C844AE99 | ----- iom.hwcd
+ CPD partition       | Manifest              | 0018208C | 00000464 | 25B6E4BB | ---- IOMP.man
+ CPD extension       |                       | 00182410 | 00000078 | 32771BF1 | ----- Signed Package Info
+ CPD SPI entry       |                       | 00182410 | 00000044 | 3463FFFF | ------ iom.met
+ CPD extension       |                       | 00182488 | 00000068 | E54593B3 | ----- IFWI Partition Manifest
+ Padding             | Empty (FFh)           | 001824F0 | 00000010 | 3FB3C61A | ---- Padding
+ CPD partition       | Metadata              | 00182500 | 000000C0 | 45191D3F | ---- iom.met
+ CPD extension       |                       | 00182500 | 000000C0 | 45191D3F | ----- IOM Metadata
+ CPD partition       | Code                  | 001825C0 | 00010D5C | 68B24B26 | ---- iom
+ Padding             | Empty (FFh)           | 0019331C | 00000024 | 19990159 | ---- Padding
+ CPD partition       | Code                  | 00193340 | 000005AC | DBD6AC45 | ---- iom.cd
+ Padding             | Empty (FFh)           | 001938EC | 00000014 | 2CF772B0 | ---- Padding
+ CPD partition       | Code                  | 00193900 | 0000003C | FDC4B613 | ---- iom.hwcd
+ Padding             | Empty (FFh)           | 0019393C | 000006C4 | 35F9C6AC | ---- Padding
+ BPDT partition      |                       | 00194000 | 00010000 | F44A6608 | --- TCSS FW PHY | TCSS FW PHY
+ CPD store           |                       | 00194000 | 0000005C | B6E77BF4 | ---- CPD partition table
+ CPD entry           |                       | 00194014 | 00000018 | 69D14CAC | ----- NPHY.man
+ CPD entry           |                       | 0019402C | 00000018 | 27FA7762 | ----- nphy.met
+ CPD entry           |                       | 00194044 | 00000018 | 933148A0 | ----- nphy
+ CPD partition       | Manifest              | 0019405C | 00000464 | C615366E | ---- NPHY.man
+ CPD extension       |                       | 001943E0 | 00000078 | A9A8D4EB | ----- Signed Package Info
+ CPD SPI entry       |                       | 001943E0 | 00000044 | F1593EE7 | ------ nphy.met
+ CPD extension       |                       | 00194458 | 00000068 | 595F8447 | ----- IFWI Partition Manifest
+ CPD partition       | Metadata              | 001944C0 | 00000048 | 81F823B8 | ---- nphy.met
+ CPD extension       |                       | 001944C0 | 00000048 | 81F823B8 | ----- MGP Metadata
+ Padding             | Empty (FFh)           | 00194508 | 00000038 | D8BBABFB | ---- Padding
+ CPD partition       | Code                  | 00194540 | 0000E480 | 4E308F75 | ---- nphy
+ Padding             | Empty (FFh)           | 001A29C0 | 00001640 | 2BBC19FA | ---- Padding
+ BPDT partition      |                       | 001A4000 | 00001000 | 2765E507 | --- PCH Config | PCH Config
+ CPD store           |                       | 001A4000 | 0000005C | 3C283A57 | ---- CPD partition table
+ CPD entry           |                       | 001A4014 | 00000018 | 89CFF8E9 | ----- PCHC.man
+ CPD entry           |                       | 001A402C | 00000018 | BAA8D676 | ----- IntelRec
+ CPD entry           |                       | 001A4044 | 00000018 | 71DD4C0C | ----- IntelRec.met
+ CPD partition       | Manifest              | 001A405C | 00000464 | 7CBAEA8E | ---- PCHC.man
+ CPD extension       |                       | 001A43E0 | 00000078 | BDF25474 | ----- Signed Package Info
+ CPD SPI entry       |                       | 001A43E0 | 00000044 | 9E618E8B | ------ IntelRec
+ CPD extension       |                       | 001A4458 | 00000068 | C5F310F0 | ----- IFWI Partition Manifest
+ CPD partition       | Metadata              | 001A44C0 | 00000048 | 382F5067 | ---- IntelRec.met
+ CPD extension       |                       | 001A44C0 | 00000048 | 382F5067 | ----- Module Attributes
+ Padding             | Empty (FFh)           | 001A4508 | 00000038 | D8BBABFB | ---- Padding
+ CPD partition       | Code                  | 001A4540 | 00000298 | 27B9416F | ---- IntelRec
+ Padding             | Empty (FFh)           | 001A47D8 | 00000828 | CC9B4C21 | ---- Padding
+ IFWI partition      | Data                  | 001A5000 | 00088000 | D7430751 | -- Data partition
+ FPT store           |                       | 001A5000 | 00000180 | C356BA79 | --- FPT partition table
+ FPT entry           | Valid                 | 001A5020 | 00000020 | EDF5726E | ---- PSVN
+ FPT entry           | Valid                 | 001A5040 | 00000020 | 837F04A5 | ---- UEP
+ FPT entry           | Valid                 | 001A5060 | 00000020 | D52B2EFD | ---- IVBP
+ FPT entry           | Valid                 | 001A5080 | 00000020 | FD9C70AA | ---- MFS
+ FPT entry           | Valid                 | 001A50A0 | 00000020 | 3A6B7B36 | ---- UTOK
+ FPT entry           | Valid                 | 001A50C0 | 00000020 | 238FA702 | ---- HVMP
+ FPT entry           | Valid                 | 001A50E0 | 00000020 | 89F16423 | ---- FLOG
+ FPT entry           | Valid                 | 001A5100 | 00000020 | DCE3AE92 | ---- EFS
+ FPT entry           | Valid                 | 001A5120 | 00000020 | EA7D72B5 | ---- RSTR
+ FPT entry           | Valid                 | 001A5140 | 00000020 | F75DC5DD | ---- IMDP
+ FPT entry           | Valid                 | 001A5160 | 00000020 | 3A284504 | ---- FITC
+ Padding             | Empty (FFh)           | 001A5180 | 00000DC0 | B2568390 | --- Padding
+ FPT partition       | Data                  | 001A5F40 | 00000040 | 027688DB | --- IMDP
+ FPT partition       | Data                  | 001A5F80 | 00000018 | 01C6463A | --- RSTR
+ Padding             | Empty (FFh)           | 001A5F98 | 00000028 | 8CD04C73 | --- Padding
+ FPT partition       | Data                  | 001A5FC0 | 0000000C | 63D7E458 | --- HVMP
+ Padding             | Empty (FFh)           | 001A5FCC | 00000034 | EB6F5BB4 | --- Padding
+ FPT partition       | Data                  | 001A6000 | 00008000 | B2A1BEE6 | --- FITC
+ FPT partition       | Data                  | 001AE000 | 00000200 | BD7BC39F | --- PSVN
+ Padding             | Empty (FFh)           | 001AE200 | 00000E00 | 5448F443 | --- Padding
+ FPT partition       | Data                  | 001AF000 | 00004000 | 690B37D3 | --- IVBP
+ FPT partition       | Data                  | 001B3000 | 00064000 | 1A8AC3AD | --- MFS
+ FPT partition       | Data                  | 00217000 | 00002000 | ED0EC7EA | --- UTOK
+ FPT partition       | Data                  | 00219000 | 00002000 | B4293435 | --- FLOG
+ FPT partition       | Data                  | 0021B000 | 00010000 | E8941138 | --- EFS
+ FPT partition       | Data                  | 0022B000 | 00002000 | D1D514BA | --- UEP
+ IFWI partition      | Boot                  | 0022D000 | 001AC000 | AB40932B | -- Boot partition
+ BPDT store          |                       | 0022D000 | 00000084 | 943148B1 | --- BPDT partition table
+ BPDT entry          |                       | 0022D018 | 0000000C | E67CFCFE | ---- Debug Launch Module
+ BPDT entry          |                       | 0022D024 | 0000000C | 91E22E0E | ---- IFP Bypass
+ BPDT entry          |                       | 0022D030 | 0000000C | E376B17F | ---- Secondary BPDT
+ BPDT entry          |                       | 0022D03C | 0000000C | E0708A00 | ---- ROM Boot Extensions
+ BPDT entry          |                       | 0022D048 | 0000000C | 7EDF8BEE | ---- UFS PHY Config
+ BPDT entry          |                       | 0022D054 | 0000000C | E57AC781 | ---- UFS GPP LUN
+ BPDT entry          |                       | 0022D060 | 0000000C | 74CB10EC | ---- OEM Key Manifest
+ BPDT entry          |                       | 0022D06C | 0000000C | C498EA85 | ---- Main
+ BPDT entry          |                       | 0022D078 | 0000000C | BDC91C1F | ---- iUnit
+ Padding             | Empty (FFh)           | 0022D084 | 00000F7C | CA039763 | --- Padding
+ BPDT partition      |                       | 0022E000 | 001A1000 | 5AA614B3 | --- Main | Main
+ CPD store           |                       | 0022E000 | 00000164 | F4A8052E | ---- CPD partition table
+ CPD entry           |                       | 0022E014 | 00000018 | 0D289E1E | ----- NFTP.man
+ CPD entry           |                       | 0022E02C | 00000018 | 42FAE88B | ----- dal_ivm
+ CPD entry           |                       | 0022E044 | 00000018 | C545A650 | ----- dal_lnch
+ CPD entry           |                       | 0022E05C | 00000018 | 8F39F06C | ----- dal_sdm
+ CPD entry           |                       | 0022E074 | 00000018 | AC4A6A3D | ----- adspa
+ CPD entry           |                       | 0022E08C | 00000018 | 98944414 | ----- iunitcse
+ CPD entry           |                       | 0022E0A4 | 00000018 | 02BE21C0 | ----- pavp
+ CPD entry           |                       | 0022E0BC | 00000018 | 044B4135 | ----- sigma
+ CPD entry           |                       | 0022E0D4 | 00000018 | 7F8299C2 | ----- hotham
+ CPD entry           |                       | 0022E0EC | 00000018 | A9DC8F30 | ----- ish_srv
+ CPD entry           |                       | 0022E104 | 00000018 | B886B46E | ----- mctp
+ CPD entry           |                       | 0022E11C | 00000018 | 9B48DFCC | ----- icc
+ CPD entry           |                       | 0022E134 | 00000018 | A1E8CCC9 | ----- tls_iso
+ CPD entry           |                       | 0022E14C | 00000018 | 01D78120 | ----- vdm
+ CPD partition       | Manifest              | 0022E164 | 00000420 | 12243CCB | ---- NFTP.man
+ CPD extension       |                       | 0022E4E8 | 00000034 | BA08D8AF | ----- Signed Package Info
+ CPD extension       |                       | 0022E51C | 00000068 | C6CA3129 | ----- IFWI Partition Manifest
+ Padding             | Empty (FFh)           | 0022E584 | 0000003C | F48CF14D | ---- Padding
+ CPD partition       | Code                  | 0022E5C0 | 0004B100 | 5BC68060 | ---- dal_ivm
+ CPD partition       | Code                  | 002796C0 | 000026C0 | 3EDE5CD5 | ---- dal_lnch
+ CPD partition       | Code                  | 0027BD80 | 00007600 | 1B4D2BCB | ---- dal_sdm
+ CPD partition       | Code                  | 00283380 | 00001640 | 10F5C54D | ---- adspa
+ CPD partition       | Code                  | 002849C0 | 00002D40 | 5696D160 | ---- iunitcse
+ CPD partition       | Code                  | 00287700 | 00029907 | 37EB41EC | ---- pavp
+ Padding             | Empty (FFh)           | 002B1007 | 00000039 | D5B7903F | ---- Padding
+ CPD partition       | Code                  | 002B1040 | 00007040 | 649EEA0B | ---- sigma
+ CPD partition       | Code                  | 002B8080 | 00005100 | 6E1BD4A5 | ---- hotham
+ CPD partition       | Code                  | 002BD180 | 00006C80 | 70614931 | ---- ish_srv
+ CPD partition       | Code                  | 002C3E00 | 00006740 | 87A238EA | ---- mctp
+ CPD partition       | Code                  | 002CA540 | 00003F80 | 834EF632 | ---- icc
+ CPD partition       | Code                  | 002CE4C0 | 00025E80 | CB19E571 | ---- tls_iso
+ CPD partition       | Code                  | 002F4340 | 00002000 | D63A8B83 | ---- vdm
+ Padding             | Empty (FFh)           | 002F6340 | 000D8CC0 | BB0BEE34 | ---- Padding
+ BPDT partition      |                       | 003CF000 | 0000A000 | 823AE25F | --- iUnit | iUnit
+ CPD store           |                       | 003CF000 | 0000005C | 1260AFCA | ---- CPD partition table
+ CPD entry           |                       | 003CF014 | 00000018 | 0B3FE0F4 | ----- IUNP.man
+ CPD entry           |                       | 003CF02C | 00000018 | 0274C9D6 | ----- iunit.met
+ CPD entry           |                       | 003CF044 | 00000018 | 54E40E5E | ----- iunit
+ CPD partition       | Manifest              | 003CF05C | 00000464 | 5F73F3E3 | ---- IUNP.man
+ CPD extension       |                       | 003CF3E0 | 00000078 | FC07F5B0 | ----- Signed Package Info
+ CPD SPI entry       |                       | 003CF3E0 | 00000044 | CFFADBDE | ------ iunit.met
+ CPD extension       |                       | 003CF458 | 00000068 | F0E19B81 | ----- IFWI Partition Manifest
+ CPD partition       | Metadata              | 003CF4C0 | 00000070 | 19F2E691 | ---- iunit.met
+ CPD extension       |                       | 003CF4C0 | 00000070 | 19F2E691 | ----- Anti-cloning SKU ID
+ Padding             | Empty (FFh)           | 003CF530 | 00000010 | 3FB3C61A | ---- Padding
+ CPD partition       | Code                  | 003CF540 | 00000F6C | D695C8D8 | ---- iunit
+ Padding             | Empty (FFh)           | 003D04AC | 00008B54 | 830EA8E4 | ---- Padding
+ Padding             | Empty (FFh)           | 003D9000 | 00027000 | CD05F3D9 | -- Padding
+ Region              | BIOS                  | 00400000 | 00C00000 | 7BD00358 | - BIOS region
+ Volume              | FFSv2                 | 00400000 | 00030000 | 76216F19 | -- FA4974FC-AF1D-4E5D-BDC5-DACD6D27BAEC
+ File                | Raw                   | 00400078 | 0002FF88 | E85082A8 | --- CEF5B9A3-476D-497F-9FDC-E98143E0422C | NVAR store
+ NVAR entry          | Full                  | 00400090 | 00001C7F | A3EB825E | ---- 4599D26F-1A11-49B8-B91F-858745CFF824 | StdDefaults
+ NVAR entry          | Full                  | 004000A7 | 00000AFA | 4CC1E7D7 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | Setup
+ NVAR entry          | Full                  | 00400BA1 | 0000001E | 94187FA9 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | PlatformLang
+ NVAR entry          | Full                  | 00400BBF | 00000015 | F0B3B0A4 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | Timeout
+ NVAR entry          | Full                  | 00400BD4 | 00000069 | C02CEE68 | ----- C811FA38-42C8-4579-A9BB-60E94EDDFB34 | AMITSESetup
+ NVAR entry          | Full                  | 00400C3D | 00000264 | B2A1C1FC | ----- B08F97FF-E6E8-4193-A997-5E9E9B0ADB32 | CpuSetup
+ NVAR entry          | Full                  | 00400EA1 | 00000459 | 0C968FAC | ----- 72C5E28C-7783-43A1-8767-FAD73FCCAFA4 | SaSetup
+ NVAR entry          | Full                  | 004012FA | 000006E2 | BA6BED25 | ----- 4570B7F1-ADE8-4943-8DC3-406472842384 | PchSetup
+ NVAR entry          | Full                  | 004019DC | 00000048 | 9A537AC4 | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetup
+ NVAR entry          | Full                  | 00401A24 | 0000002B | 1301B13F | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetupStorage
+ NVAR entry          | Full                  | 00401A4F | 0000002B | 1B5023E7 | ----- 64192DCA-D034-49D2-A6DE-65A829EB4C74 | IccAdvancedSetupDataVar
+ NVAR entry          | Full                  | 00401A7A | 0000001A | 1BC60B4A | ----- AAF8E719-48F8-4099-A6F7-645FBD694C3D | SiSetup
+ NVAR entry          | Full                  | 00401A94 | 0000002C | CB27B574 | ----- DE0A5E74-4E3E-3D96-A440-2C96ECBD3C97 | DebugConfigData
+ NVAR entry          | Full                  | 00401AC0 | 00000020 | B2FD1A29 | ----- C61C31A3-CB5D-46DD-9FE5-8A82BBC72483 | AmiWrapperSetup
+ NVAR entry          | Full                  | 00401AE0 | 00000019 | 9517F3B2 | ----- 6B0CC1BC-910F-411E-B6CB-0E314D0BB8C1 | SioSetupData
+ NVAR entry          | Full                  | 00401AF9 | 00000047 | 7ACD221A | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | UsbSupport
+ NVAR entry          | Full                  | 00401B40 | 00000023 | F62056C2 | ----- D1405D16-7AFC-4695-BB12-41459D3695A2 | NetworkStackVar
+ NVAR entry          | Full                  | 00401B63 | 00000072 | CA89B731 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | SdioDevConfiguration
+ NVAR entry          | Full                  | 00401BD5 | 00000022 | 97015D5F | ----- 7B59104A-C00D-4158-87FF-F04D6396A915 | SecureBootSetup
+ NVAR entry          | Full                  | 00401BF7 | 00000018 | 4F3FFB92 | ----- 80E1202E-2697-4264-9CC9-80762C3E5863 | Setup
+ Free space          |                       | 00401C0F | 00000010 | 3FB3C61A | ----- Free space
+ NVAR GUID store     |                       | 00401C1F | 000000F0 | 45030849 | ----- GUID store
+ Free space          |                       | 00401D0F | 0002E2E1 | 555064DF | ---- Free space
+ NVAR GUID store     |                       | 0042FFF0 | 00000010 | 2F82779F | ---- GUID store
+ Padding             | Empty (FFh)           | 00430000 | 00040000 | B7094978 | -- Padding
+ Volume              | FFSv2                 | 00470000 | 00390000 | 8953B590 | -- 4F1C52D3-D824-4D2A-A2F0-EC40C23C5916
+ File                | Freeform              | 00470078 | 0000102C | 61A8CA3D | --- 414D94AD-998D-47D2-BFCD-4E882241DE32
+ Section             | Freeform subtype GUID | 00470090 | 00001014 | A8938EFB | ---- 5A88641B-BBB9-4AA6-80F7-498AE407C31F
+ File                | Raw                   | 004710A8 | 00020018 | D3E201E3 | --- 05CA020B-0FC1-11DC-9011-00173153EBA8 | AMI ROM hole
+ File                | Volume image          | 004910C0 | 002FAF25 | 29CC245A | --- 9E21FD93-9C72-4C15-8C4B-E77F1DB2D792
+ Section             | GUID defined          | 004910D8 | 002FAF0D | 6DED2662 | ---- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | Raw                   |   N/A    | 00000008 | DB37312F | ----- Raw section
+ Section             | Volume image          |   N/A    | 0016D004 | 879AC748 | ----- Volume image section
+ Padding             | Non-empty             |   N/A    | 0016D000 | 17BE00EE | ------ Padding
+ Section             | Unknown 00h           |   N/A    | 00E3CE08 | F400536D | ----- Unknown 00h section
+ Section             | Unknown 48h           |   N/A    | 000FEB0B | 237F4057 | ----- Unknown 48h section
+ Padding             | Non-empty             |   N/A    | 000C46EC | 4FEB5A75 | ----- Non-UEFI data
+ Free space          |                       | 0078BFE8 | 00074018 | 19061EEF | --- Volume free space
+ Volume              | FFSv2                 | 00800000 | 003C0000 | 604064EA | -- B7A3CAAA-4E10-44A5-8C2C-D2F38D5B8083
+ File                | Volume image          | 00800078 | 000C36A1 | ACB08017 | --- 5DDBF43F-914D-4B83-96A8-3A4F7CD3E59D
+ Section             | GUID defined          | 00800090 | 000C3689 | 73AF64A5 | ---- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | Raw                   |   N/A    | 0000000C | 7EBC7FC4 | ----- Raw section
+ Section             | Volume image          |   N/A    | 0027C004 | 264501BB | ----- Volume image section
+ Volume              | FFSv2                 |   N/A    | 0027C000 | 0FD2AA89 | ------ 81E9E0E0-D599-45E0-AE0A-B725AF4C075F
+ File                | DXE driver            |   N/A    | 00000A56 | D1C6A122 | ------- A210F973-229D-4F4D-AA37-9895E6C9EABA | DpcDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00000A04 | E305EFB2 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 3B58DBF5 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000343E | A21DA4F5 | ------- 529D3F93-E8E9-4E73-B1E1-BDF6A9D50113 | ArpDxe
+ Section             | PE32 image            |   N/A    | 00003404 | D758CD8C | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 9F5911EC | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000573E | 40FE6AB4 | ------- A2F436EA-A127-4EF8-957C-8048606FF670 | SnpDxe
+ Section             | PE32 image            |   N/A    | 00005704 | A9CD1FAE | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 11974950 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00006FFE | FED1DDF0 | ------- 025BBFC7-E6A9-4B8B-82AD-6815A1AEAF4A | MnpDxe
+ Section             | PE32 image            |   N/A    | 00006FC4 | 93D1A6B1 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | BCBE20BC | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000FA0A | 7EAB83EC | ------- B95E9FDA-26DE-48D2-8807-1F9107AC5E3A | UefiPxeBcDxe
+ Section             | PE32 image            |   N/A    | 0000F9C4 | 7F56E353 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 7426BBE3 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000C2FE | 2E887478 | ------- 1A7E4468-2F55-4A56-903C-01265EB7622B | TcpDxe
+ Section             | PE32 image            |   N/A    | 0000C2C4 | 1BAC9FDE | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | EAF5E27E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000E15A | 9307B1E2 | ------- ECEBCB00-D9C8-11E4-AF3D-8CDCD426C973 | HttpBootDxe
+ Section             | Raw                   |   N/A    | 00000034 | 96B44C98 | -------- Raw section
+ Section             | PE32 image            |   N/A    | 0000E0E4 | 6F87616F | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001C | 0DCAB70E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000967E | 03C0BC5B | ------- 2366C20F-E15A-11E3-8BF1-E4115B28BC50 | HttpDxe
+ Section             | PE32 image            |   N/A    | 00009644 | 7229BDD2 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 7BF48072 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000A0FE | DB39C7CC | ------- B219E140-DFFC-11E3-B956-0022681E6906 | DnsDxe
+ Section             | PE32 image            |   N/A    | 0000A0C4 | 55360E5E | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | F9DF64FF | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000110A | FFB5EFC4 | ------- 22EA234F-E72A-11E4-91F9-28D2447C4829 | HttpUtilitiesDxe
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000010A4 | D7716ECF | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 69BE629E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000AB92 | 0FA46E5D | ------- 7CA1024F-EB17-11E5-9DBA-28D2447C4829 | TlsAuthConfigDxe
+ Section             | DXE dependency        |   N/A    | 0000004C | 80D6A05A | -------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000034 | 05BD1E03 | -------- Raw section
+ Section             | PE32 image            |   N/A    | 0000AAC4 | D049EC4D | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | D9F5D875 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0018EB9E | BB19C493 | ------- 3ACEB0C0-3C72-11E4-9A56-74D435052646 | TlsDxe
+ Section             | PE32 image            |   N/A    | 0018EB64 | C3229841 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 7356C60C | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 000082E2 | 146D0125 | ------- 94734718-0BBC-47FB-96A5-EE7A5AE6A2AD | Dhcp4Dxe
+ Section             | PE32 image            |   N/A    | 000082A4 | 1CF7EF12 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 5620EFF1 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00010992 | 6CE507D9 | ------- 9FB1A1F3-3B71-4324-B39A-745CBB015FFF | Ip4Dxe
+ Section             | Raw                   |   N/A    | 00000034 | 1A7962FE | -------- Raw section
+ Section             | PE32 image            |   N/A    | 00010924 | 3C716DEE | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | D76A369F | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00007522 | 0A69E620 | ------- DC3641B8-2FA8-4ED3-BC1F-F9962A03454B | Mtftp4Dxe
+ Section             | PE32 image            |   N/A    | 000074E4 | 9B1B24DD | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 1316C69E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00006F3E | 115F09ED | ------- 6D6963AB-906D-4A65-A7CA-BD40E5D6AF2B | Udp4Dxe
+ Section             | PE32 image            |   N/A    | 00006F04 | D3AB3DC4 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 667C5C7C | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00007E02 | 1B67EA84 | ------- 95E3669D-34BE-4775-A651-7EA41B69D89E | Dhcp6Dxe
+ Section             | PE32 image            |   N/A    | 00007DC4 | 77C55EB1 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 52D53FCC | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 000174D2 | 8B9E1E19 | ------- 5BEDB5CC-D830-4EB2-8742-2D4CC9B54F2C | Ip6Dxe
+ Section             | Raw                   |   N/A    | 00000034 | 8A00750D | -------- Raw section
+ Section             | PE32 image            |   N/A    | 00017464 | 3E97076B | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | D39FE6A2 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00007962 | BF31FE9E | ------- 99F03B99-98D8-49DD-A8D3-3219D0FFE41E | Mtftp6Dxe
+ Section             | PE32 image            |   N/A    | 00007924 | EE25E376 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 17E316A3 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00006D3E | 398D31C3 | ------- D912C7BC-F098-4367-92BA-E911083C7B0E | Udp6Dxe
+ Section             | PE32 image            |   N/A    | 00006D04 | 987AD826 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | 62898C41 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000783A | A5DCCE90 | ------- 28A03FF4-12B3-4305-A417-BB1A4F94081E | RamDiskDxe
+ Section             | DXE dependency        |   N/A    | 0000005E | B3CDBF97 | -------- DXE dependency section
+ Section             | Raw                   |   N/A    | 00000034 | 575D15D3 | -------- Raw section
+ Section             | PE32 image            |   N/A    | 000076E4 | 3D9CAD4D | -------- PE32 image section
+ Section             | Raw                   |   N/A    | 00000080 | 1B1751F0 | -------- Raw section
+ Section             | UI                    |   N/A    | 0000001A | 28230069 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00001756 | 9DFF8D4A | ------- 67820532-7613-4DD3-9ED7-3D9BE3A7DA63 | Aint13
+ Section             | DXE dependency        |   N/A    | 00000016 | 1C339288 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001704 | 3E9E1EE6 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 9848B1E2 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000230A | 6FB6F721 | ------- 4A3602BC-1A05-4C82-99B4-588CD2A32CD5 | LegacySredir
+ Section             | DXE dependency        |   N/A    | 0000005E | 5CEA00AF | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002264 | E505A53D | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 67A9E416 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 000013FE | 9101AC5F | ------- 4C006CD9-19BA-4617-8483-609194A1ACFC | UsbInt13
+ Section             | DXE dependency        |   N/A    | 0000003A | 91C2C00F | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001384 | AE57770C | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | D268B3EE | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000DD32 | A71B9884 | ------- A062CF1F-8473-4AA3-8793-600BC4FFE9A8 | CsmDxe
+ Section             | DXE dependency        |   N/A    | 00000094 | 31CF213E | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 0000DC64 | 729CE432 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 37C29376 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 0000081E | 1CD0A4F6 | ------- C9A6DE36-FDFF-4FAF-8343-85D9E3470F43 | NvmeInt13
+ Section             | DXE dependency        |   N/A    | 0000003A | 65A34935 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000007A4 | 082F6722 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 7C4754C3 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00000A3E | ED6166EE | ------- 10B7F979-741C-467E-8764-8DD50D8AD6C5 | SdioInt13
+ Section             | DXE dependency        |   N/A    | 0000003A | 65A34935 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000009C4 | B712BABE | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 07A158CC | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 000010BE | 5E41FF41 | ------- 858EBE6F-360F-415B-B7DC-463AAEB03412 | TcgLegacy
+ Section             | DXE dependency        |   N/A    | 0000003A | 997541CA | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00001044 | D13815CE | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | F6D6CCCA | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 00002E76 | 8A340341 | ------- 25ACF158-DD61-4E64-9A49-55851E9A26C7 | CsmBlockIo
+ Section             | DXE dependency        |   N/A    | 000000EE | 96D65050 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 00002D44 | 34A32D89 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | F1CE50D7 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            |   N/A    | 000044D2 | 0FF2FC91 | ------- 29CF55F8-B675-4F5D-8F2F-B87A3ECFD063 | CsmVideo
+ Section             | DXE dependency        |   N/A    | 000000EE | 96D65050 | -------- DXE dependency section
+ Section             | PE32 image            |   N/A    | 000043A4 | 5101CC8D | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 520C45A1 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | SMM module            |   N/A    | 00001A8A | 6BEABB46 | ------- 291E46D4-CA63-4D33-9857-1397C9AD7C0D | LegacySmmSredir
+ Section             | MM dependency         |   N/A    | 0000003A | FB0CBC42 | -------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00001A04 | EBDF373E | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | DA20D61C | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | SMM module            |   N/A    | 000054AE | 9BEE7867 | ------- F3331DE6-4A55-44E4-B767-7453F7A1A021 | MicrocodeUpdate
+ Section             | MM dependency         |   N/A    | 0000005E | E581C172 | -------- MM dependency section
+ Section             | PE32 image            |   N/A    | 00005404 | 1AF1508E | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000024 | 5A738B34 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | Freeform              |   N/A    | 000004B2 | 7CBC8218 | ------- A08276EC-A0FE-4E06-8670-385336C7D093
+ Section             | Raw                   |   N/A    | 0000049A | 0B18016F | -------- Raw section
+ File                | Freeform              |   N/A    | 00000714 | 3CA37863 | ------- E998C6D8-572B-4E18-96CC-031EA3DD558C
+ Section             | Raw                   |   N/A    | 000006FC | AA22C95F | -------- Raw section
+ File                | Freeform              |   N/A    | 00012C98 | 5DDA24A5 | ------- 365C62BA-05EF-4B2E-A7F7-92C1781AF4F9
+ Section             | GUID defined          |   N/A    | 00012C80 | 6C0ABD2A | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | Raw                   |   N/A    | 000264FB | B4BE2B0C | --------- Raw section
+ Free space          |                       |   N/A    | 00000F10 | 25284E22 | ------- Volume free space
+ Free space          |                       | 008C3720 | 002FC8E0 | B36FF6A7 | --- Volume free space
+ Volume              | FFSv2                 | 00BC0000 | 000C0000 | 8BD5CADC | -- 3DA4F21C-189D-46A3-98C0-AF814EBF01B0
+ File                | Pad                   | 00BC0078 | 00000F70 | F96E670D | --- Padding file
+ File                | Raw                   | 00BC0FE8 | 00000418 | D306CFA8 | --- 201B32CB-21AD-4AB3-B21D-CEDD1A2053F7
+ File                | Volume image          | 00BC1400 | 00034816 | 13D787F8 | --- F641AC56-3B92-4154-8547-80EF6AAFF551
+ Section             | GUID defined          | 00BC1418 | 000347FE | 0CE3C6B7 | ---- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | Raw                   |   N/A    | 0000000C | 7EBC7FC4 | ----- Raw section
+ Section             | Volume image          |   N/A    | 00067004 | F268F832 | ----- Volume image section
+ Volume              | FFSv2                 |   N/A    | 00067000 | C0126B5A | ------ 14E428FA-1A12-4875-B637-8B3CC87FDF07
+ File                | PEI module            |   N/A    | 0000077E | 900B1EF2 | ------- 76864548-0261-410E-A8B4-01615BFA3E0A | FwKeyHobPei
+ Section             | PEI dependency        |   N/A    | 00000016 | 99E93E7C | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000724 | 41D207EF | -------- TE image section
+ Section             | UI                    |   N/A    | 0000001C | 3ECB1E95 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00000A8A | 9AD424B1 | ------- ADF01BF6-47D6-495D-B95B-687777807214 | FirmwarePerformancePei
+ Section             | PEI dependency        |   N/A    | 0000004C | 80338278 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000009E4 | 48FB327A | -------- TE image section
+ Section             | UI                    |   N/A    | 00000032 | 1B8027CC | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000CB82 | FD899A61 | ------- 24DDC83F-9F06-44AB-B696-60FE7DF2C948 | RstVmdPeim
+ Section             | PEI dependency        |   N/A    | 00000016 | 4D01504D | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 0000CB52 | C898DE94 | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 0001C904 | F4291C53 | --------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 7CD1EB76 | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 000029B2 | 7DC802B6 | ------- 59ADD62D-A1C0-44C5-A90F-A1168770468C | PlatformInitPostMem
+ Section             | PEI dependency        |   N/A    | 0000003A | D8014D18 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00002924 | 6E8AD3CE | -------- TE image section
+ Section             | UI                    |   N/A    | 0000002C | 753F9E6E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000088E | 6156A19F | ------- E60A79D5-DC9B-47F1-87D3-51BF697B6121 | CpuPei
+ Section             | PEI dependency        |   N/A    | 00000070 | FD644210 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000007E4 | B02708EA | -------- TE image section
+ Section             | UI                    |   N/A    | 00000012 | 794A11B6 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00011032 | E6156EAE | ------- 314EE04C-1106-4DC6-ACBC-CF19C0DBC5CC | PlatformInitAdvancedPostMem
+ Section             | PEI dependency        |   N/A    | 0000004C | 16DA3E0B | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00010F84 | 8DC17F3E | -------- TE image section
+ Section             | UI                    |   N/A    | 0000003C | 9BB3BD74 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 000008CA | 48A49012 | ------- 0D244DF9-6CE3-4133-A1CF-53200AB663AC | FspsWrapperPeim
+ Section             | PEI dependency        |   N/A    | 0000003A | D7DFE49C | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000844 | CD21E89A | -------- TE image section
+ Section             | UI                    |   N/A    | 00000024 | 2B1E5C1C | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000374A | D9520F6E | ------- 960241A5-5CE6-4EBF-B9C4-E37D294BEBA9 | FspWrapperPeim
+ Section             | PEI dependency        |   N/A    | 0000003A | 60AD4707 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000036C4 | 5172F9B0 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000022 | 5C93F2C5 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000069A | 451E96C5 | ------- 3245EA7C-9209-41E7-BE2C-EB662B8C0622 | FspFirmwareVersionPeim
+ Section             | PEI dependency        |   N/A    | 0000003A | 60AD4707 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000604 | 910B261B | -------- TE image section
+ Section             | UI                    |   N/A    | 00000032 | C7B1CA4D | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 000006A2 | A566E108 | ------- 655B0D2F-BCF1-4B1E-9A6A-A2E891BB50E4 | BiosGuardFirmwareVersionPeim
+ Section             | PEI dependency        |   N/A    | 00000016 | 99E93E7C | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000624 | 3783B0EE | -------- TE image section
+ Section             | UI                    |   N/A    | 0000003E | 991DAE9B | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00000666 | 47E717ED | ------- 1C8B7F78-1699-40E6-AF33-9B995D16B043 | PiSmmCommunicationPei
+ Section             | PEI dependency        |   N/A    | 0000004C | 313A8103 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000005C4 | 1D174CD3 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000030 | 2BF3E725 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00001512 | 4AA9642F | ------- 89E549B0-7CFE-449D-9BA3-10D8B2312D71 | S3Resume2Pei
+ Section             | PEI dependency        |   N/A    | 00000028 | BB3EB8AA | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000014A4 | F30812DC | -------- TE image section
+ Section             | UI                    |   N/A    | 0000001E | B64EB0F3 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00000896 | 9A803945 | ------- BD87C542-9CFF-4D4A-A890-02B6AF986F34 | PeiOverClock
+ Section             | PEI dependency        |   N/A    | 0000004C | C6725CD0 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000804 | E7E53298 | -------- TE image section
+ Section             | UI                    |   N/A    | 0000001E | 03BE5C63 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000258A | ACFFEEFD | ------- 34989D8E-930A-4A95-AB04-2E6CFDFF6631 | TcgPei
+ Section             | PEI dependency        |   N/A    | 0000004C | 7B738316 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00002504 | C250466B | -------- TE image section
+ Section             | UI                    |   N/A    | 00000012 | 22E8E9C3 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000AFA6 | D0E02EF4 | ------- 961C19BE-D1AC-4BA7-87AF-4AE0F09DF2A6 | TrEEPei
+ Section             | PEI dependency        |   N/A    | 0000005E | C6F998BD | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 0000AF0C | C60526BF | -------- TE image section
+ Section             | UI                    |   N/A    | 00000014 | CE0A84A9 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000C052 | B7832D7D | ------- 0D8039FF-49E9-4CC9-A806-BB7C31B0BCB0 | AmiTpm20PlatformPei
+ Section             | PEI dependency        |   N/A    | 0000004C | DC3D3889 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 0000BFB4 | 725E9AEA | -------- TE image section
+ Section             | UI                    |   N/A    | 0000002C | 3ADBE904 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000044A | 32A9F56B | ------- 1C98780A-C67D-4D9B-A9D8-4AC0487A6D6E | PcdRecoveryPei
+ Section             | PEI dependency        |   N/A    | 0000003A | C6991EFF | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 000003C4 | 8EA48265 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000022 | DDEFD2CF | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00005D99 | C8F4A96B | ------- 67451698-1825-4AC5-999D-F350CC7D5D72 | CryptoPPI
+ Section             | PEI dependency        |   N/A    | 00000070 | D5588B51 | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 00005D11 | 91954A10 | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 0000A744 | 07FF07E9 | --------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | CEEB090F | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 000005F2 | 49310E30 | ------- D2ABC888-AE13-4E3B-BCEE-5DE368FA4E72 | MsegSmramPeim
+ Section             | PEI dependency        |   N/A    | 00000028 | C05D1940 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000584 | F4BE0F04 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000020 | A43684F5 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 000007C2 | 16FE66E8 | ------- 968C1D9F-80C4-43B7-8CAE-668AA56C4E71 | SmbiosPeim
+ Section             | PEI dependency        |   N/A    | 0000003A | C6991EFF | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000744 | 79296996 | -------- TE image section
+ Section             | UI                    |   N/A    | 0000001A | 54046D6E | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000402E | E681419D | ------- 39E8CA1A-7A69-4A73-834A-D06381933286 | UsbPei
+ Section             | PEI dependency        |   N/A    | 00000082 | FED24BC6 | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 00003F92 | 30AB6AD2 | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 00009424 | 5AA05A99 | --------- PE32 image section
+ Section             | UI                    |   N/A    | 00000012 | 55D62E0D | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 00006036 | 7CFB6126 | ------- 9B3F28D5-10A6-46C8-BA72-BD40B847A71A | AmiTcgPlatformPeiAfterMem
+ Section             | PEI dependency        |   N/A    | 0000004C | 55209B07 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00005F8C | 8D846BB4 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000038 | 80F64161 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00000422 | 85DE32B8 | ------- E9312938-E56B-4614-A252-CF7D2F377E26 | AmiTcgPlatformPeiBeforeMem
+ Section             | PEI dependency        |   N/A    | 0000003A | E8D3BE04 | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000384 | F8E39C08 | -------- TE image section
+ Section             | UI                    |   N/A    | 0000003A | 0CF36075 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 0000040A | 8620819A | ------- 6B844C5B-6B75-42CA-8E8E-1CB94412B59B | TcgPeiplatform
+ Section             | PEI dependency        |   N/A    | 0000003A | 0915A95E | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00000384 | 26C22773 | -------- TE image section
+ Section             | UI                    |   N/A    | 00000022 | 7735B7DF | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            |   N/A    | 00002547 | F877D827 | ------- BDAD7D1A-4C48-4C75-B5BC-D002D17F6397 | AhciRecovery
+ Section             | PEI dependency        |   N/A    | 00000082 | F5BFE9DB | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 000024AB | EAD16B0C | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 00003F44 | 98CA3DA9 | --------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 5EAD2382 | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 0000106F | 66A45775 | ------- DACF705C-71DF-497D-AABE-10186B2E1DDE | Recovery
+ Section             | PEI dependency        |   N/A    | 00000070 | 03EAF83B | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 00000FE7 | D2E930F0 | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 00001824 | 5D73A47F | --------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 15FE41AC | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 000029DD | 1DA27B6E | ------- 7ECD9C20-68B9-4A6F-B515-D64FF500B109 | FsRecovery
+ Section             | PEI dependency        |   N/A    | 00000070 | 8FDBBC75 | -------- PEI dependency section
+ Section             | GUID defined          |   N/A    | 00002955 | 4EE92C11 | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | PE32 image            |   N/A    | 00004744 | D0679B05 | --------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001A | 4C4D771A | --------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | --------- Version section
+ File                | PEI module            |   N/A    | 000032EE | 42A3D0E6 | ------- 00026AEB-F334-4C15-A7F0-E1E897E9FE91 | NvmeRecovery
+ Section             | PEI dependency        |   N/A    | 00000082 | F5BFE9DB | -------- PEI dependency section
+ Section             | TE image              |   N/A    | 00003224 | 9FDC8AC3 | -------- TE image section
+ Section             | UI                    |   N/A    | 0000001E | D69825A0 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | Freeform              |   N/A    | 00004EB2 | 8D1E6C84 | ------- 52BF7D53-79CF-4555-A517-1E8BB3042332
+ Section             | Raw                   |   N/A    | 00004E9A | 18CB449D | -------- Raw section
+ File                | Freeform              |   N/A    | 0000221C | B8298137 | ------- DCB132E7-27D2-40FF-9C3F-9F280B3D10F5
+ Section             | Raw                   |   N/A    | 00002204 | CF407B7F | -------- Raw section
+ File                | Freeform              |   N/A    | 0000223A | 95D09763 | ------- 8958D092-7B26-4E47-BB98-16AE2DC315A2 | IntelGopVbt2
+ Section             | Raw                   |   N/A    | 00002204 | CF407B7F | -------- Raw section
+ Section             | UI                    |   N/A    | 0000001E | D55B6873 | -------- UI section
+ File                | Freeform              |   N/A    | 0000051A | B2B96E53 | ------- 0CAE55C0-65B3-4734-832A-74322E1C813A
+ Section             | GUID defined          |   N/A    | 00000502 | DB7BEC8D | -------- EE4E5898-3914-4259-9D6E-DC7BD79403CF
+ Section             | Raw                   |   N/A    | 00009F38 | BB7B992F | --------- Raw section
+ Free space          |                       |   N/A    | 00000550 | 29F7AD6B | ------- Volume free space
+ Free space          |                       | 00BF5C18 | 0008A3E8 | 0B5E1CEF | --- Volume free space
+ Volume              | FFSv2                 | 00C80000 | 0006F000 | 8B82754D | -- 8C8CE578-8A3D-4F1C-9935-896185C32DD3
+ File                | Volume image          | 00C80048 | 0005A028 | 3C1279A4 | --- 3417F275-4CF1-42D8-A0C3-B3F60779DF4D
+ Section             | Raw                   | 00C80060 | 0000000C | 7EBC7FC4 | ---- Raw section
+ Section             | Volume image          | 00C8006C | 0005A004 | E6F771F1 | ---- Volume image section
+ Volume              | FFSv2                 | 00C80070 | 0005A000 | CFF5A2F4 | ----- 1B5C27FE-F01C-4FBC-AEAE-341B2E992A17
+ File                | Raw                   | 00C800E8 | 000000A0 | 28B53485 | ------ 912740BE-2284-4734-B971-84B027353F0C
+ Section             | Raw                   | 00C80100 | 00000088 | 48A2EE7F | ------- Raw section
+ File                | SEC core              | 00C80188 | 00000540 | CB9EAD4B | ------ DF0FCD70-264A-40BF-BBD4-06C76DB19CB1
+ Section             | Raw                   | 00C801A0 | 00000004 | CA4DE08B | ------- Raw section
+ Section             | TE image              | 00C801A4 | 00000524 | F50743E6 | ------- TE image section
+ File                | PEI module            | 00C806C8 | 0000252A | AB6422A6 | ------ 86D70125-BAA3-4296-A62F-602BEBBB9081 | DxeIpl
+ Section             | PEI dependency        | 00C806E0 | 0000004C | 625EDC29 | ------- PEI dependency section
+ Section             | TE image              | 00C8072C | 000024A4 | E318D84C | ------- TE image section
+ Section             | UI                    | 00C82BD0 | 00000012 | 3A14057A | ------- UI section
+ Section             | Version               | 00C82BE4 | 0000000E | 80E5540A | ------- Version section
+ File                | PEI module            | 00C82BF8 | 00021DC8 | B1A7D1B5 | ------ 299D6F8B-2EC9-4E40-9EC6-DDAA7EBF5FD9 | SiInitFsp
+ Section             | PEI dependency        | 00C82C10 | 0000003A | D7DFE49C | ------- PEI dependency section
+ Section             | Compressed            | 00C82C4C | 00021D74 | 24CE10B6 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00036AC4 | E787C1E9 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 5A5ECF41 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CA49C0 | 00002AA8 | 663542D6 | ------ 131B73AC-C033-4DE1-8794-6DAB08E731CF | FspInit
+ Section             | PEI dependency        | 00CA49D8 | 0000004C | C5C163CD | ------- PEI dependency section
+ Section             | Compressed            | 00CA4A24 | 00002A44 | 88BE3453 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00004864 | 7F9F6620 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000014 | E1C2D1CE | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CA7468 | 00003C5A | E9B1862A | ------ EDADEB9D-DDBA-48BD-9D22-C1C169C8C5C6 | CpuMpPei
+ Section             | PEI dependency        | 00CA7480 | 00000028 | 3F90EB89 | ------- PEI dependency section
+ Section             | Compressed            | 00CA74A8 | 00003C1A | EFF6A459 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00005E44 | 3EBEFC3E | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | ACF23282 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAB0C8 | 000004F8 | E3A3FC19 | ------ 4E22BF36-C59D-47C4-9FD1-25A603D75958 | SaInitFsp
+ Section             | PEI dependency        | 00CAB0E0 | 0000003A | 9873AE60 | ------- PEI dependency section
+ Section             | Compressed            | 00CAB11C | 000004A4 | 4677C322 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 000007C4 | BEC834E3 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000018 | 4D0F614D | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAB5C0 | 00000ACC | E09FA5B7 | ------ 54D7CC18-492A-4B43-AD9E-A461D81F82B5 | PchInitFspTgl
+ Section             | PEI dependency        | 00CAB5D8 | 0000004C | BF6ACA45 | ------- PEI dependency section
+ Section             | Compressed            | 00CAB624 | 00000A68 | 744832A5 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00001084 | 93F209AB | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | BBAB3FE4 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAC090 | 0000238E | 064C2D49 | ------ EEE8D8EC-40C2-159B-71C7-8796EEEF3FBC | HeciInit
+ Section             | PEI dependency        | 00CAC0A8 | 0000004C | BF6ACA45 | ------- PEI dependency section
+ Section             | Compressed            | 00CAC0F4 | 0000232A | 13651B2B | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 000036A4 | 1F3AE2A9 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000016 | 990C92BD | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAE420 | 0000051C | A4675032 | ------ 29CBB005-C972-49F3-960F-292E2202CECD | FspNotifyPhasePeim
+ Section             | PEI dependency        | 00CAE438 | 0000003A | 5AFD26C3 | ------- PEI dependency section
+ Section             | Compressed            | 00CAE474 | 000004C8 | 5C6A5C6B | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00000804 | D73EC30F | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000002A | D36FEE56 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAE940 | 0000042E | FFC0EF0A | ------ EA7F0916-B5C8-493F-A006-565CC2041044 | FspS3Notify
+ Section             | PEI dependency        | 00CAE958 | 00000028 | 3DD9DD66 | ------- PEI dependency section
+ Section             | TE image              | 00CAE980 | 000003C4 | D32FAA89 | ------- TE image section
+ Section             | UI                    | 00CAED44 | 0000001C | 930B2EC6 | ------- UI section
+ Section             | Version               | 00CAED60 | 0000000E | 80E5540A | ------- Version section
+ File                | PEI module            | 00CAED70 | 00000621 | 337F49B3 | ------ 4F1F379F-2A62-48BB-AC34-D3F135C6E2B7 | PcatSingleSegmentPciCfg2Pei
+ Section             | PEI dependency        | 00CAED88 | 00000028 | F5A1153C | ------- PEI dependency section
+ Section             | Compressed            | 00CAEDB0 | 000005E1 | A65FEDC4 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00000AA4 | 29066DA7 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000003C | EB97D82A | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CAF398 | 0000ED10 | A25DA26B | ------ 76ED893A-B2F9-4C7D-A05F-1EA170ECF6CD | IntelGraphicsPeiDriver
+ Section             | PEI dependency        | 00CAF3B0 | 00000028 | 797764FB | ------- PEI dependency section
+ Section             | Compressed            | 00CAF3D8 | 0000ECD0 | 892C1C97 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 0001B544 | 04669FAB | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000032 | 19D162BF | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | PEI module            | 00CBE0A8 | 000001D4 | 79658A57 | ------ 8B555AE2-4254-43A2-839E-4869604CCC9A | FspEndOfPei2Peim
+ Section             | PEI dependency        | 00CBE0C0 | 0000003B | 6396803C | ------- PEI dependency section
+ Section             | Compressed            | 00CBE0FC | 00000180 | D61BA422 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00000384 | DA5D35B5 | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000026 | 696F1139 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            | 00CBE280 | 0000149E | 8385E9D6 | ------ B8BA8298-AF29-4FA3-9D10-27A8478BB6A7 | PchInitDxeFsp
+ Section             | DXE dependency        | 00CBE298 | 00000028 | EB361868 | ------- DXE dependency section
+ Section             | Compressed            | 00CBE2C0 | 0000145E | 1F4FE853 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00002644 | FCE0009D | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000020 | 56C68B17 | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            | 00CBF720 | 00002635 | 98DB0ACC | ------ C92652E3-C7DE-4C78-9577-1C897C51BFFA | HeciInitDxeFsp
+ Section             | DXE dependency        | 00CBF738 | 0000004C | 5D05C232 | ------- DXE dependency section
+ Section             | Compressed            | 00CBF784 | 000025D1 | ED3A633E | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 00004184 | 88A63E2C | -------- PE32 image section
+ Section             | UI                    |   N/A    | 00000022 | D4D0F86B | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | DXE driver            | 00CC1D58 | 00000AB4 | 60301EB1 | ------ 1C652EC8-2347-44C1-93E0-D1BEE8C82FFC | SaInitDxeFsp
+ Section             | DXE dependency        | 00CC1D70 | 00000082 | 8C7D3CA4 | ------- DXE dependency section
+ Section             | Compressed            | 00CC1DF4 | 00000A18 | 55361E93 | ------- Compressed section
+ Section             | PE32 image            |   N/A    | 000013A4 | 0968830A | -------- PE32 image section
+ Section             | UI                    |   N/A    | 0000001E | 57359C8F | -------- UI section
+ Section             | Version               |   N/A    | 0000000E | 80E5540A | -------- Version section
+ File                | Raw                   | 00CC2810 | 00000ECC | E273ECDB | ------ E3CD9B18-998C-4F76-B65E-98B154E5446F
+ Section             | Raw                   | 00CC2828 | 00000EB4 | 871803FE | ------- Raw section
+ Free space          |                       | 00CC36E0 | 00016990 | 68A9AB5D | ------ Volume free space
+ Free space          |                       | 00CDA070 | 00014F90 | 1F7D7920 | --- Volume free space
+ Volume              | FFSv2                 | 00CEF000 | 0008B000 | 1E31DEC0 | -- 52F1AFB6-78A6-448F-8274-F370549AC5D0
+ File                | Raw                   | 00CEF078 | 000000A0 | 68CD4BC2 | --- 912740BE-2284-4734-B971-84B027353F0C
+ Section             | Raw                   | 00CEF090 | 00000088 | 08DA9138 | ---- Raw section
+ File                | SEC core              | 00CEF118 | 00000A60 | B738310B | --- C2F9AE46-3437-4FEF-9CB1-9A568B282FEE
+ Section             | Raw                   | 00CEF130 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | TE image              | 00CEF134 | 00000A44 | 7CAC8A0F | ---- TE image section
+ File                | PEI core              | 00CEFB78 | 000058FE | A7D1AB35 | --- 52C05B14-0B98-496C-BC3B-04B50211D680 | PeiCore
+ Section             | TE image              | 00CEFB90 | 000058C4 | B2E0BE3B | ---- TE image section
+ Section             | UI                    | 00CF5454 | 00000014 | 018974F6 | ---- UI section
+ Section             | Version               | 00CF5468 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00CF5478 | 000019A2 | 4ECE1950 | --- 9B3ADA4F-AE56-4C24-8DEA-F03B7558AE50 | PcdPeim
+ Section             | Raw                   | 00CF5490 | 0000012C | 5B621EA1 | ---- Raw section
+ Section             | PEI dependency        | 00CF55BC | 00000016 | 02609ED2 | ---- PEI dependency section
+ Section             | TE image              | 00CF55D4 | 00001824 | 3EA4CCA7 | ---- TE image section
+ Section             | UI                    | 00CF6DF8 | 00000014 | 9618C23A | ---- UI section
+ Section             | Version               | 00CF6E0C | 0000000E | 468A5D8D | ---- Version section
+ File                | PEI module            | 00CF6E20 | 00000816 | 37340BD3 | --- 6141E486-7543-4F1A-A579-FF532ED78E75 | ResetSystemPei
+ Section             | PEI dependency        | 00CF6E38 | 00000028 | F5A1153C | ---- PEI dependency section
+ Section             | TE image              | 00CF6E60 | 000007A4 | 0C6A83E6 | ---- TE image section
+ Section             | UI                    | 00CF7604 | 00000022 | D1BD9C20 | ---- UI section
+ Section             | Version               | 00CF7628 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00CF7638 | 00000452 | 97072B40 | --- BAEB5BEE-5B33-480A-8AB7-B29C85E7CEAB | FspGlobalDataInitPei
+ Section             | PEI dependency        | 00CF7650 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00CF7668 | 000003E4 | D7AA9C33 | ---- TE image section
+ Section             | UI                    | 00CF7A4C | 0000002E | 4A5FF8CC | ---- UI section
+ Section             | Version               | 00CF7A7C | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00CF7A90 | 0000034E | 7AE70262 | --- 88C17E54-EBFE-4531-A992-581029F58126 | FspPcdInit
+ Section             | PEI dependency        | 00CF7AA8 | 00000028 | 17DBA366 | ---- PEI dependency section
+ Section             | TE image              | 00CF7AD0 | 000002E4 | 042D5F4D | ---- TE image section
+ Section             | UI                    | 00CF7DB4 | 0000001A | B1E57734 | ---- UI section
+ Section             | Version               | 00CF7DD0 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00CF7DE0 | 0007BB5E | A95C5FD3 | --- A8499E65-A6F6-48B0-96DB-45C266030D83 | SiInitPreMemFsp
+ Section             | PEI dependency        | 00CF7DF8 | 00000028 | 6F57C50E | ---- PEI dependency section
+ Section             | TE image              | 00CF7E20 | 0007BAEC | 16872A54 | ---- TE image section
+ Section             | UI                    | 00D7390C | 00000024 | 6EB8B53B | ---- UI section
+ Section             | Version               | 00D73930 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D73940 | 00005886 | C6039FE8 | --- 9E1CC850-6731-4848-8752-6673C7005EEE | FspInitPreMem
+ Section             | PEI dependency        | 00D73958 | 0000003A | 8E7472BD | ---- PEI dependency section
+ Section             | TE image              | 00D73994 | 00005804 | 43219E1E | ---- TE image section
+ Section             | UI                    | 00D79198 | 00000020 | F0AE65F6 | ---- UI section
+ Section             | Version               | 00D791B8 | 0000000E | 80E5540A | ---- Version section
+ File                | Raw                   | 00D791C8 | 00000974 | 84AB1786 | --- D5B86AEA-6AF7-40D4-8014-982301BC3D89
+ Section             | Raw                   | 00D791E0 | 0000095C | C706ECE7 | ---- Raw section
+ File                | Pad                   | 00D79B40 | 00000018 | 9BDC9D65 | --- Padding file
+ File                | Raw                   | 00D79B58 | 00000067 | 19932175 | --- D9093578-08EB-44DF-B9D8-D0C1D3D55D96
+ Section             | Raw                   | 00D79B70 | 0000004F | 4DFA600A | ---- Raw section
+ Free space          |                       | 00D79BC0 | 00000440 | 3ADF097F | --- Volume free space
+ Volume              | FFSv2                 | 00D7A000 | 00006000 | 95CB16A5 | -- 7BEBD21A-A1E5-4C4C-9CA1-A0C168BCBD9D
+ File                | Raw                   | 00D7A078 | 000000A0 | 12EB9854 | --- 912740BE-2284-4734-B971-84B027353F0C
+ Section             | Raw                   | 00D7A090 | 00000088 | 72FC42AE | ---- Raw section
+ File                | SEC core              | 00D7A118 | 00005740 | 278299DC | --- 5B94E419-C795-414D-A0D4-B80A877BE5FE
+ Section             | Raw                   | 00D7A130 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | TE image              | 00D7A134 | 00005724 | 6341F050 | ---- TE image section
+ File                | Raw                   | 00D7F858 | 000000D4 | C20FB1BE | --- 70BCF6A5-FFB1-47D8-B1AE-EFE5508E23EA
+ Section             | Raw                   | 00D7F870 | 000000BC | 83D550E3 | ---- Raw section
+ Free space          |                       | 00D7F930 | 000006D0 | 0786C2EE | --- Volume free space
+ Volume              | FFSv2                 | 00D80000 | 000B0000 | 23923591 | -- 61C0F511-A691-4F54-974F-B9A42172CE53
+ File                | Freeform              | 00D80078 | 0000014C | 2B6B485E | --- 1B45CC0A-156A-428A-AF62-49864DA0E6E6 | PEI apriori file
+ Section             | Raw                   | 00D80090 | 00000134 | D16F80B6 | ---- Raw section
+ File                | Freeform              | 00D801C8 | 0000003C | 0C2EB511 | --- 5B85965C-455D-4CC6-9C4C-7F086967D2B0
+ Section             | Raw                   | 00D801E0 | 00000024 | 0E18019C | ---- Raw section
+ File                | PEI module            | 00D80208 | 0000031A | 1F608C7F | --- 3E7DD42F-A67E-4D4F-BC02-2B5A6EC8DAE9 | SetupVariablePei
+ Section             | PEI dependency        | 00D80220 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D80248 | 000002A4 | 7EDE86F4 | ---- TE image section
+ Section             | UI                    | 00D804EC | 00000026 | 79F09304 | ---- UI section
+ Section             | Version               | 00D80514 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D80528 | 00001DCE | 10C3AAEE | --- C779F6D8-7113-4AA1-9648-EB1633C7D53B | CapsulePei
+ Section             | PEI dependency        | 00D80540 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D80568 | 00001D64 | 2458B501 | ---- TE image section
+ Section             | UI                    | 00D822CC | 0000001A | 66787EDE | ---- UI section
+ Section             | Version               | 00D822E8 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D822F8 | 00001592 | 0E4FE2F0 | --- 9962883C-C025-4EBB-B699-4EA4D147C8A8 | AmiTxtTcgPeim
+ Section             | PEI dependency        | 00D82310 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D82338 | 00001524 | B9A54530 | ---- TE image section
+ Section             | UI                    | 00D8385C | 00000020 | 7D2955EC | ---- UI section
+ Section             | Version               | 00D8387C | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D83890 | 00001606 | 4A24B360 | --- 79AA6086-035A-4AD9-A89A-A6D5AA27F0E2 | NbPei
+ Section             | PEI dependency        | 00D838A8 | 0000004C | DB496778 | ---- PEI dependency section
+ Section             | TE image              | 00D838F4 | 00001584 | A16F2A5F | ---- TE image section
+ Section             | UI                    | 00D84E78 | 00000010 | E4C50507 | ---- UI section
+ Section             | Version               | 00D84E88 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D84E98 | 0000121A | F483FBE0 | --- C1FBD624-27EA-40D1-AA48-94C3DC5C7E0D | SbPei
+ Section             | PEI dependency        | 00D84EB0 | 0000005E | 748DBAC3 | ---- PEI dependency section
+ Section             | TE image              | 00D84F10 | 00001184 | 45B7C41A | ---- TE image section
+ Section             | UI                    | 00D86094 | 00000010 | 7672E915 | ---- UI section
+ Section             | Version               | 00D860A4 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D860B8 | 0000188A | 51CE39E1 | --- F906769F-4AED-4A0D-8C7C-FF21B9D1051A | IntelVTdPmrPei
+ Section             | PEI dependency        | 00D860D0 | 0000003A | 358FC329 | ---- PEI dependency section
+ Section             | TE image              | 00D8610C | 00001804 | 83241815 | ---- TE image section
+ Section             | UI                    | 00D87910 | 00000022 | 805859E4 | ---- UI section
+ Section             | Version               | 00D87934 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D87948 | 00000A4A | FC1060B4 | --- 839EB770-5C64-4EED-A6D5-EC515B2B2B23 | PlatformVTdInfoSamplePei
+ Section             | PEI dependency        | 00D87960 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D87988 | 000009C4 | AE0BAD1D | ---- TE image section
+ Section             | UI                    | 00D8834C | 00000036 | CA1CD557 | ---- UI section
+ Section             | Version               | 00D88384 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D88398 | 00000566 | 28D4D8C9 | --- 52B3DBA7-9565-48E8-8E13-EC7196721B3C | PlatformInfoPei
+ Section             | PEI dependency        | 00D883B0 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00D883C8 | 00000504 | C1E453B4 | ---- TE image section
+ Section             | UI                    | 00D888CC | 00000024 | 496B8634 | ---- UI section
+ Section             | Version               | 00D888F0 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D88900 | 00001496 | F8DDC0FD | --- B41956E1-7CA2-42DB-9562-168389F0F066 | BootGuardPei
+ Section             | PEI dependency        | 00D88918 | 0000003A | 51A1C906 | ---- PEI dependency section
+ Section             | TE image              | 00D88954 | 00001414 | 37B3765D | ---- TE image section
+ Section             | UI                    | 00D89D68 | 0000001E | D18CA32B | ---- UI section
+ Section             | Version               | 00D89D88 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D89D98 | 0000047A | 1E84E703 | --- CAC3FB95-33F5-4596-818B-68E024DDB67B | IsSecRecoveryPEI
+ Section             | PEI dependency        | 00D89DB0 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D89DD8 | 00000404 | 346E3B8F | ---- TE image section
+ Section             | UI                    | 00D8A1DC | 00000026 | 16DBD09E | ---- UI section
+ Section             | Version               | 00D8A204 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D8A218 | 0000050A | 77CA82E7 | --- 0FE9DA53-043D-4265-A94D-FD77FEDE2EB4 | TcgPlatformSetupPeiPolicy
+ Section             | PEI dependency        | 00D8A230 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D8A258 | 00000484 | 5597CB7A | ---- TE image section
+ Section             | UI                    | 00D8A6DC | 00000038 | 875DB405 | ---- UI section
+ Section             | Version               | 00D8A714 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D8A728 | 00000D7A | D96A662D | --- 0135229A-EBB5-4A21-957D-1D20057CF751 | TCMPEI
+ Section             | PEI dependency        | 00D8A740 | 0000003A | 9C39EEBD | ---- PEI dependency section
+ Section             | TE image              | 00D8A77C | 00000D04 | 2DC6B2B5 | ---- TE image section
+ Section             | UI                    | 00D8B480 | 00000012 | C5380B2A | ---- UI section
+ Section             | Version               | 00D8B494 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D8B4A8 | 0000054A | 304E3204 | --- 9EA28D33-0175-4788-BEA8-6950516030A5 | SmBusPei
+ Section             | PEI dependency        | 00D8B4C0 | 00000028 | 6F57C50E | ---- PEI dependency section
+ Section             | TE image              | 00D8B4E8 | 000004E4 | BE008F56 | ---- TE image section
+ Section             | UI                    | 00D8B9CC | 00000016 | 5A3507D0 | ---- UI section
+ Section             | Version               | 00D8B9E4 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D8B9F8 | 0000049A | 670AF903 | --- 0D1ED2F7-E92B-4562-92DD-5C82EC917EAE | CrbPei
+ Section             | PEI dependency        | 00D8BA10 | 0000003A | E9825A9E | ---- PEI dependency section
+ Section             | TE image              | 00D8BA4C | 00000424 | 6D3CC3EC | ---- TE image section
+ Section             | UI                    | 00D8BE70 | 00000012 | 500315B8 | ---- UI section
+ Section             | Version               | 00D8BE84 | 0000000E | 80E5540A | ---- Version section
+ File                | Freeform              | 00D8BE98 | 000000A4 | E0D225E7 | --- 3FD1D3A2-99F7-420B-BC69-8BB1D492A332
+ Section             | Freeform subtype GUID | 00D8BEB0 | 0000008C | B6FBFD3F | ---- 2EBE0275-6458-4AF9-91ED-D3F4EDB100AA
+ File                | PEI module            | 00D8BF40 | 00002FE2 | FC5EB7A1 | --- 838DCF34-907B-4D55-9A4B-A0EF7167B5F4 | NvramPei
+ Section             | PEI dependency        | 00D8BF58 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00D8BF70 | 00002F8C | 5C21C51F | ---- TE image section
+ Section             | UI                    | 00D8EEFC | 00000016 | A66EA26C | ---- UI section
+ Section             | Version               | 00D8EF14 | 0000000E | 4C4F5494 | ---- Version section
+ File                | Freeform              | 00D8EF28 | 00000224 | EA431AD1 | --- 0DCA793A-EA96-42D8-BD7B-DC7F684E38C1
+ Section             | Freeform subtype GUID | 00D8EF40 | 0000020C | D8D6C416 | ---- 88A15A4F-977D-4682-B17C-DA1F316C1F32
+ File                | PEI module            | 00D8F150 | 00003F5E | 52172401 | --- F7FDE4A6-294C-493C-B50F-9734553BB757 | CapsuleX64
+ Section             | PEI dependency        | 00D8F168 | 00000006 | 367210DA | ---- PEI dependency section
+ Section             | TE image              | 00D8F170 | 00003F14 | 28890E5D | ---- TE image section
+ Section             | UI                    | 00D93084 | 0000001A | 06E0C84D | ---- UI section
+ Section             | Version               | 00D930A0 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D930B0 | 00000B42 | D00E0DDB | --- 9029F23E-E1EE-40D1-9382-36DD61A63EAA | IT8625PeiInit
+ Section             | PEI dependency        | 00D930C8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00D930E0 | 00000AE4 | AED7C602 | ---- TE image section
+ Section             | UI                    | 00D93BC4 | 00000020 | 0A16F92A | ---- UI section
+ Section             | Version               | 00D93BE4 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D93BF8 | 000002FA | B554CC78 | --- A8F14FA9-FC88-45F4-A622-F06E6C56E632 | FirmwareBootMediaInfoPei
+ Section             | PEI dependency        | 00D93C10 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00D93C28 | 00000284 | 0845757D | ---- TE image section
+ Section             | UI                    | 00D93EAC | 00000036 | 68B7D9DE | ---- UI section
+ Section             | Version               | 00D93EE4 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D93EF8 | 0000072E | 27D85DB4 | --- A20F7425-BC87-47D1-945C-637603323584 | PlatformConfigTool
+ Section             | PEI dependency        | 00D93F10 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00D93F28 | 000006C4 | EB98456A | ---- TE image section
+ Section             | UI                    | 00D945EC | 0000002A | 377E5AE2 | ---- UI section
+ Section             | Version               | 00D94618 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D94628 | 000002CA | DB61457A | --- C7D4BBCF-EB0A-4C91-BD8B-FCA99F28B011 | AmiTxtPei
+ Section             | PEI dependency        | 00D94640 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D94668 | 00000264 | B824CBBD | ---- TE image section
+ Section             | UI                    | 00D948CC | 00000018 | C0D74010 | ---- UI section
+ Section             | Version               | 00D948E4 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D948F8 | 000062DE | 6CE77077 | --- EEEE611D-F78F-4FB9-B868-55907F169280 | PlatformInitPreMem
+ Section             | PEI dependency        | 00D94910 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00D94938 | 00006264 | 78DA9FE3 | ---- TE image section
+ Section             | UI                    | 00D9AB9C | 0000002A | F1DD768B | ---- UI section
+ Section             | Version               | 00D9ABC8 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D9ABD8 | 000008A6 | B049A785 | --- 0E2DAF63-8A4F-4026-A899-DE2D7F46E5EC | TpvPei
+ Section             | PEI dependency        | 00D9ABF0 | 00000028 | 6F57C50E | ---- PEI dependency section
+ Section             | TE image              | 00D9AC18 | 00000844 | 3799B7FF | ---- TE image section
+ Section             | UI                    | 00D9B45C | 00000012 | 91023C19 | ---- UI section
+ Section             | Version               | 00D9B470 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00D9B480 | 00010BE2 | 6D5EF487 | --- 56BBC314-B442-4D5A-BA5C-D842DAFDBB24 | PlatformInitAdvancedPreMem
+ Section             | PEI dependency        | 00D9B498 | 0000003A | 575278B4 | ---- PEI dependency section
+ Section             | TE image              | 00D9B4D4 | 00010B44 | 5003B722 | ---- TE image section
+ Section             | UI                    | 00DAC018 | 0000003A | AE8B8410 | ---- UI section
+ Section             | Version               | 00DAC054 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DAC068 | 000006CA | 2D4D7599 | --- 9FAAD0FF-0E0C-4885-A738-BAB4E4FA1E66 | FspmWrapperPeim
+ Section             | PEI dependency        | 00DAC080 | 0000003A | 5AEEA790 | ---- PEI dependency section
+ Section             | TE image              | 00DAC0BC | 00000644 | F0B0487D | ---- TE image section
+ Section             | UI                    | 00DAC700 | 00000024 | EBBBF769 | ---- UI section
+ Section             | Version               | 00DAC724 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DAC738 | 000003A6 | 879D0EA5 | --- 75862FE4-4FC6-4188-804B-29DC7733178B | StallServicePei
+ Section             | PEI dependency        | 00DAC750 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00DAC768 | 00000344 | D58DD466 | ---- TE image section
+ Section             | UI                    | 00DACAAC | 00000024 | B4C9DD79 | ---- UI section
+ Section             | Version               | 00DACAD0 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DACAE0 | 00001E26 | EF4D5C95 | --- 654FE61A-2EDA-4749-A76A-56ED7ADE1CBE | CmosPei
+ Section             | PEI dependency        | 00DACAF8 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00DACB20 | 00001DC4 | CF0E606C | ---- TE image section
+ Section             | UI                    | 00DAE8E4 | 00000014 | 72190B3E | ---- UI section
+ Section             | Version               | 00DAE8F8 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DAE908 | 0000150E | 00F9147A | --- E03E6451-297A-4FE9-B1F7-639B70327C52 | EnhancePeiVariable
+ Section             | PEI dependency        | 00DAE920 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00DAE938 | 000014A4 | 34238A88 | ---- TE image section
+ Section             | UI                    | 00DAFDDC | 0000002A | D0789F70 | ---- UI section
+ Section             | Version               | 00DAFE08 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DAFE18 | 000003AE | 65C9C5B1 | --- A6AEF1F6-F25A-4082-AF39-2229BCF5A6E1 | AmtStatusCodePei
+ Section             | PEI dependency        | 00DAFE30 | 0000003A | 9CA84AF8 | ---- PEI dependency section
+ Section             | TE image              | 00DAFE6C | 00000324 | 8F075A21 | ---- TE image section
+ Section             | UI                    | 00DB0190 | 00000026 | 41114BA1 | ---- UI section
+ Section             | Version               | 00DB01B8 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DB01C8 | 000007C6 | 964779AA | --- 6141E486-7543-4F1A-A579-FF532ED78E75 | ResetSystemPei
+ Section             | PEI dependency        | 00DB01E0 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00DB01F8 | 00000764 | 7A335E41 | ---- TE image section
+ Section             | UI                    | 00DB095C | 00000022 | D1BD9C20 | ---- UI section
+ Section             | Version               | 00DB0980 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DB0990 | 000008FA | 391ED1EE | --- AE265864-CF5D-41A8-913D-71C155E76442 | CpuIoPei
+ Section             | PEI dependency        | 00DB09A8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00DB09C0 | 000008A4 | EFCDB31D | ---- TE image section
+ Section             | UI                    | 00DB1264 | 00000016 | 7951D398 | ---- UI section
+ Section             | Version               | 00DB127C | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DB1290 | 000008FE | 320A1C48 | --- 4F1F379F-2A62-48BB-AC34-D3F135C6E2B7 | PcatSingleSegmentPciCfg2Pei
+ Section             | PEI dependency        | 00DB12A8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00DB12C0 | 00000884 | 37DB889A | ---- TE image section
+ Section             | UI                    | 00DB1B44 | 0000003C | EB97D82A | ---- UI section
+ Section             | Version               | 00DB1B80 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DB1B90 | 00003DFA | AB39B9F8 | --- 86D70125-BAA3-4296-A62F-602BEBBB9081 | DxeIpl
+ Section             | PEI dependency        | 00DB1BA8 | 0000003A | FB187EEB | ---- PEI dependency section
+ Section             | TE image              | 00DB1BE4 | 00003D84 | B9B00D8B | ---- TE image section
+ Section             | UI                    | 00DB5968 | 00000012 | 3A14057A | ---- UI section
+ Section             | Version               | 00DB597C | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00DB5990 | 0000048E | 7411B212 | --- 8E199D3F-3A74-492B-8CB3-93D668D87D07 | IsRecovery
+ Section             | PEI dependency        | 00DB59A8 | 00000028 | BB3EB8AA | ---- PEI dependency section
+ Section             | TE image              | 00DB59D0 | 00000424 | 08F6E60F | ---- TE image section
+ Section             | UI                    | 00DB5DF4 | 0000001A | 90D76F5A | ---- UI section
+ Section             | Version               | 00DB5E10 | 0000000E | 80E5540A | ---- Version section
+ File                | Freeform              | 00DB5E20 | 0000005A | 3298DA97 | --- 4EA785A4-6BFF-45A2-9D42-BB28C953DDEC | GpioPreMem
+ Section             | Raw                   | 00DB5E38 | 00000028 | 1B51F616 | ---- Raw section
+ Section             | UI                    | 00DB5E60 | 0000001A | ECEF4FE4 | ---- UI section
+ File                | Freeform              | 00DB5E80 | 000001F4 | E95081D2 | --- E8633F36-4B3F-4635-84E5-8ED68BAB5B78 | GpioPostMem
+ Section             | Raw                   | 00DB5E98 | 000001C0 | D6CC0CA9 | ---- Raw section
+ Section             | UI                    | 00DB6058 | 0000001C | 3113E33E | ---- UI section
+ Free space          |                       | 00DB6078 | 00079F88 | 61A9ACF1 | --- Volume free space
+ Volume              | FFSv2                 | 00E30000 | 00090000 | 7D345F8F | -- 4409A1B5-8D3E-436C-B424-B0C9F7AF1C9F
+ File                | Pad                   | 00E30078 | 00000070 | 773D5C82 | --- Padding file
+ File                | Raw                   | 00E300E8 | 00000198 | 297607D6 | --- B52282EE-9B66-44B9-B1CF-7E5040F787C1
+ File                | Pad                   | 00E30280 | 00000068 | A8B3B7F4 | --- Padding file
+ File                | Raw                   | 00E302E8 | 00000A18 | 90956394 | --- C30FFF4A-10C6-4C0F-A454-FD319BAF6CE6
+ File                | Pad                   | 00E30D00 | 000002E8 | A1832CF4 | --- Padding file
+ File                | Raw                   | 00E30FE8 | 00042028 | 3286BE2B | --- 17088572-377F-44EF-8F4E-B09FFF46A070
+ Intel microcode     |                       | 00E31000 | 0001B800 | 2A595493 | ---- Intel microcode
+ Padding             | Empty (FFh)           | 00E4C800 | 00004800 | 4724E1C7 | ---- Padding
+ Intel microcode     |                       | 00E51000 | 00018000 | 8E556BEA | ---- Intel microcode
+ Padding             | Non-empty             | 00E69000 | 0000A010 | 3F6E437A | ---- Padding
+ File                | Pad                   | 00E73010 | 00000058 | 247A233E | --- Padding file
+ File                | Raw                   | 00E73068 | 00000418 | 2D4DA156 | --- 7C9A98F8-2B2B-4027-8F16-F7D277D58025
+ File                | Pad                   | 00E73480 | 0000CB68 | 5F256FD1 | --- Padding file
+ File                | Raw                   | 00E7FFE8 | 00040018 | 9EDAD146 | --- 6520F532-2A27-4195-B331-C0854683E0BA
+ Volume              | FFSv2                 | 00EC0000 | 000C0000 | 25806512 | -- AFDD39F1-19D7-4501-A730-CE5A27E1154B
+ File                | Freeform              | 00EC0078 | 000008EC | 71E80A00 | --- 4B14BD9E-1112-4DA0-BBF3-6B34CE39E772
+ Section             | Raw                   | 00EC0090 | 000008D4 | F816D7D7 | ---- Raw section
+ File                | Raw                   | 00EC0968 | 00000198 | 0651C70D | --- B52282EE-9B66-44B9-B1CF-7E5040F787C1
+ File                | Pad                   | 00EC0B00 | 000004E8 | FF442D02 | --- Padding file
+ File                | Raw                   | 00EC0FE8 | 00042028 | 3286BE2B | --- 17088572-377F-44EF-8F4E-B09FFF46A070
+ Intel microcode     |                       | 00EC1000 | 0001B800 | 2A595493 | ---- Intel microcode
+ Padding             | Empty (FFh)           | 00EDC800 | 00004800 | 4724E1C7 | ---- Padding
+ Intel microcode     |                       | 00EE1000 | 00018000 | 8E556BEA | ---- Intel microcode
+ Padding             | Non-empty             | 00EF9000 | 0000A010 | 3F6E437A | ---- Padding
+ File                | Pad                   | 00F03010 | 00000058 | 247A233E | --- Padding file
+ File                | Raw                   | 00F03068 | 00000A18 | 90956394 | --- C30FFF4A-10C6-4C0F-A454-FD319BAF6CE6
+ File                | Pad                   | 00F03A80 | 00000068 | A8B3B7F4 | --- Padding file
+ File                | Raw                   | 00F03AE8 | 00000418 | 2D4DA156 | --- 7C9A98F8-2B2B-4027-8F16-F7D277D58025
+ File                | Pad                   | 00F03F00 | 0003C0E8 | EA1FB519 | --- Padding file
+ File                | Raw                   | 00F3FFE8 | 00040018 | 9EDAD146 | --- 6520F532-2A27-4195-B331-C0854683E0BA
+ Volume              | FFSv2                 | 00F80000 | 00040000 | 8A4E73A8 | -- 8487985B-65AD-44D1-BA36-FD65190CEACD
+ File                | Freeform              | 00F80078 | 0000004C | 93AB6ECC | --- 1B45CC0A-156A-428A-AF62-49864DA0E6E6 | PEI apriori file
+ Section             | Raw                   | 00F80090 | 00000034 | 766DCAF5 | ---- Raw section
+ File                | PEI core              | 00F800C8 | 00005FBE | 3A066128 | --- 52C05B14-0B98-496C-BC3B-04B50211D680 | PeiCore
+ Section             | TE image              | 00F800E0 | 00005F84 | BEB8F703 | ---- TE image section
+ Section             | UI                    | 00F86064 | 00000014 | 018974F6 | ---- UI section
+ Section             | Version               | 00F86078 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00F86088 | 0000484E | 6919FAEE | --- 9B3ADA4F-AE56-4C24-8DEA-F03B7558AE50 | PcdPeim
+ Section             | Raw                   | 00F860A0 | 00002FD8 | 5497317D | ---- Raw section
+ Section             | PEI dependency        | 00F89078 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00F89090 | 00001824 | 6318D247 | ---- TE image section
+ Section             | UI                    | 00F8A8B4 | 00000014 | 9618C23A | ---- UI section
+ Section             | Version               | 00F8A8C8 | 0000000E | 468A5D8D | ---- Version section
+ File                | PEI module            | 00F8A8D8 | 000011A2 | 91E5C7F5 | --- 7EB7126D-C45E-4BD0-9357-7F507C5C9CF9 | RomLayoutPei
+ Section             | PEI dependency        | 00F8A8F0 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00F8A908 | 00001144 | E6C3135F | ---- TE image section
+ Section             | UI                    | 00F8BA4C | 0000001E | 5EDAF6D5 | ---- UI section
+ Section             | Version               | 00F8BA6C | 0000000E | 80E5540A | ---- Version section
+ File                | Freeform              | 00F8BA80 | 0000035C | 8B999B1D | --- C91C3C17-FC74-46E5-BDBE-6F486A5A9F3C
+ Section             | Freeform subtype GUID | 00F8BA98 | 00000344 | 18266DB4 | ---- 00781CA1-5DE3-405F-ABB8-379C3C076984
+ File                | Freeform              | 00F8BDE0 | 0000006C | AF6253B3 | --- 98DB68E0-5AB6-4A48-80C8-EAC6C51180FC
+ Section             | Raw                   | 00F8BDF8 | 00000054 | 5F9F7233 | ---- Raw section
+ File                | Freeform              | 00F8BE50 | 0000006C | 8802E3D8 | --- CBC91F44-A4BC-4A5B-8696-703451D0B053 | AMI v2 protected ranges hash file
+ Section             | Raw                   | 00F8BE68 | 00000054 | 5F9F7233 | ---- Raw section
+ File                | PEI module            | 00F8BEC0 | 000007FA | CAB1F158 | --- 28BF2E78-AD2D-4616-ABAD-7644CD7E47C8 | FvBb1Pei
+ Section             | PEI dependency        | 00F8BED8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00F8BEF0 | 000007A4 | 540636D3 | ---- TE image section
+ Section             | UI                    | 00F8C694 | 00000016 | CE5FFCE2 | ---- UI section
+ Section             | Version               | 00F8C6AC | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00F8C6C0 | 00003662 | 4A2F230C | --- E9DD7F62-25EC-4F9D-A4AB-AAD20BF59A10 | StatusCodePei
+ Section             | PEI dependency        | 00F8C6D8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00F8C6F0 | 00003604 | D434CB22 | ---- TE image section
+ Section             | UI                    | 00F8FCF4 | 00000020 | 8D74CA9E | ---- UI section
+ Section             | Version               | 00F8FD14 | 0000000E | 80E5540A | ---- Version section
+ File                | Raw                   | 00F8FD28 | 00001CB7 | 937DAEB4 | --- 77D3DC50-D42B-4916-AC80-8F469035D150 | NVRAM external defaults
+ NVAR entry          | Full                  | 00F8FD40 | 00001C7F | A3EB825E | ---- 4599D26F-1A11-49B8-B91F-858745CFF824 | StdDefaults
+ NVAR entry          | Full                  | 00F8FD57 | 00000AFA | 4CC1E7D7 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | Setup
+ NVAR entry          | Full                  | 00F90851 | 0000001E | 94187FA9 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | PlatformLang
+ NVAR entry          | Full                  | 00F9086F | 00000015 | F0B3B0A4 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | Timeout
+ NVAR entry          | Full                  | 00F90884 | 00000069 | C02CEE68 | ----- C811FA38-42C8-4579-A9BB-60E94EDDFB34 | AMITSESetup
+ NVAR entry          | Full                  | 00F908ED | 00000264 | B2A1C1FC | ----- B08F97FF-E6E8-4193-A997-5E9E9B0ADB32 | CpuSetup
+ NVAR entry          | Full                  | 00F90B51 | 00000459 | 0C968FAC | ----- 72C5E28C-7783-43A1-8767-FAD73FCCAFA4 | SaSetup
+ NVAR entry          | Full                  | 00F90FAA | 000006E2 | BA6BED25 | ----- 4570B7F1-ADE8-4943-8DC3-406472842384 | PchSetup
+ NVAR entry          | Full                  | 00F9168C | 00000048 | 9A537AC4 | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetup
+ NVAR entry          | Full                  | 00F916D4 | 0000002B | 1301B13F | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetupStorage
+ NVAR entry          | Full                  | 00F916FF | 0000002B | 1B5023E7 | ----- 64192DCA-D034-49D2-A6DE-65A829EB4C74 | IccAdvancedSetupDataVar
+ NVAR entry          | Full                  | 00F9172A | 0000001A | 1BC60B4A | ----- AAF8E719-48F8-4099-A6F7-645FBD694C3D | SiSetup
+ NVAR entry          | Full                  | 00F91744 | 0000002C | CB27B574 | ----- DE0A5E74-4E3E-3D96-A440-2C96ECBD3C97 | DebugConfigData
+ NVAR entry          | Full                  | 00F91770 | 00000020 | B2FD1A29 | ----- C61C31A3-CB5D-46DD-9FE5-8A82BBC72483 | AmiWrapperSetup
+ NVAR entry          | Full                  | 00F91790 | 00000019 | 9517F3B2 | ----- 6B0CC1BC-910F-411E-B6CB-0E314D0BB8C1 | SioSetupData
+ NVAR entry          | Full                  | 00F917A9 | 00000047 | 7ACD221A | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | UsbSupport
+ NVAR entry          | Full                  | 00F917F0 | 00000023 | F62056C2 | ----- D1405D16-7AFC-4695-BB12-41459D3695A2 | NetworkStackVar
+ NVAR entry          | Full                  | 00F91813 | 00000072 | CA89B731 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | SdioDevConfiguration
+ NVAR entry          | Full                  | 00F91885 | 00000022 | 97015D5F | ----- 7B59104A-C00D-4158-87FF-F04D6396A915 | SecureBootSetup
+ NVAR entry          | Full                  | 00F918A7 | 00000018 | 4F3FFB92 | ----- 80E1202E-2697-4264-9CC9-80762C3E5863 | Setup
+ Free space          |                       | 00F918BF | 00000010 | 3FB3C61A | ----- Free space
+ NVAR GUID store     |                       | 00F918CF | 000000F0 | 45030849 | ----- GUID store
+ Free space          |                       | 00F919BF | 00000010 | 3FB3C61A | ---- Free space
+ NVAR GUID store     |                       | 00F919CF | 00000010 | 2F82779F | ---- GUID store
+ File                | Pad                   | 00F919E0 | 0002A6E8 | 8171077D | --- Startup AP data padding file
+ Free space          |                       | 00F919F8 | 0002A608 | 36E5A78A | ---- Free space
+ Startup AP data     | X86 128K              | 00FBC000 | 000000C8 | F07BE27C | ---- Startup AP data
+ File                | SEC core              | 00FBC0C8 | 00003F38 | 91F9192B | --- 1BA0062E-C779-4582-8566-336AE8F78F09 | Volume Top File
+ Section             | Raw                   | 00FBC0E0 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | TE image              | 00FBC0E4 | 00003ED4 | 5984F892 | ---- TE image section
+ Section             | Raw                   | 00FBFFB8 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | Raw                   | 00FBFFBC | 00000044 | AEB8B891 | ---- Raw section
+ Volume              | FFSv2                 | 00FC0000 | 00040000 | 62C5E6B5 | -- 289EFB98-9F4C-47F5-9AC4-35A4D847B0A9
+ File                | Freeform              | 00FC0078 | 0000004C | 93AB6ECC | --- 1B45CC0A-156A-428A-AF62-49864DA0E6E6 | PEI apriori file
+ Section             | Raw                   | 00FC0090 | 00000034 | 766DCAF5 | ---- Raw section
+ File                | PEI core              | 00FC00C8 | 00005FBE | 3A066128 | --- 52C05B14-0B98-496C-BC3B-04B50211D680 | PeiCore
+ Section             | TE image              | 00FC00E0 | 00005F84 | BEB8F703 | ---- TE image section
+ Section             | UI                    | 00FC6064 | 00000014 | 018974F6 | ---- UI section
+ Section             | Version               | 00FC6078 | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00FC6088 | 0000484E | 6919FAEE | --- 9B3ADA4F-AE56-4C24-8DEA-F03B7558AE50 | PcdPeim
+ Section             | Raw                   | 00FC60A0 | 00002FD8 | 5497317D | ---- Raw section
+ Section             | PEI dependency        | 00FC9078 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00FC9090 | 00001824 | 6318D247 | ---- TE image section
+ Section             | UI                    | 00FCA8B4 | 00000014 | 9618C23A | ---- UI section
+ Section             | Version               | 00FCA8C8 | 0000000E | 468A5D8D | ---- Version section
+ File                | PEI module            | 00FCA8D8 | 000011A2 | 91E5C7F5 | --- 7EB7126D-C45E-4BD0-9357-7F507C5C9CF9 | RomLayoutPei
+ Section             | PEI dependency        | 00FCA8F0 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00FCA908 | 00001144 | E6C3135F | ---- TE image section
+ Section             | UI                    | 00FCBA4C | 0000001E | 5EDAF6D5 | ---- UI section
+ Section             | Version               | 00FCBA6C | 0000000E | 80E5540A | ---- Version section
+ File                | Freeform              | 00FCBA80 | 0000035C | 8B999B1D | --- C91C3C17-FC74-46E5-BDBE-6F486A5A9F3C
+ Section             | Freeform subtype GUID | 00FCBA98 | 00000344 | 18266DB4 | ---- 00781CA1-5DE3-405F-ABB8-379C3C076984
+ File                | Freeform              | 00FCBDE0 | 0000006C | AF6253B3 | --- 98DB68E0-5AB6-4A48-80C8-EAC6C51180FC
+ Section             | Raw                   | 00FCBDF8 | 00000054 | 5F9F7233 | ---- Raw section
+ File                | Freeform              | 00FCBE50 | 0000006C | 8802E3D8 | --- CBC91F44-A4BC-4A5B-8696-703451D0B053 | AMI v2 protected ranges hash file
+ Section             | Raw                   | 00FCBE68 | 00000054 | 5F9F7233 | ---- Raw section
+ File                | PEI module            | 00FCBEC0 | 000007FA | CAB1F158 | --- 28BF2E78-AD2D-4616-ABAD-7644CD7E47C8 | FvBb1Pei
+ Section             | PEI dependency        | 00FCBED8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00FCBEF0 | 000007A4 | 540636D3 | ---- TE image section
+ Section             | UI                    | 00FCC694 | 00000016 | CE5FFCE2 | ---- UI section
+ Section             | Version               | 00FCC6AC | 0000000E | 80E5540A | ---- Version section
+ File                | PEI module            | 00FCC6C0 | 00003662 | 4A2F230C | --- E9DD7F62-25EC-4F9D-A4AB-AAD20BF59A10 | StatusCodePei
+ Section             | PEI dependency        | 00FCC6D8 | 00000016 | 99E93E7C | ---- PEI dependency section
+ Section             | TE image              | 00FCC6F0 | 00003604 | D434CB22 | ---- TE image section
+ Section             | UI                    | 00FCFCF4 | 00000020 | 8D74CA9E | ---- UI section
+ Section             | Version               | 00FCFD14 | 0000000E | 80E5540A | ---- Version section
+ File                | Raw                   | 00FCFD28 | 00001CB7 | 937DAEB4 | --- 77D3DC50-D42B-4916-AC80-8F469035D150 | NVRAM external defaults
+ NVAR entry          | Full                  | 00FCFD40 | 00001C7F | A3EB825E | ---- 4599D26F-1A11-49B8-B91F-858745CFF824 | StdDefaults
+ NVAR entry          | Full                  | 00FCFD57 | 00000AFA | 4CC1E7D7 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | Setup
+ NVAR entry          | Full                  | 00FD0851 | 0000001E | 94187FA9 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | PlatformLang
+ NVAR entry          | Full                  | 00FD086F | 00000015 | F0B3B0A4 | ----- 8BE4DF61-93CA-11D2-AA0D-00E098032B8C | Timeout
+ NVAR entry          | Full                  | 00FD0884 | 00000069 | C02CEE68 | ----- C811FA38-42C8-4579-A9BB-60E94EDDFB34 | AMITSESetup
+ NVAR entry          | Full                  | 00FD08ED | 00000264 | B2A1C1FC | ----- B08F97FF-E6E8-4193-A997-5E9E9B0ADB32 | CpuSetup
+ NVAR entry          | Full                  | 00FD0B51 | 00000459 | 0C968FAC | ----- 72C5E28C-7783-43A1-8767-FAD73FCCAFA4 | SaSetup
+ NVAR entry          | Full                  | 00FD0FAA | 000006E2 | BA6BED25 | ----- 4570B7F1-ADE8-4943-8DC3-406472842384 | PchSetup
+ NVAR entry          | Full                  | 00FD168C | 00000048 | 9A537AC4 | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetup
+ NVAR entry          | Full                  | 00FD16D4 | 0000002B | 1301B13F | ----- 5432122D-D034-49D2-A6DE-65A829EB4C74 | MeSetupStorage
+ NVAR entry          | Full                  | 00FD16FF | 0000002B | 1B5023E7 | ----- 64192DCA-D034-49D2-A6DE-65A829EB4C74 | IccAdvancedSetupDataVar
+ NVAR entry          | Full                  | 00FD172A | 0000001A | 1BC60B4A | ----- AAF8E719-48F8-4099-A6F7-645FBD694C3D | SiSetup
+ NVAR entry          | Full                  | 00FD1744 | 0000002C | CB27B574 | ----- DE0A5E74-4E3E-3D96-A440-2C96ECBD3C97 | DebugConfigData
+ NVAR entry          | Full                  | 00FD1770 | 00000020 | B2FD1A29 | ----- C61C31A3-CB5D-46DD-9FE5-8A82BBC72483 | AmiWrapperSetup
+ NVAR entry          | Full                  | 00FD1790 | 00000019 | 9517F3B2 | ----- 6B0CC1BC-910F-411E-B6CB-0E314D0BB8C1 | SioSetupData
+ NVAR entry          | Full                  | 00FD17A9 | 00000047 | 7ACD221A | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | UsbSupport
+ NVAR entry          | Full                  | 00FD17F0 | 00000023 | F62056C2 | ----- D1405D16-7AFC-4695-BB12-41459D3695A2 | NetworkStackVar
+ NVAR entry          | Full                  | 00FD1813 | 00000072 | CA89B731 | ----- EC87D643-EBA4-4BB5-A1E5-3F3E36B20DA9 | SdioDevConfiguration
+ NVAR entry          | Full                  | 00FD1885 | 00000022 | 97015D5F | ----- 7B59104A-C00D-4158-87FF-F04D6396A915 | SecureBootSetup
+ NVAR entry          | Full                  | 00FD18A7 | 00000018 | 4F3FFB92 | ----- 80E1202E-2697-4264-9CC9-80762C3E5863 | Setup
+ Free space          |                       | 00FD18BF | 00000010 | 3FB3C61A | ----- Free space
+ NVAR GUID store     |                       | 00FD18CF | 000000F0 | 45030849 | ----- GUID store
+ Free space          |                       | 00FD19BF | 00000010 | 3FB3C61A | ---- Free space
+ NVAR GUID store     |                       | 00FD19CF | 00000010 | 2F82779F | ---- GUID store
+ File                | Pad                   | 00FD19E0 | 0002A6E8 | 8171077D | --- Startup AP data padding file
+ Free space          |                       | 00FD19F8 | 0002A608 | 36E5A78A | ---- Free space
+ Startup AP data     | X86 128K              | 00FFC000 | 000000C8 | F07BE27C | ---- Startup AP data
+ File                | SEC core              | 00FFC0C8 | 00003F38 | 55814DF3 | --- 1BA0062E-C779-4582-8566-336AE8F78F09 | Volume Top File
+ Section             | Raw                   | 00FFC0E0 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | TE image              | 00FFC0E4 | 00003ED4 | 5984F892 | ---- TE image section
+ Section             | Raw                   | 00FFFFB8 | 00000004 | CA4DE08B | ---- Raw section
+ Section             | Raw                   | 00FFFFBC | 00000044 | 6AC0EC49 | ---- Raw section

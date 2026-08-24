@@ -1,0 +1,80 @@
+﻿[
+    {
+        "RelativePath":  "EFI\\kde\\grubx64.efi",
+        "Length":  2660232,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "A831AF01E4FB5E3C9457120E1D08EA13D98A0A47B62728C284B7F502D535965C"
+    },
+    {
+        "RelativePath":  "EFI\\kde\\shimx64.efi",
+        "Length":  966664,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "6FE6E1BCBE6CF6BAEC8E056D40361CA1AA715CC04DDCC2855351DE060B84350B"
+    },
+    {
+        "RelativePath":  "EFI\\kde\\mmx64.efi",
+        "Length":  856280,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "D2FA8E52FDDC99DAD94A0009FEE23CB2478C28373B777D50B2F784EB4E96F88E"
+    },
+    {
+        "RelativePath":  "EFI\\kde\\BOOTX64.CSV",
+        "Length":  132,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\kde\\grub.cfg",
+        "Length":  117,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\BOOT\\BOOTX64.EFI",
+        "Length":  966664,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "6FE6E1BCBE6CF6BAEC8E056D40361CA1AA715CC04DDCC2855351DE060B84350B"
+    },
+    {
+        "RelativePath":  "EFI\\BOOT\\fbx64.efi",
+        "Length":  88344,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "8F57751703470403FF7377C26A90A810EBA9F6DB36F262AC6AD94D132DDC5A60"
+    },
+    {
+        "RelativePath":  "EFI\\BOOT\\mmx64.efi",
+        "Length":  856280,
+        "LastWriteTime":  "2025-10-29T11:13:56.0000000-03:00",
+        "Sha256":  "D2FA8E52FDDC99DAD94A0009FEE23CB2478C28373B777D50B2F784EB4E96F88E"
+    },
+    {
+        "RelativePath":  "EFI\\neon\\grubx64.efi",
+        "Length":  2656136,
+        "LastWriteTime":  "2025-10-28T17:50:00.0000000-03:00",
+        "Sha256":  "076CEB4824B4BC71E898AAF10CEFB738F4EB15EFC5E6E951C150C1A265A47D36"
+    },
+    {
+        "RelativePath":  "EFI\\neon\\shimx64.efi",
+        "Length":  966664,
+        "LastWriteTime":  "2025-10-28T17:50:00.0000000-03:00",
+        "Sha256":  "6FE6E1BCBE6CF6BAEC8E056D40361CA1AA715CC04DDCC2855351DE060B84350B"
+    },
+    {
+        "RelativePath":  "EFI\\neon\\mmx64.efi",
+        "Length":  856280,
+        "LastWriteTime":  "2025-10-28T17:50:00.0000000-03:00",
+        "Sha256":  "D2FA8E52FDDC99DAD94A0009FEE23CB2478C28373B777D50B2F784EB4E96F88E"
+    },
+    {
+        "RelativePath":  "EFI\\neon\\BOOTX64.CSV",
+        "Length":  132,
+        "LastWriteTime":  "2025-10-28T17:50:00.0000000-03:00",
+        "Sha256":  null
+    },
+    {
+        "RelativePath":  "EFI\\neon\\grub.cfg",
+        "Length":  117,
+        "LastWriteTime":  "2025-10-28T17:50:00.0000000-03:00",
+        "Sha256":  null
+    }
+]

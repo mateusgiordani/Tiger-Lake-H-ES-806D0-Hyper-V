@@ -1,0 +1,80 @@
+﻿# ==============================================================================
+# OS & Environment Metadata
+# ==============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ==============================================================================
+# Python & Virtual Environments
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+ENV/
+.tools/mea-venv/
+
+# ==============================================================================
+# IDEs and Editors
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Disassembler, Decompiler & Reversing caches/projects
+# ==============================================================================
+*.idb
+*.i64
+*.nam
+*.til
+*.id0
+*.id1
+*.id2
+*.r2
+*.rz
+*.rzdb
+*.pdb
+
+# ==============================================================================
+# Temporary / Decompressed Extraction Trees
+# (UEFIExtract unpacked directories that generate thousands of loose files)
+# ==============================================================================
+*.dump/
+*.dump[0-9]*/
+
+# ==============================================================================
+# Downloaded / Third-party Tools & Toolkits (unpacked binaries)
+# ==============================================================================
+analysis/tools/rizin-0.9.1/rizin-win-installer-clang_cl-64/
+analysis/tools/UEFITool_0.28.0_win32/
+analysis/tools/UEFIExtract_NE_A75_win64/
+analysis/tools/UEFIPatch_0.28.0_win32/
+analysis/tools/OpenCore-1.0.7-RELEASE/
+analysis/tools/edk2-BaseTools-win32/
+analysis/tools/intel-microcode/
+analysis/tools/NVRAMap/
+.tools/uefiextract-a75/
+.tools/MEAnalyzer/MEA.dat
+.tools/MEAnalyzer/FileTable.dat
+.tools/MEAnalyzer/Huffman.dat
+
+# ==============================================================================
+# Logs, Temporary Crash dumps, and intermediate test states
+# ==============================================================================
+*.log
+*.tmp
+*.bak
+dump_*.dmp
+MEMORY.DMP
+MiniDump/
