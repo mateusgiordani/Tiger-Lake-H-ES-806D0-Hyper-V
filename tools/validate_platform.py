@@ -127,9 +127,12 @@ def validate_madt(path: Path) -> list[tuple[str, str]]:
     wildcards = {uid for uid in nmis if uid in (0xFF, 0xFFFFFFFF)}
     concrete_nmis = nmis - wildcards
     issues: list[tuple[str, str]] = []
-    if not wildcards and cpus != concrete_nmis:
+    orphan = sorted(concrete_nmis - cpus)
+    if wildcards:
+        missing: list[int] = []
+    else:
         missing = sorted(cpus - concrete_nmis)
-        orphan = sorted(concrete_nmis - cpus)
+    if missing or orphan:
         issues.append(("MADT_NMI_UID_MISMATCH", f"missing={missing} orphan={orphan}"))
     if not wildcards and {uid + 1 for uid in cpus} == concrete_nmis:
         issues.append(("NMI_UID_OFFSET_PLUS_ONE", "Local APIC NMI UIDs are shifted by +1"))
@@ -230,6 +233,15 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
     }
 
 
+def report_exit_code(result: dict) -> int:
+    """0 = clean, 1 = issues detected, 2 = insufficient input data."""
+    if result["overall_status"] == "INCOMPLETE":
+        return 2
+    if result["overall_status"] == "ISSUES DETECTED":
+        return 1
+    return 0
+
+
 def print_report(result: dict) -> None:
     print("BIOS Interposer Platform Validator")
     cpu = result["cpu"]
@@ -268,7 +280,7 @@ def main() -> int:
     print_report(result)
     if args.report_json:
         args.report_json.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    return 0 if result["classification"] != "Affected" or not result["issues"] else 1
+    return report_exit_code(result)
 
 
 if __name__ == "__main__":

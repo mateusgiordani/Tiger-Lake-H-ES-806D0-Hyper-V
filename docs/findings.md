@@ -96,9 +96,20 @@ Se cair no Recovery, escolha **Sair e continuar para o Windows**.
 
 ### 5.4 Tornar o dia-a-dia estável \(quando `HV 07` for o vencedor\)
 
+A entrada `HV 07 SEM XSAVE` isola o defeito CPUID/XSTATE. O script da matriz
+também definiu `vsmlaunchtype=off` em todas as entradas; VSM não foi testado
+isoladamente no boot positivo.
+
+**Causal para o bug XSAVE:**
+
 ```powershell
 bcdedit /set "{current}" hypervisorlaunchtype auto
 bcdedit /set "{current}" xsavedisable 1
+```
+
+**Também presente no ambiente observado:**
+
+```powershell
 bcdedit /set "{current}" vsmlaunchtype off
 bcdedit /set "{current}" description "Windows - HV07 XSAVE OFF (dia-a-dia)"
 bcdedit /default "{current}"

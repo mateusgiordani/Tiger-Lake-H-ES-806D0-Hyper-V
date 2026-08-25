@@ -15,10 +15,16 @@ Hyper-V causa reset/bootloop precoce, enquanto Linux/KVM funciona.
 
 **Known working workaround**
 
+Causal setting for the CPUID/XSTATE bug:
+
 ```powershell
 bcdedit /set "{current}" hypervisorlaunchtype auto
 bcdedit /set "{current}" xsavedisable 1
 ```
+
+The successful native boot also had `vsmlaunchtype=off` because the diagnostic
+matrix applied it to every test entry. See [workaround.md](docs/workaround.md)
+for the precise required vs observed configuration.
 
 **Root findings**
 
@@ -28,8 +34,9 @@ bcdedit /set "{current}" xsavedisable 1
 
 ## Validação
 
-O projeto separa coleta de análise. Coletores produzem JSON normalizado; o
-validador não depende de o dado ter vindo de Windows ou Linux.
+O projeto separa coleta de análise. Coletores produzem JSON normalizado e
+podem incluir diagnósticos auxiliares (PKU/CET, TSC); a classificação de
+compatibilidade da plataforma é responsabilidade exclusiva do validator.
 
 ```powershell
 python tools/collect/windows/collect_platform.py platform.json --madt-output evidence/acpi/apic.dat
@@ -42,8 +49,9 @@ python -m pytest
 
 O comando sem argumentos usa o fixture afetado. O relatório JSON contém a
 classificação, checks, issues, valores CPUID relevantes, resumo MADT, versão
-do validator e recomendação. O workaround só aparece quando a assinatura
-`000806D0` coincide com a inconsistência CPUID/XSTATE conhecida.
+do validator e recomendação. Códigos de saída: `0` limpo, `1` anomalias
+detectadas, `2` dados insuficientes. O workaround só aparece quando a
+assinatura `000806D0` coincide com a inconsistência CPUID/XSTATE conhecida.
 
 ## Documentação
 

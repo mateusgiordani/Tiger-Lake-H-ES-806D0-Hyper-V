@@ -64,3 +64,18 @@ def test_clean_cpuid_with_madt_anomaly_is_not_xsave_affected():
     assert result["xsave_hyperv_signature"]["match"] is False
     assert result["madt_firmware_anomaly"]["detected"] is True
     assert result["overall_status"] == "ISSUES DETECTED"
+    assert validator.report_exit_code(result) == 1
+
+
+def test_incomplete_cpuid_exit_code_is_two():
+    data = {
+        "cpu": {"signature": "000806D0"},
+        "cpuid": {},
+    }
+    result = validator.build_report(data)
+    assert validator.report_exit_code(result) == 2
+
+
+def test_known_good_exit_code_is_zero():
+    result = validator.build_report(load("known-good"))
+    assert validator.report_exit_code(result) == 0

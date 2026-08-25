@@ -40,6 +40,27 @@ def test_x2apic_nmi_wildcard_is_supported(tmp_path):
     assert validator.validate_madt(path) == []
 
 
+def test_wildcard_does_not_hide_orphan_nmi_uid(tmp_path):
+    records = [
+        struct.pack("<BBHIII", 9, 16, 0, 0, 1, 42),
+        struct.pack("<BBHIB3x", 10, 12, 0, 0xFFFFFFFF, 1),
+        struct.pack("<BBHIB3x", 10, 12, 0, 99, 1),
+    ]
+    table = bytearray(44 + sum(map(len, records)))
+    table[:4] = b"APIC"
+    struct.pack_into("<I", table, 4, len(table))
+    table[8] = 6
+    offset = 44
+    for record in records:
+        table[offset : offset + len(record)] = record
+        offset += len(record)
+    table[9] = (-sum(table)) & 0xFF
+    path = tmp_path / "wildcard-orphan.dat"
+    path.write_bytes(table)
+    codes = {code for code, _ in validator.validate_madt(path)}
+    assert "MADT_NMI_UID_MISMATCH" in codes
+
+
 def test_invalid_checksum_is_rejected(tmp_path):
     path = tmp_path / "bad.dat"
     data = bytearray((ROOT / "tests" / "fixtures" / "affected" / "madt-fixed.dat").read_bytes())

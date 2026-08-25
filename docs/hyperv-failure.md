@@ -83,12 +83,28 @@ O OpenCore não consegue fazer isso: ele só entrega `ACPI`/mapa de memória. `C
 
 ## 7. Solução do dia-a-dia adotada
 
-Transformar o `HV 07` em padrão nativo:
+O boot nativo bem-sucedido usou a entrada `HV 07 SEM XSAVE` da matriz BCD. Essa
+entrada isola causalmente o defeito CPUID/XSTATE com `xsavedisable=1`. O script
+da matriz também aplicou `vsmlaunchtype=off` a **todas** as entradas de teste,
+portanto VSM não foi isolado nesse boot positivo.
+
+**Configuração causal comprovada para o bug XSAVE:**
+
 ```powershell
 bcdedit /set "{current}" hypervisorlaunchtype auto
 bcdedit /set "{current}" xsavedisable 1
+```
+
+**Também presente no ambiente de teste observado:**
+
+```powershell
 bcdedit /set "{current}" vsmlaunchtype off
 ```
+
+Não afirmar que `xsavedisable=1` sozinho basta até um boot confirmar Hyper-V
+com VSM padrão/auto. Até esse teste de isolamento, trate `vsmlaunchtype=off`
+como parte da configuração observada, não como extra opcional comprovado.
+
 Com `VirtualMachinePlatform` habilitado, `WSL2`/`Docker` voltam. `IOMMU` continua ligado, `x2APIC` continua ligado, performance de `EPT/MBEC` preservada — só o `XSAVE` do hipervisor fica desligado.
 
 ## 8. Próximos passos e opção definitiva na BIOS
