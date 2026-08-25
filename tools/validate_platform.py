@@ -30,6 +30,37 @@ def _leaf(data: dict, leaf: str, subleaf: str = "0") -> dict:
     return entry.get(subleaf, entry.get(f"0x{_int(subleaf):X}", {}))
 
 
+def _register_present(data: dict, leaf: str, register: str, subleaf: str = "0") -> bool:
+    return register in _leaf(data, leaf, subleaf)
+
+
+def cpuid_data_complete(data: dict) -> tuple[bool, list[str]]:
+    """Require the CPUID leaves used for Hyper-V XSAVE classification."""
+    missing: list[str] = []
+    if not _register_present(data, "0x00000007", "ebx"):
+        missing.append("CPUID.7.0.EBX")
+    if not _register_present(data, "0x00000007", "edx"):
+        missing.append("CPUID.7.0.EDX")
+    if not _register_present(data, "0x0000000D", "eax"):
+        missing.append("CPUID.D.0.EAX")
+    return not missing, missing
+
+
+def resolve_madt_path(data: dict, input_path: Path, cli_madt: Path | None) -> Path | None:
+    if cli_madt is not None:
+        return cli_madt
+    madt_info = data.get("madt")
+    if not isinstance(madt_info, dict):
+        return None
+    raw_path = madt_info.get("path")
+    if not raw_path:
+        return None
+    path = Path(raw_path)
+    if not path.is_absolute():
+        path = (input_path.parent / path).resolve()
+    return path
+
+
 def _bit(data: dict, leaf: str, register: str, bit: int) -> int:
     return (_int(_leaf(data, leaf).get(register, 0)) >> bit) & 1
 
@@ -71,7 +102,7 @@ def parse_madt(path: Path) -> tuple[set[int], set[int], list[int]]:
         elif kind == 4 and length >= 6:
             nmi_uids.add(data[offset + 2])
         elif kind == 9 and length >= 16:
-            uid, flags = struct.unpack_from("<II", data, offset + 8)
+            _, flags, uid = struct.unpack_from("<III", data, offset + 4)
             if flags & 1:
                 cpu_uids.add(uid)
         elif kind == 10 and length >= 12:
@@ -135,7 +166,12 @@ def validate_cpuid(data: dict) -> list[tuple[str, str]]:
 
 def build_report(data: dict, madt: Path | None = None) -> dict:
     cpuid = cpuid_values(data)
-    cpuid_issues = validate_cpuid(data)
+    cpuid_complete, missing_cpuid = cpuid_data_complete(data)
+    cpuid_issues = validate_cpuid(data) if cpuid_complete else []
+    if not cpuid_complete:
+        cpuid_issues = [
+            ("INCOMPLETE_CPUID", f"Required CPUID data missing: {', '.join(missing_cpuid)}"),
+        ]
     madt_issues: list[tuple[str, str]] = []
     summary = None
     if madt:
@@ -149,11 +185,29 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         for code, message in madt_issues
     ]
     known_signature_match = _fms(data) == KNOWN_FMS
-    cpuid_platform_match = known_signature_match and any(
+    xsave_hyperv_match = cpuid_complete and known_signature_match and any(
         issue[0] == "ORPHAN_AVX512_VP2INTERSECT" for issue in cpuid_issues
     ) and any(issue[0] == "AVX512_XSTATE_UNAVAILABLE" for issue in cpuid_issues)
+    cpuid_platform_match = xsave_hyperv_match
+    if not cpuid_complete:
+        classification = "Unknown"
+    elif xsave_hyperv_match:
+        classification = "Affected"
+    elif known_signature_match:
+        classification = "Not affected"
+    else:
+        classification = "Unknown"
+    xsave_status = (
+        "MATCH" if xsave_hyperv_match else ("NO MATCH" if known_signature_match and cpuid_complete else "UNKNOWN")
+    )
+    madt_status = "NOT CHECKED" if madt is None else ("DETECTED" if madt_issues else "CLEAN")
+    overall_status = "INCOMPLETE" if not cpuid_complete else ("ISSUES DETECTED" if issues else "CLEAN")
     checks = [
-        {"name": "CPUID/XSTATE", "status": "FAIL" if cpuid_issues else "PASS", "values": cpuid},
+        {
+            "name": "CPUID/XSTATE",
+            "status": "INCOMPLETE" if not cpuid_complete else ("FAIL" if cpuid_issues else "PASS"),
+            "values": cpuid,
+        },
     ]
     if madt:
         checks.append({"name": "MADT", "status": "FAIL" if madt_issues else "PASS", "summary": summary})
@@ -167,8 +221,12 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         "madt": summary,
         "known_signature_match": known_signature_match,
         "platform_match": cpuid_platform_match,
-        "classification": "Affected" if cpuid_platform_match else ("Not affected" if known_signature_match else "Unknown"),
-        "recommendation": 'bcdedit /set "{current}" xsavedisable 1' if cpuid_platform_match else None,
+        "xsave_hyperv_signature": {"status": xsave_status, "match": xsave_hyperv_match},
+        "madt_firmware_anomaly": {"status": madt_status, "detected": bool(madt_issues)},
+        "overall_status": overall_status,
+        "cpuid_complete": cpuid_complete,
+        "classification": classification,
+        "recommendation": 'bcdedit /set "{current}" xsavedisable 1' if xsave_hyperv_match else None,
     }
 
 
@@ -187,8 +245,12 @@ def print_report(result: dict) -> None:
         if not any(issue["source"] == ("cpuid" if check["name"].startswith("CPUID") else "madt") for issue in result["issues"]):
             print(f"  [{check['status']}] {check['name']}")
     print("\nClassification")
-    marker = "MATCH" if result["platform_match"] else ("NO MATCH" if result["known_signature_match"] else "UNKNOWN")
-    print(f"  [{marker}] {result['classification']}")
+    xsave = result["xsave_hyperv_signature"]
+    madt = result["madt_firmware_anomaly"]
+    print(f"  Known Hyper-V XSAVE signature: [{xsave['status']}]")
+    print(f"  MADT firmware anomaly: [{madt['status']}]")
+    print(f"  Overall platform status: {result['overall_status']}")
+    print(f"  Hyper-V xsavedisable classification: {result['classification']}")
     if result["recommendation"]:
         print("\nKnown workaround:")
         print(f"  {result['recommendation']}")
@@ -201,7 +263,8 @@ def main() -> int:
     parser.add_argument("--report-json", type=Path, help="write the complete machine-readable report")
     args = parser.parse_args()
     data = json.loads(args.input.read_text(encoding="utf-8"))
-    result = build_report(data, args.madt)
+    madt_path = resolve_madt_path(data, args.input, args.madt)
+    result = build_report(data, madt_path)
     print_report(result)
     if args.report_json:
         args.report_json.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

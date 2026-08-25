@@ -22,8 +22,8 @@ def test_fixed_is_consistent():
 
 def test_x2apic_nmi_wildcard_is_supported(tmp_path):
     records = [
-        struct.pack("<BBHIII", 9, 16, 0, 0, 42, 1),
-        struct.pack("<BBHIHBB", 10, 12, 0, 0xFFFFFFFF, 0, 1, 0),
+        struct.pack("<BBHIII", 9, 16, 0, 0, 1, 42),
+        struct.pack("<BBHIB3x", 10, 12, 0, 0xFFFFFFFF, 1),
     ]
     table = bytearray(44 + sum(map(len, records)))
     table[:4] = b"APIC"

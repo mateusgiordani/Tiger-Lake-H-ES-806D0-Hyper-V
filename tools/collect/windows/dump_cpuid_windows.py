@@ -205,7 +205,6 @@ def hyperv_relevant_consistency(cpuid: Cpuid) -> dict[str, object]:
         "cet_supervisor_xss_bit_12": bool(xss_ecx & (1 << 12)),
     }
     full_avx512_xstate = all(avx512_xstate.values())
-    orphan_vp2intersect = vp2intersect and not (avx512f or avx512vl) and not full_avx512_xstate
     inconsistent_pku_state = pku and not related_xstate["pkru_xcr0_bit_9"]
     inconsistent_cet_state = cet_shadow_stack and not (
         related_xstate["cet_user_xss_bit_11"] and related_xstate["cet_supervisor_xss_bit_12"]
@@ -220,7 +219,6 @@ def hyperv_relevant_consistency(cpuid: Cpuid) -> dict[str, object]:
         "avx512vl": avx512vl,
         "avx512_vp2intersect": vp2intersect,
         "avx512_xstate": avx512_xstate,
-        "orphan_avx512_vp2intersect": orphan_vp2intersect,
         "pku": pku,
         "cet_shadow_stack": cet_shadow_stack,
         "cet_ibt": cet_ibt,
@@ -228,16 +226,10 @@ def hyperv_relevant_consistency(cpuid: Cpuid) -> dict[str, object]:
         "inconsistent_pku_state": inconsistent_pku_state,
         "inconsistent_cet_state": inconsistent_cet_state,
         "interpretation": (
-            "VP2INTERSECT is enumerated while AVX512F, AVX512VL and XCR0 AVX-512 "
-            "state components 5-7 are absent; retest after changing the firmware AVX3 option. "
+            "Raw AVX-512/VP2INTERSECT and XCR0 components 5-7 are reported above; "
+            "use validate_platform.py for Hyper-V classification. "
             f"PKU/PKRU consistency={not inconsistent_pku_state}; "
             f"CET/XSS consistency={not inconsistent_cet_state}."
-            if orphan_vp2intersect
-            else (
-                "No orphan VP2INTERSECT combination detected. "
-                f"PKU/PKRU consistency={not inconsistent_pku_state}; "
-                f"CET/XSS consistency={not inconsistent_cet_state}."
-            )
         ),
     }
 
