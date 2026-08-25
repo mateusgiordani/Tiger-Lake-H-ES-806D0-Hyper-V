@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source": "Windows CPUID capture, Tiger Lake-H ES / HM570111",
+  "cpu": {
+    "vendor": "GenuineIntel",
+    "brand": "Genuine Intel CPU 0000",
+    "family": 6,
+    "model": 141,
+    "stepping": 0,
+    "signature": "000806D0",
+    "logical_processors": 16
+  },
+  "cpuid": {
+    "0x00000007": {"0": {"eax": "0x00000000", "ebx": "0x00000000", "ecx": "0x00000000", "edx": "0x00000100"}},
+    "0x0000000D": {"0": {"eax": "0x00000207", "ebx": "0x00000000", "ecx": "0x00000000", "edx": "0x00000000"}}
+  },
+  "signature": "ERYING_TGL_ES_806D0_XSAVE"
+}

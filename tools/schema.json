@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BIOS Interposer normalized platform evidence",
+  "type": "object",
+  "required": ["cpu", "cpuid"],
+  "properties": {
+    "cpu": {
+      "type": "object",
+      "required": ["vendor", "signature", "logical_processors"],
+      "properties": {
+        "vendor": {"type": "string"},
+        "signature": {"type": "string"},
+        "family": {"type": ["integer", "string"]},
+        "model": {"type": ["integer", "string"]},
+        "stepping": {"type": ["integer", "string"]},
+        "logical_processors": {"type": "integer", "minimum": 1}
+      }
+    },
+    "cpuid": {"type": "object", "additionalProperties": {"type": "object"}},
+    "signature": {"type": "string"}
+  }
+}

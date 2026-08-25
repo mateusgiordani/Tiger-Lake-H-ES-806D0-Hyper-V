@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "source": "synthetic internally consistent reference",
+  "cpu": {"vendor": "GenuineIntel", "signature": "000806D1", "family": 6, "model": 141, "stepping": 1, "logical_processors": 16},
+  "cpuid": {
+    "0x00000007": {"0": {"eax": "0x00000000", "ebx": "0x80010000", "ecx": "0x00000000", "edx": "0x00000000"}},
+    "0x0000000D": {"0": {"eax": "0x000002E7", "ebx": "0x00000000", "ecx": "0x00000000", "edx": "0x00000000"}}
+  }
+}
