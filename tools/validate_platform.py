@@ -9,7 +9,7 @@ import struct
 from pathlib import Path
 
 
-VALIDATOR_VERSION = "0.2.0"
+VALIDATOR_VERSION = "0.3.0"
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "tests" / "fixtures" / "affected" / "platform.json"
 KNOWN_FMS = 0x000806D0
