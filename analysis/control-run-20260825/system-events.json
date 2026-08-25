@@ -1,0 +1,2802 @@
+﻿[
+    {
+        "TimeCreated":  "\/Date(1787668103969)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668095811)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668086623)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668060341)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668060340)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668060296)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 19 para 21.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668026544)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 18 para 19.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787668021520)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667959068)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667959067)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667959016)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 16 para 18.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667951692)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 15 para 16.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667946679)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667786080)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667786079)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667786032)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 13 para 15.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667780854)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 12 para 13.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667775847)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667719309)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667719308)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667719258)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 10 para 12.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667332680)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 9 para 10.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667327681)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667272286)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667272284)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667272236)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 7 para 9.  motivo Signal   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667268154)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 6 para 7.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667263125)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667212472)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667207441)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667207440)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667206340)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667146985)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667146985)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667146942)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 4 para 6.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667143471)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço wuauserv com argumentos \"Não Disponível\" para executar o servidor: {E60687F7-01A1-40AA-86AC-DB1CBF673334}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667143467)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço wuauserv com argumentos \"Não Disponível\" para executar o servidor: {E60687F7-01A1-40AA-86AC-DB1CBF673334}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667112097)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 3 para 4.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667108072)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667051646)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667051645)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787667050273)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666952862)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666952860)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947546)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço WinUsb para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000 com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947545)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço WUDFWpdMtp para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000 com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947539)\/",
+        "Id":  10100,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "Instalação do pacote de driver bem-sucedida."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947538)\/",
+        "Id":  10002,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "O serviço UMDF WpdMtpDriver (CLSID {aaae762b-a6a2-4c45-b5d8-9a83afb6bb70}) foi atualizado. É necessário usar a versão do framework 2.35.0 ou superior."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947537)\/",
+        "Id":  10000,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "Um pacote de driver que usa a versão 2.35.0 do framework de driver no modo de usuário está sendo instalado no dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947551)\/",
+        "Id":  25089,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-WPDClassInstaller",
+        "Msg":  "Não foi possível acessar o dispositivo () após a instalação dos drivers. Código do erro 0x80070651."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666947549)\/",
+        "Id":  24576,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-WPDClassInstaller",
+        "Msg":  "Os drivers do dispositivo USB\\VID_04E8\u0026PID_6860\u0026REV_0504\u0026MS_COMP_MTP\u0026SAMSUNG_Android foram instalados com êxito."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666939840)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666939838)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937769)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937769)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937724)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937724)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937723)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937715)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937685)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço RmSvc com argumentos \"Não Disponível\" para executar o servidor: {581333F6-28DB-41BE-BC7A-FF201F12F3F6}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937598)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937591)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937581)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937573)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937571)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937370)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666937359)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666934722)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666934421)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666927762)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666918249)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666918247)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666918245)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666918238)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666915436)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666915133)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666914849)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666914550)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666914319)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666914018)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666913595)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666913294)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666913127)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666912823)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666912353)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666912052)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909823)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909821)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909519)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909517)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909420)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909418)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909417)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909416)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909414)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909399)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666909397)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908788)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908788)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908784)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908778)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908244)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908244)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908240)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666908234)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666905169)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666904864)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666899604)\/",
+        "Id":  10317,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-NDIS",
+        "Msg":  "A miniporta Remote NDIS based Internet Sharing Device, {88006925-f4f1-4478-bd03-c16e6515d8b5}, tinha o evento Network Interface deleted while PNP Device still exists. Note that this event is provided for informational purpose and might not be an error always (Eg: In case of vSwitch which was recently un-installed or a LBFO team was removed)"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666899314)\/",
+        "Id":  7045,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Service Control Manager",
+        "Msg":  "Foi instalado um serviço no sistema  Nome do Serviço:  Adaptador USB RNDIS6 Nome do Arquivo de Serviço:  \\SystemRoot\\System32\\drivers\\usb80236.sys Tipo de Serviço:  driver de modo kernel Tipo de Início de Serviço:  iniciar demanda Conta de Serviço:  "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666899280)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço dg_ssudbus para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6863\\RXCY404W1CE com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889849)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço WinUsb para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000 com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889848)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço WUDFWpdMtp para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000 com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889841)\/",
+        "Id":  10100,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "Instalação do pacote de driver bem-sucedida."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889840)\/",
+        "Id":  10002,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "O serviço UMDF WpdMtpDriver (CLSID {aaae762b-a6a2-4c45-b5d8-9a83afb6bb70}) foi atualizado. É necessário usar a versão do framework 2.35.0 ou superior."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889839)\/",
+        "Id":  10000,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DriverFrameworks-UserMode",
+        "Msg":  "Um pacote de driver que usa a versão 2.35.0 do framework de driver no modo de usuário está sendo instalado no dispositivo USB\\VID_04E8\u0026PID_6860\u0026MS_COMP_MTP\u0026SAMSUNG_ANDROID\\8\u0026369F331C\u00260\u00260000."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889764)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço ssudmdm para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\u0026MODEM\\8\u0026369F331C\u00260\u00260001 com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889617)\/",
+        "Id":  20003,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-UserPnp",
+        "Msg":  "O Gerenciamento de Drivers concluiu o processo de adição do Serviço dg_ssudbus para a Identificação da Instância do Dispositivo USB\\VID_04E8\u0026PID_6860\\RXCY404W1CE com o seguinte status: 0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889855)\/",
+        "Id":  25089,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-WPDClassInstaller",
+        "Msg":  "Não foi possível acessar o dispositivo () após a instalação dos drivers. Código do erro 0x80070651."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666889852)\/",
+        "Id":  24576,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-WPDClassInstaller",
+        "Msg":  "Os drivers do dispositivo USB\\VID_04E8\u0026PID_6860\u0026REV_0504\u0026MS_COMP_MTP\u0026SAMSUNG_Android foram instalados com êxito."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666809417)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666809116)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808904)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808654)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808652)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808652)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808650)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808648)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808646)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DevicesFlowUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: DevicesFlowInteraction.Connection.DeviceConnectionManager"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666808519)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço NPSMSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: {BCBB9860-C012-4AD7-A938-6E337AE6ABA5}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666804156)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 1 para 3.  motivo InputHid   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666801616)\/",
+        "Id":  566,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A sessão do sistema fez a transição de 0 para 1.  motivo SessionUnlock   BootId: 571"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666620416)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço dps com argumentos \"Não Disponível\" para executar o servidor: {DDCFD26B-FEED-44CD-B71D-79487D2E5E5A}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666620414)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618497)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618492)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618492)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618490)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618488)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618478)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666618474)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666617732)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666617732)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666617729)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666617723)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666611289)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666607723)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666607723)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666607721)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666607713)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666591168)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590963)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590758)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590553)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590348)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590135)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterInternalService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {F38ECCCA-5759-590F-AF37-12B290CCBA2C}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590052)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590052)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590051)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590051)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590050)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666590050)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleUpdaterService152.0.7933.0 com argumentos \"--com-service\" para executar o servidor: {8018F647-BF07-55BB-82BE-A2D7049F7CE4}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666587219)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586718)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586718)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586562)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586561)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586544)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586544)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586428)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586428)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586372)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586372)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586294)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586292)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586198)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586196)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586070)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586069)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586046)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666586044)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585965)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585964)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585941)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585941)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585749)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585749)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585342)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585341)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585118)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666585118)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584962)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584961)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584960)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584958)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584957)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584949)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584947)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584322)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584322)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584320)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666584315)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581342)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581341)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581167)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581166)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581083)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581082)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581081)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581079)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581078)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581068)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666581068)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666580108)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666580107)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666580103)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666580099)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578930)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578929)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578847)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578845)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578762)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578761)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578760)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578759)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578757)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578750)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666578748)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666577324)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666577323)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666577319)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666577315)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575836)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575835)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575760)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575760)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575632)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575629)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575626)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575624)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575599)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575599)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575034)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575031)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575028)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666575020)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666571078)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço GoogleChromeElevationService com argumentos \"Não Disponível\" para executar o servidor: {708860E0-F641-4611-8895-7D867DD3675B}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666570750)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666565069)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666562330)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666562280)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666562279)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560565)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WSearch com argumentos \"Não Disponível\" para executar o servidor: {7D096C5F-AC08-4F1F-BEB7-5C22C517CE39}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560565)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WSearch com argumentos \"Não Disponível\" para executar o servidor: {7D096C5F-AC08-4F1F-BEB7-5C22C517CE39}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560470)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560466)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560425)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560326)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560204)\/",
+        "Id":  16,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\estum\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\UserClasses.dat foi limpo, atualizando 12 chaves e criando 1 páginas modificadas."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560203)\/",
+        "Id":  16,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\estum\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\User.dat foi limpo, atualizando 11 chaves e criando 1 páginas modificadas."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560188)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560177)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560104)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560104)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560100)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560100)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666560098)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.WamProviderRegistration"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559959)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WpnUserService_65ccf com argumentos \"Não Disponível\" para executar o servidor: {F53321FA-34F8-4B7F-B9A3-361877CB94CF}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559953)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço RmSvc com argumentos \"Não Disponível\" para executar o servidor: {581333F6-28DB-41BE-BC7A-FF201F12F3F6}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559835)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço EventSystem com argumentos \"Não Disponível\" para executar o servidor: {1BE1F766-5536-11D1-B726-00C04FB926AF}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559726)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WpnUserService_65ccf com argumentos \"Não Disponível\" para executar o servidor: {D18705BE-FC2F-44C8-AEFF-1CD49AEA8FC1}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559724)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WpnUserService_65ccf com argumentos \"Não Disponível\" para executar o servidor: {1FFE4FFD-25B1-40B1-A1EA-EF633353BB4E}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559722)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559710)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559706)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559612)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559596)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559557)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559515)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559513)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559464)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559425)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdk.UI.Shell.ViewCoordinator"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559367)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559367)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço UdkUserSvc_65ccf com argumentos \"Não Disponível\" para executar o servidor: WindowsUdkInternal.System.ActivationService"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559190)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço WpnUserService_65ccf com argumentos \"Não Disponível\" para executar o servidor: {1FFE4FFD-25B1-40B1-A1EA-EF633353BB4E}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559155)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559115)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666559031)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666558809)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço ShellHWDetection com argumentos \"Não Disponível\" para executar o servidor: {DD522ACC-F821-461A-A407-50B198B896DC}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666558634)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço TokenBroker com argumentos \"Não Disponível\" para executar o servidor: Windows.Internal.Security.Authentication.Web.TokenBrokerInternal"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666558421)\/",
+        "Id":  7001,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Winlogon",
+        "Msg":  "Notificação de Logon do Usuário para Programa de Aperfeiçoamento da Experiência do Usuário"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666546654)\/",
+        "Id":  18,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "TPM",
+        "Msg":  "Este evento dispara a execução da verificação de status/provisionamento do TPM (Trusted Platform Module)."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666541355)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço RmSvc com argumentos \"Não Disponível\" para executar o servidor: {581333F6-28DB-41BE-BC7A-FF201F12F3F6}"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666541124)\/",
+        "Id":  4000,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-WLAN-AutoConfig",
+        "Msg":  "Serviço de Configuração Automática de WLAN iniciado com êxito. "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666541053)\/",
+        "Id":  7026,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Service Control Manager",
+        "Msg":  "O(s) seguinte(s) driver(s) de início do sistema ou de inicialização não foram carregados:  bam cdrom CTIIO dam FileCrypt MSIO MsSecCore npsvctrig UCPD Vid WdFilter"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539973)\/",
+        "Id":  10005,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "O DCOM obteve o erro \"1084\" ao tentar iniciar o serviço DispBrokerDesktopSvc com argumentos \"Não Disponível\" para executar o servidor: DispBrokerDesktop.GlobalBrokerInstance"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539928)\/",
+        "Id":  51046,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-DHCPv6-Client",
+        "Msg":  "O serviço do cliente DHCPv6 foi iniciado"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539920)\/",
+        "Id":  50036,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Dhcp-Client",
+        "Msg":  "O serviço do cliente DHCPv4 foi iniciado"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539920)\/",
+        "Id":  50103,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Dhcp-Client",
+        "Msg":  "Cliente DHCPv4 registrado para notificação de desligamento"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539920)\/",
+        "Id":  50036,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Dhcp-Client",
+        "Msg":  "O serviço do cliente DHCPv4 foi iniciado"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539603)\/",
+        "Id":  16983,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Directory-Services-SAM",
+        "Msg":  "O gerenciador de contas de segurança agora registra eventos resumidos periódicos para clientes remotos que invocam chamadas herdadas do método RPC para alterar ou definir senhas.  Para mais informações, confira https://go.microsoft.com/fwlink/?linkid=2150956. "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539603)\/",
+        "Id":  16977,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Directory-Services-SAM",
+        "Msg":  "O domínio tem as seguintes configurações de comprimento mínimo para senha.  MinimumPasswordLength: 0  RelaxMinimumPasswordLengthLimits: 0  MinimumPasswordLengthAudit: -1  Para mais informações, consulte https://go.microsoft.com/fwlink/?LinkId=2097191. "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539597)\/",
+        "Id":  16962,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Directory-Services-SAM",
+        "Msg":  "As chamadas remotas ao banco de dados SAM estão sendo restritas usando o descritor de segurança padrão: O:SYG:SYD:(A;;RC;;;BA). Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkId=787651."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539510)\/",
+        "Id":  6156,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "LsaSrv",
+        "Msg":  "Status da habilitação automática do Credential Guard.  Requisitos de Hardware para Segurança Baseada em Virtualização:\t1 Domínio Ingressado:\t0 Associado ao Azure AD:\t0  Licenciado para o Credential Guard:\t0 Controlador de Domínio:\t0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539480)\/",
+        "Id":  14,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Credential Guard configuration:  Registry Configuration: 0x0 Test Configuration: 0 Auto Enablement: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539423)\/",
+        "Id":  23,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Antiversão do Aplicativo de Inicialização: Inicialização Concluída com status: HRESULT: A operação foi concluída com êxito. Novo timer necessário: false Novo timer aguardando conclusão da atualização do sistema: false O timer de trava anterior existe, mas foi desabilitado pelo Registro: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539423)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Antiversão do Aplicativo de Inicialização: timer anterior retomado com status:  HRESULT: A operação foi concluída com êxito. Timer anterior presente: true Hora de início: ‎2026‎-‎08‎-‎13T01:24:13.449639800Z Período de cortesia: 51840000000000 Tentativa de imposição de recuperação bem-sucedida: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539423)\/",
+        "Id":  24,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Aplicativo de Inicialização Antirreversão: início do temporizador concluído com status:  Erro Win32: 0 Hora de início: ‎2026‎-‎08‎-‎13T01:24:13.449639800Z Período de carência: 51840000000000 Hora de vencimento: ‎2026‎-‎10‎-‎12T01:24:13.449639800Z "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539423)\/",
+        "Id":  19,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Status da criação do temporizador de Segurança Baseada em Virtualização  HRESULT: A operação foi concluída com êxito. Novo temporizador de trava necessário: false Novo temporizador de trava aguardando a conclusão da atualização do sistema: false Temporizador de trava anterior existente, mas desabilitado pelo registro: false Arquivo de política existente: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539027)\/",
+        "Id":  24,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "As informações de fuso horário foram atualizadas com o motivo de saída 0. O ajuste do fuso horário atual é 180."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666530421)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume \\\\?\\Volume{6081a7e1-baf4-4624-8f5f-1ac191baf188} (\\Device\\HarddiskVolume4) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666530404)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume E: (\\Device\\HarddiskVolume8) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666530267)\/",
+        "Id":  219,
+        "LevelDisplayName":  "Aviso",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Msg":  "O driver \\Driver\\usbaudio2 ao carregar. Device: USB\\VID_0020\u0026PID_0B21\u0026MI_00\\8\u002631e40a88\u00261\u00260000 Status: 0xC000035F"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666530166)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume D: (\\Device\\HarddiskVolume6) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666529736)\/",
+        "Id":  219,
+        "LevelDisplayName":  "Aviso",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Msg":  "O driver \\Driver\\HdAudAddService ao carregar. Device: HDAUDIO\\FUNC_01\u0026VEN_10EC\u0026DEV_0897\u0026SUBSYS_10EC0897\u0026REV_1004\\4\u0026203beee8\u00260\u00260001 Status: 0xC000035F"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666529088)\/",
+        "Id":  2,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "MEIx64",
+        "Msg":  "Intel(R) Management Engine Interface driver has started successfully."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666528914)\/",
+        "Id":  219,
+        "LevelDisplayName":  "Aviso",
+        "ProviderName":  "Microsoft-Windows-Kernel-PnP",
+        "Msg":  "O driver \\Driver\\Netwaw18 ao carregar. Device: PCI\\VEN_8086\u0026DEV_272B\u0026SUBSYS_00F48086\u0026REV_1A\\4\u002611c26f4a\u00260\u002600E8 Status: 0xC0000365"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666528842)\/",
+        "Id":  172,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "Estado de conectividade em espera: Disconnected, Motivo: NIC compliance"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666528841)\/",
+        "Id":  41,
+        "LevelDisplayName":  "Nível Crítico",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "O sistema foi reiniciado sem um desligamento correto primeiro. Esse erro pode ser causado quando o sistema para de responder, trava ou fica sem energia inesperadamente."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666528840)\/",
+        "Id":  125,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A zona termal ACPI \\_TZ.TZ00 foi enumerada.              _PSV = 0K              _TC1 = 0              _TC2 = 0              _TSP = 0ms              _AC0 = 0K              _AC1 = 0K              _AC2 = 0K              _AC3 = 0K              _AC4 = 0K              _AC5 = 0K              _AC6 = 0K              _AC7 = 0K              _AC8 = 0K              _AC9 = 0K              _CRT = 0K              _HOT = 0K              restrição mínima = 0              _CR3 = 0K"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666528436)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume C: (\\Device\\HarddiskVolume3) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666527528)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027Wof\u0027 (10.0, ‎2047‎-‎07‎-‎10T10:40:35.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666527527)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027FileInfo\u0027 (10.0, ‎2093‎-‎04‎-‎01T22:29:43.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539928)\/",
+        "Id":  6013,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "O tempo de ativação do sistema é 14 segundos."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539927)\/",
+        "Id":  6005,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "O serviço Log de eventos foi iniciado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539927)\/",
+        "Id":  6009,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "Microsoft (R) Windows (R) 10.00. 26200  Multiprocessor Free."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666539927)\/",
+        "Id":  6008,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "EventLog",
+        "Msg":  "O desligamento do sistema que ocorreu às 10:59:23 do dia ‎25/‎08/‎2026 não era esperado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525863)\/",
+        "Id":  16,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-HAL",
+        "Msg":  "O relatório de falhas da IOMMU foi inicializado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525857)\/",
+        "Id":  20,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "A configuração de segundo bissexto foi atualizada. Motivo: Leap second data initialized from registry during boot Segundos bissextos habilitados: true Nova contagem de segundos bissextos: 0 Contagem antiga de segundos bissextos: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525856)\/",
+        "Id":  30,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O firmware relatou métricas de inicialização."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  27,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O tipo de inicialização era 0x0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "A política do menu de inicialização era 0x1."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  238,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "Diferença de fuso horário EFI: 2047. Sinalizadores de horário de verão: 0. Tempo do firmware: ‎2026‎-‎08‎-‎25T11:02:04.000000000Z. "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  21,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O menu de opções avançadas do carregador de sistema operacional foi exibido e o usuário selecionou a opção 0x1."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  20,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O status bem-sucedido do último desligamento era true. O status bem-sucedido da última inicialização era true."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  32,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O bootmgr gastou 0 ms aguardando a entrada do usuário."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  26,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "Uma sequência de inicialização única foi usada durante a inicialização."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525855)\/",
+        "Id":  153,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "A segurança baseada em virtualização (políticas: 0) está disabled."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525854)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "A hora do sistema foi inicializada para ‎2026‎-‎08‎-‎25T14:02:05.500000000Z.   Tempo do carregador: ‎2026‎-‎08‎-‎25T14:02:04.000000000Z Sinalizadores de inicialização internos: 0x2 Código de erro HAL RTC: 0x0 Hora RTC está em UTC: false Inicialização suave: false Êxito: true Fase: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666525854)\/",
+        "Id":  12,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "Sistema operacional iniciado na hora do sistema ‎2026‎-‎08‎-‎25T14:02:05.500000000Z."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666362643)\/",
+        "Id":  6156,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "LsaSrv",
+        "Msg":  "Status da habilitação automática do Credential Guard.  Requisitos de Hardware para Segurança Baseada em Virtualização:\t1 Domínio Ingressado:\t0 Associado ao Azure AD:\t0  Licenciado para o Credential Guard:\t0 Controlador de Domínio:\t0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666362615)\/",
+        "Id":  14,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Credential Guard configuration:  Registry Configuration: 0x0 Test Configuration: 0 Auto Enablement: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666336128)\/",
+        "Id":  23,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Antiversão do Aplicativo de Inicialização: Inicialização Concluída com status: HRESULT: A operação foi concluída com êxito. Novo timer necessário: false Novo timer aguardando conclusão da atualização do sistema: false O timer de trava anterior existe, mas foi desabilitado pelo Registro: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666336127)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Antiversão do Aplicativo de Inicialização: timer anterior retomado com status:  HRESULT: A operação foi concluída com êxito. Timer anterior presente: true Hora de início: ‎2026‎-‎08‎-‎13T01:24:13.449639800Z Período de cortesia: 51840000000000 Tentativa de imposição de recuperação bem-sucedida: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666336127)\/",
+        "Id":  24,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Aplicativo de Inicialização Antirreversão: início do temporizador concluído com status:  Erro Win32: 0 Hora de início: ‎2026‎-‎08‎-‎13T01:24:13.449639800Z Período de carência: 51840000000000 Hora de vencimento: ‎2026‎-‎10‎-‎12T01:24:13.449639800Z "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666336127)\/",
+        "Id":  19,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Wininit",
+        "Msg":  "Status da criação do temporizador de Segurança Baseada em Virtualização  HRESULT: A operação foi concluída com êxito. Novo temporizador de trava necessário: false Novo temporizador de trava aguardando a conclusão da atualização do sistema: false Temporizador de trava anterior existente, mas desabilitado pelo registro: false Arquivo de política existente: false "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666334032)\/",
+        "Id":  24,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "As informações de fuso horário foram atualizadas com o motivo de saída 0. O ajuste do fuso horário atual é 180."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666325057)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume \\\\?\\Volume{6081a7e1-baf4-4624-8f5f-1ac191baf188} (\\Device\\HarddiskVolume4) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666324822)\/",
+        "Id":  18,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "BTHUSB",
+        "Msg":  "O Windows não pode armazenar códigos de autenticação Bluetooth (chaves de link) no adaptador local. Os teclados Bluetooth podem não funcionar no BIOS do sistema durante a inicialização."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666324804)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume E: (\\Device\\HarddiskVolume8) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666324357)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume D: (\\Device\\HarddiskVolume6) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323971)\/",
+        "Id":  7027,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Netwaw18",
+        "Msg":  ""
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323893)\/",
+        "Id":  7017,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Netwaw18",
+        "Msg":  ""
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323568)\/",
+        "Id":  7010,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Netwaw18",
+        "Msg":  ""
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323521)\/",
+        "Id":  7005,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Netwaw18",
+        "Msg":  ""
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323412)\/",
+        "Id":  7029,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Netwaw18",
+        "Msg":  ""
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323412)\/",
+        "Id":  2,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "MEIx64",
+        "Msg":  "Intel(R) Management Engine Interface driver has started successfully."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323154)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 15 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323152)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 13 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323152)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 11 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323151)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 9 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323150)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 7 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323149)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 5 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323149)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 3 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323148)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 1 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323147)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 14 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323146)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 12 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323145)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 10 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323145)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 8 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323144)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 6 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323143)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 4 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323142)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 2 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 61 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666323126)\/",
+        "Id":  55,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Processor-Power",
+        "Msg":  "O processador 0 no grupo 0 expõe os seguintes recursos de gerenciamento de energia:  Tipo de estado ocioso: ACPI Idle (C) States (3 estado(s))  Tipo de estado de desempenho: ACPI Collaborative Processor Performance Control Frequência Nominal (MHz): 3110 Percentual de desempenho máximo: 151 Percentual de desempenho mínimo: 25 Percentual de aceleração mínimo: 3"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322722)\/",
+        "Id":  172,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "Estado de conectividade em espera: Disconnected, Motivo: NIC compliance"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322722)\/",
+        "Id":  41,
+        "LevelDisplayName":  "Nível Crítico",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "O sistema foi reiniciado sem um desligamento correto primeiro. Esse erro pode ser causado quando o sistema para de responder, trava ou fica sem energia inesperadamente."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322720)\/",
+        "Id":  125,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Power",
+        "Msg":  "A zona termal ACPI \\_TZ.TZ00 foi enumerada.              _PSV = 0K              _TC1 = 0              _TC2 = 0              _TSP = 0ms              _AC0 = 0K              _AC1 = 0K              _AC2 = 0K              _AC3 = 0K              _AC4 = 0K              _AC5 = 0K              _AC6 = 0K              _AC7 = 0K              _AC8 = 0K              _AC9 = 0K              _CRT = 0K              _HOT = 0K              restrição mínima = 0              _CR3 = 0K"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322699)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027npsvctrig\u0027 (10.0, ‎1978‎-‎05‎-‎14T06:13:30.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322641)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027UCPD\u0027 (10.0, ‎2104‎-‎11‎-‎24T20:34:34.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322639)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027FileCrypt\u0027 (10.0, ‎2075‎-‎08‎-‎31T19:07:07.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666322564)\/",
+        "Id":  98,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Ntfs",
+        "Msg":  "Volume C: (\\Device\\HarddiskVolume3) está íntegro. Nenhuma ação é necessária."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666321731)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027WdFilter\u0027 (10.0, ‎2039‎-‎08‎-‎18T18:32:16.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666321731)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027Wof\u0027 (10.0, ‎2047‎-‎07‎-‎10T10:40:35.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666321730)\/",
+        "Id":  6,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-FilterManager",
+        "Msg":  "Filtro do Sistema de Arquivos \u0027FileInfo\u0027 (10.0, ‎2093‎-‎04‎-‎01T22:29:43.000000000Z) carregou e registrou com sucesso o Gerenciador de Filtros."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666363174)\/",
+        "Id":  6013,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "O tempo de ativação do sistema é 50 segundos."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666363173)\/",
+        "Id":  6005,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "O serviço Log de eventos foi iniciado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666363173)\/",
+        "Id":  6009,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "EventLog",
+        "Msg":  "Microsoft (R) Windows (R) 10.00. 26200  Multiprocessor Free."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666363173)\/",
+        "Id":  6008,
+        "LevelDisplayName":  "Erro",
+        "ProviderName":  "EventLog",
+        "Msg":  "O desligamento do sistema que ocorreu às 10:57:17 do dia ‎25/‎08/‎2026 não era esperado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312894)\/",
+        "Id":  16,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-HAL",
+        "Msg":  "O relatório de falhas da IOMMU foi inicializado."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312862)\/",
+        "Id":  20,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "A configuração de segundo bissexto foi atualizada. Motivo: Leap second data initialized from registry during boot Segundos bissextos habilitados: true Nova contagem de segundos bissextos: 0 Contagem antiga de segundos bissextos: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312862)\/",
+        "Id":  30,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O firmware relatou métricas de inicialização."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  27,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O tipo de inicialização era 0x0."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "A política do menu de inicialização era 0x1."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  238,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "Diferença de fuso horário EFI: 2047. Sinalizadores de horário de verão: 0. Tempo do firmware: ‎2026‎-‎08‎-‎25T10:58:32.000000000Z. "
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  20,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O status bem-sucedido do último desligamento era false. O status bem-sucedido da última inicialização era true."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  32,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "O bootmgr gastou 0 ms aguardando a entrada do usuário."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  18,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "Há 0x2 opções de inicialização no sistema."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  153,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-Boot",
+        "Msg":  "A segurança baseada em virtualização (políticas: 0) está disabled."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  25,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "A hora do sistema foi inicializada para ‎2026‎-‎08‎-‎25T13:58:32.500000000Z.   Tempo do carregador: ‎2026‎-‎08‎-‎25T13:58:32.000000000Z Sinalizadores de inicialização internos: 0x2 Código de erro HAL RTC: 0x0 Hora RTC está em UTC: false Inicialização suave: false Êxito: true Fase: 0"
+    },
+    {
+        "TimeCreated":  "\/Date(1787666312860)\/",
+        "Id":  12,
+        "LevelDisplayName":  "Informações",
+        "ProviderName":  "Microsoft-Windows-Kernel-General",
+        "Msg":  "Sistema operacional iniciado na hora do sistema ‎2026‎-‎08‎-‎25T13:58:32.500000000Z."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666250699)\/",
+        "Id":  10016,
+        "LevelDisplayName":  "Aviso",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID  {00000000-0000-0000-0000-000000000000}  e APPID  {4839DDB7-58C2-48F5-8283-E1D1807D0D7D}  ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+    },
+    {
+        "TimeCreated":  "\/Date(1787666250699)\/",
+        "Id":  10016,
+        "LevelDisplayName":  "Aviso",
+        "ProviderName":  "Microsoft-Windows-DistributedCOM",
+        "Msg":  "As configurações de permissão específico do aplicativo não concedem permissão Local Ativação para o aplicativo de Servidor COM com CLSID  {00000000-0000-0000-0000-000000000000}  e APPID  {4839DDB7-58C2-48F5-8283-E1D1807D0D7D}  ao usuário AUTORIDADE NT\\SERVIÇO LOCAL SID (S-1-5-19) do endereço LocalHost (Usando LRPC) que está sendo executado no contêiner de aplicativos Não Disponível SID (Não Disponível). Essa permissão de segurança pode ser modificada com a ferramenta administrativa Serviços de Componentes."
+    }
+]

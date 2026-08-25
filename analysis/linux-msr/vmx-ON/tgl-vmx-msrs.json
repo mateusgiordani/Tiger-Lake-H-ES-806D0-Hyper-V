@@ -1,0 +1,3718 @@
+{
+  "collector": "collect_tgl_vmx_msrs_linux.py",
+  "kernel": "6.14.0-37-generic",
+  "cpuinfo": {
+    "vendor_id": "GenuineIntel",
+    "cpu family": "6",
+    "model": "141",
+    "stepping": "0",
+    "microcode": "0x50",
+    "model name": "Genuine Intel(R) CPU 0000 @ 2.60GHz"
+  },
+  "online_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "identical_msr_groups": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  ],
+  "per_cpu": {
+    "0": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E392CB7AE"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00D00",
+        "apic": {
+          "bsp": true,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "1": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3939B652"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "2": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3940043F"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "3": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3950BAAB"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "4": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E395BC3DA"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "5": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3967938C"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "6": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3979CDA3"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "7": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E3990C2F8"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "8": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39A371F5"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "9": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39AE9B46"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "10": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39B8B60D"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "11": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39C2C84E"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "12": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39CD0AF5"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "13": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39D895B2"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "14": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39E2C74F"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    },
+    "15": {
+      "IA32_TIME_STAMP_COUNTER": {
+        "index": "0x10",
+        "value": "0x0000020E39ECADF2"
+      },
+      "IA32_PLATFORM_ID": {
+        "index": "0x17",
+        "value": "0x0004000000000000"
+      },
+      "IA32_APIC_BASE": {
+        "index": "0x1B",
+        "value": "0x00000000FEE00C00",
+        "apic": {
+          "bsp": false,
+          "x2apic_enabled": true,
+          "apic_global_enable": true,
+          "base": "0x00000000FEE00000"
+        }
+      },
+      "IA32_FEATURE_CONTROL": {
+        "index": "0x3A",
+        "value": "0x0000000000000005",
+        "feature_control": {
+          "locked": true,
+          "vmx_inside_smx": false,
+          "vmx_outside_smx": true,
+          "senter_local_function_mask": "0x00",
+          "senter_global_enable": false,
+          "sgx_launch_control_enable": false,
+          "sgx_global_enable": false
+        }
+      },
+      "IA32_BIOS_SIGN_ID": {
+        "index": "0x8B",
+        "value": "0x0000005000000000"
+      },
+      "MSR_PLATFORM_INFO": {
+        "index": "0xCE",
+        "value": "0x0808083BF9811F00"
+      },
+      "IA32_MTRRCAP": {
+        "index": "0xFE",
+        "value": "0x0000000000005D0A"
+      },
+      "IA32_ARCH_CAPABILITIES": {
+        "index": "0x10A",
+        "value": "0x000000000000006B"
+      },
+      "IA32_TSX_CTRL": {
+        "error": "[Errno 5] Input/output error"
+      },
+      "IA32_PAT": {
+        "index": "0x277",
+        "value": "0x0407050600070106"
+      },
+      "IA32_MTRR_DEF_TYPE": {
+        "index": "0x2FF",
+        "value": "0x0000000000000C06"
+      },
+      "IA32_VMX_BASIC": {
+        "index": "0x480",
+        "value": "0x01DA050000000013",
+        "vmx_basic": {
+          "vmcs_revision_id": "0x00000013",
+          "vmcs_region_bytes": 1280,
+          "physical_address_width_32_only": false,
+          "dual_monitor_smm": true,
+          "memory_type": 6,
+          "vm_exit_instruction_info": true,
+          "true_controls": true
+        }
+      },
+      "IA32_VMX_PINBASED_CTLS": {
+        "index": "0x481",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_PROCBASED_CTLS": {
+        "index": "0x482",
+        "value": "0xFFFBFFFE0401E172",
+        "control": {
+          "must_be_1": "0x0401E172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_EXIT_CTLS": {
+        "index": "0x483",
+        "value": "0x137FFFFF00036DFF",
+        "control": {
+          "must_be_1": "0x00036DFF",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_ENTRY_CTLS": {
+        "index": "0x484",
+        "value": "0x0016FFFF000011FF",
+        "control": {
+          "must_be_1": "0x000011FF",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_MISC": {
+        "index": "0x485",
+        "value": "0x000000007004C1E7"
+      },
+      "IA32_VMX_CR0_FIXED0": {
+        "index": "0x486",
+        "value": "0x0000000080000021"
+      },
+      "IA32_VMX_CR0_FIXED1": {
+        "index": "0x487",
+        "value": "0x00000000FFFFFFFF"
+      },
+      "IA32_VMX_CR4_FIXED0": {
+        "index": "0x488",
+        "value": "0x0000000000002000"
+      },
+      "IA32_VMX_CR4_FIXED1": {
+        "index": "0x489",
+        "value": "0x0000000000FF6FFF"
+      },
+      "IA32_VMX_VMCS_ENUM": {
+        "index": "0x48A",
+        "value": "0x000000000000002E"
+      },
+      "IA32_VMX_PROCBASED_CTLS2": {
+        "index": "0x48B",
+        "value": "0x035F7FFF00000000",
+        "control": {
+          "must_be_1": "0x00000000",
+          "may_be_1": "0x035F7FFF",
+          "must_be_0": "0xFCA08000"
+        },
+        "may_enable": [
+          "virtualize_apic_accesses",
+          "ept",
+          "rdtscp",
+          "virtualize_x2apic",
+          "vpid",
+          "unrestricted_guest",
+          "apic_register_virtualization",
+          "virtual_interrupt_delivery",
+          "invpcid",
+          "vm_functions",
+          "vmcs_shadowing",
+          "page_modification_logging",
+          "ept_violation_ve",
+          "xsaves_xrstors",
+          "mode_based_execute_control",
+          "tsc_scaling"
+        ]
+      },
+      "IA32_VMX_EPT_VPID_CAP": {
+        "index": "0x48C",
+        "value": "0x00000F0106F34141",
+        "capabilities": [
+          "execute_only_ept",
+          "page_walk_length_4",
+          "ept_uc_memory_type",
+          "ept_wb_memory_type",
+          "ept_2mb_pages",
+          "ept_1gb_pages",
+          "invept",
+          "invept_single_context",
+          "invept_all_contexts",
+          "invvpid",
+          "invvpid_individual_address",
+          "invvpid_single_context",
+          "invvpid_all_contexts",
+          "invvpid_single_context_retaining_globals"
+        ]
+      },
+      "IA32_VMX_TRUE_PINBASED_CTLS": {
+        "index": "0x48D",
+        "value": "0x000000FF00000016",
+        "control": {
+          "must_be_1": "0x00000016",
+          "may_be_1": "0x000000FF",
+          "must_be_0": "0xFFFFFF00"
+        }
+      },
+      "IA32_VMX_TRUE_PROCBASED_CTLS": {
+        "index": "0x48E",
+        "value": "0xFFFBFFFE04006172",
+        "control": {
+          "must_be_1": "0x04006172",
+          "may_be_1": "0xFFFBFFFE",
+          "must_be_0": "0x00040001"
+        }
+      },
+      "IA32_VMX_TRUE_EXIT_CTLS": {
+        "index": "0x48F",
+        "value": "0x137FFFFF00036DFB",
+        "control": {
+          "must_be_1": "0x00036DFB",
+          "may_be_1": "0x137FFFFF",
+          "must_be_0": "0xEC800000"
+        }
+      },
+      "IA32_VMX_TRUE_ENTRY_CTLS": {
+        "index": "0x490",
+        "value": "0x0016FFFF000011FB",
+        "control": {
+          "must_be_1": "0x000011FB",
+          "may_be_1": "0x0016FFFF",
+          "must_be_0": "0xFFE90000"
+        }
+      },
+      "IA32_VMX_VMFUNC": {
+        "index": "0x491",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_PROCBASED_CTLS3": {
+        "index": "0x492",
+        "value": "0x0000000000000001"
+      },
+      "IA32_VMX_EXIT_CTLS2": {
+        "error": "[Errno 5] Input/output error"
+      }
+    }
+  },
+  "errors": [
+    "CPU 0 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 0 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 1 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 1 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 2 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 2 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 3 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 3 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 4 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 4 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 5 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 5 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 6 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 6 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 7 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 7 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 8 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 8 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 9 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 9 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 10 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 10 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 11 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 11 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 12 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 12 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 13 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 13 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 14 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 14 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error",
+    "CPU 15 IA32_TSX_CTRL: [Errno 5] Input/output error",
+    "CPU 15 IA32_VMX_EXIT_CTLS2: [Errno 5] Input/output error"
+  ]
+}

@@ -1,0 +1,14 @@
+Linux pc-mateus 6.14.0-37-generic #37~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 20 10:25:38 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="KDE neon User Edition"
+NAME="KDE neon"
+VERSION_ID="24.04"
+VERSION="User Edition"
+VERSION_CODENAME=noble
+ID=neon
+ID_LIKE="ubuntu debian"
+HOME_URL="https://neon.kde.org/"
+SUPPORT_URL="https://neon.kde.org/"
+BUG_REPORT_URL="https://bugs.kde.org/"
+PRIVACY_POLICY_URL="https://kde.org/privacypolicy/"
+UBUNTU_CODENAME=noble
+LOGO=start-here-kde-neoncmdline: BOOT_IMAGE=/boot/vmlinuz-6.14.0-37-generic root=UUID=732a8a62-c721-450d-b3bf-c05af3eccb3a ro quiet splash vt.handoff=7

@@ -1,0 +1,29 @@
+[    0.000000] APIC: Static calls initialized
+[    0.036952] ACPI: APIC 0x0000000049475000 00012C (v04 ALASKA A M I    01072009 AMI  01000013)
+[    0.036991] ACPI: Reserving APIC table memory at [mem 0x49475000-0x4947512b]
+[    0.071713] ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+[    0.071714] ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+[    0.071715] ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+[    0.071715] ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+[    0.071716] ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+[    0.071716] ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+[    0.071716] ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+[    0.071717] ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+[    0.071717] ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+[    0.071718] ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+[    0.071718] ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+[    0.071718] ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+[    0.071719] ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+[    0.071719] ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+[    0.071720] ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+[    0.071720] ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+[    0.071758] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-119
+[    0.151726] APIC: Switch to symmetric I/O mode setup
+[    0.151740] DMAR-IR: IOAPIC id 2 under DRHD base  0xfed91000 IOMMU 0
+[    0.151742] DMAR-IR: Queued invalidation will be enabled to support x2apic and Intr-remapping.
+[    0.153163] DMAR-IR: Enabled IRQ remapping in x2apic mode
+[    0.153165] x2apic enabled
+[    0.153221] APIC: Switched APIC routing to: cluster x2apic
+[    0.157763] GDS: Vulnerable: No microcode
+[    0.238820] ACPI: Using IOAPIC for interrupt routing
+[    0.513589] microcode: Current revision: 0x00000050

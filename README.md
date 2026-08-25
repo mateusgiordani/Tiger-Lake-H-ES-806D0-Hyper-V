@@ -31,9 +31,19 @@ Entretanto, no fim da sessão foi preparada uma inicialização única de contro
   incorreta**;
 - o teste ainda **não havia sido executado** quando este README foi criado.
 
-Isso significa que o próximo carregamento do Windows Boot Manager pode entrar
-diretamente no teste Hyper-V, inclusive se o boot for iniciado pelo disco
-interno. O menu BCD não precisa aparecer quando existe `bootsequence`.
+**CORREÇÃO (25/08/2026):** a afirmação abaixo sobre `bootsequence` estava
+errada. Conforme a documentação oficial do `bcdedit`, `/bootsequence` define
+uma **ordem de exibição única**: a entrada aparece em primeiro/destacada no
+menu BCD apenas no próximo carregamento e depois o gerente volta ao
+`displayorder`. Ela **não** lança a entrada por fora do menu. Confirmado na
+prática: os reinícios de 19:34 de 24/08 e da manhã de 25/08 foram normais
+(sem nenhum evento Kernel-Power 41/6008), com a entrada visível no menu.
+A `bootsequence` já foi consumida; a entrada continua listada porque está no
+`displayorder` permanente. O controle causal segue **pendente**, para ser
+executado deliberadamente selecionando a entrada uma única vez.
+
+~ O texto original, incorreto, dizia que o próximo carregamento poderia
+~ entrar diretamente no teste sem menu.
 
 Se a intenção for apenas entregar o projeto para análise e não executar o
 controle agora, abrir PowerShell como Administrador e cancelar antes de
@@ -426,6 +436,32 @@ Ordem recomendada para revisão por outro modelo:
 - `analysis/candidates/`: candidata MADT e relatório.
 - `analysis/bcd-backups/`: backups e manifestos dos testes.
 - `analysis/scripts/`: coletores e scripts reversíveis.
+- `analysis/linux-msr/`: coleta VMX/MSR do Ubuntu (vmx-ON, vmx-OFF) e
+  `ANALISE_LINUX_MSR.md`.
+
+## Atualização 25/08/2026 — coleta VMX no Linux (hipótese 3 refutada)
+
+Duas inicializações pela NVMe Ubuntu com coleta somente leitura
+(`analysis/linux-msr/`, detalhes em `analysis/linux-msr/ANALISE_LINUX_MSR.md`):
+
+- Os **16 LPs têm MSRs VMX idênticos** (grupo único); microcode `0x50`
+  uniforme; `FEATURE_CONTROL` travada e aberta corretamente.
+- O conjunto de capacidades cobre tudo que o `hvix64.exe` consome no
+  lançamento: EPT completo, VPID/INVVPID todos os tipos, suíte APICv inteira
+  (APIC-access/x2APIC/APIC-reg/VID/posted interrupts/VNMI), MBEC, XSaves,
+  VMCS shadowing, VMFUNC. Ausências são todas opcionais.
+- A transição x2APIC + interrupt remapping funciona no hardware (Linux).
+- A desabilitação de VMX pelo Setup é limpa (`FEATURE_CONTROL` `0x5`→`0x1`,
+  bit CPUID some, capacidades inalteradas) — o toggle é confiável para o
+  teste AVX3 isolado.
+
+Ordem revisada de ataque:
+
+1. Resolver conscientemente o controle OpenCore one-shot ainda armado.
+2. Teste BIOS `AVX3` isolado + repetir o dump CPUID.
+3. Matriz BCD priorizando `HV 03 xAPIC LEGADO`, depois `HV 05 MINIMO` e
+   `HV 07 SEM XSAVE`.
+4. KDNET se a matriz inteira falhar.
 
 ## Regras de segurança para continuidade
 

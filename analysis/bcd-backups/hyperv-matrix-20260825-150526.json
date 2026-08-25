@@ -1,0 +1,168 @@
+﻿{
+    "CreatedAt":  "2026-08-25T15:05:34.5889426-03:00",
+    "BcdBackup":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\bios-interposer\\analysis\\bcd-backups\\bcd-before-hyperv-matrix-20260825-150526.bcd",
+    "SafeDefault":  "{current}",
+    "SafeDefaultHypervisor":  "off",
+    "TimeoutSeconds":  15,
+    "TestEntries":  [
+                        {
+                            "Name":  "Windows - HV 01 BASELINE",
+                            "Purpose":  "Hypervisor Microsoft ligado, VSM desligado, sem isoladores adicionais.",
+                            "Identifier":  "{5cbe73cb-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 02 SEM IOMMU",
+                            "Purpose":  "Isola DMAR, VT-d e interrupt remapping do lancamento inicial.",
+                            "Identifier":  "{5cbe73cc-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisoriommupolicy":  "disable"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 03 xAPIC LEGADO",
+                            "Purpose":  "Isola a transicao x2APIC e a virtualizacao de APIC.",
+                            "Identifier":  "{5cbe73cd-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "x2apicpolicy":  "disable",
+                                             "uselegacyapicmode":  "yes"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 04 UM LP",
+                            "Purpose":  "Testa se a falha ocorre ao iniciar processadores auxiliares.",
+                            "Identifier":  "{5cbe73ce-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisornumproc":  "1"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 05 MINIMO",
+                            "Purpose":  "Combina um processador, xAPIC legado e IOMMU desligada.",
+                            "Identifier":  "{5cbe73cf-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisoriommupolicy":  "disable",
+                                             "x2apicpolicy":  "disable",
+                                             "uselegacyapicmode":  "yes",
+                                             "hypervisornumproc":  "1",
+                                             "onecpu":  "yes"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 06 SEM MBEC HW",
+                            "Purpose":  "Isola a rota MBEC anunciada pelo processador ES.",
+                            "Identifier":  "{5cbe73d0-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "DISABLEHARDWAREMBEC"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 07 SEM XSAVE",
+                            "Purpose":  "Isola a enumeracao CPUID/XSTATE incoerente do processador ES.",
+                            "Identifier":  "{5cbe73d1-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "xsavedisable":  "1"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 08 CAPTURA BOOTLOG",
+                            "Purpose":  "Mostra bugcheck e registra ntbtlog.txt se o kernel chegar a carregar drivers.",
+                            "Identifier":  "{5cbe73d2-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "bootlog":  "yes",
+                                             "nocrashautoreboot":  "yes",
+                                             "sos":  "yes"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 09 SEM vAPIC",
+                            "Purpose":  "Desliga somente a rota de APIC virtual lida pelo hvloader (BCD 0x26000116).",
+                            "Identifier":  "{5cbe73d3-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorusevapic":  "no"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 10 SEM POSTED INT",
+                            "Purpose":  "Isola interrupcoes postadas de VMX/VT-d no hipervisor.",
+                            "Identifier":  "{5cbe73d4-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "DISABLEPOSTEDINTERRUPTS"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 11 SEM IPI VIRTUAL",
+                            "Purpose":  "Isola a virtualizacao de IPI/APIC do stepping ES.",
+                            "Identifier":  "{5cbe73d5-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "DISABLEIPIVIRTUALIZATION"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 12 SEM SLAT EPT",
+                            "Purpose":  "Forca o hipervisor a nao usar SLAT/EPT; teste de compatibilidade, nao solucao final.",
+                            "Identifier":  "{5cbe73d6-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisordisableslat":  "yes"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 13 APIC DEST FISICO",
+                            "Purpose":  "Forca destino fisico do APIC sem alterar o modo x2APIC.",
+                            "Identifier":  "{5cbe73d7-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "usephysicaldestination":  "yes"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 14 SCHED CLASSICO",
+                            "Purpose":  "Isola o scheduler Core padrao e a interpretacao SMT/topologia.",
+                            "Identifier":  "{5cbe73d8-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorschedulertype":  "classic"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 15 SEM IOMMU HANDOFF",
+                            "Purpose":  "Desliga o handoff vivo de IOMMU reconhecido diretamente pelo hvloader.",
+                            "Identifier":  "{5cbe73d9-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "IOMMULIVEHANDOFF=DISABLE"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 16 IOMMU NAO ESCALAVEL",
+                            "Purpose":  "Evita o caminho de IOMMU escalavel; opcao interna experimental.",
+                            "Identifier":  "{5cbe73da-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "DISABLESCALABLEIOMMU"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 17 TEMPO PMTIMER",
+                            "Purpose":  "Forca a fonte de tempo de referencia ACPI PM Timer; opcao interna experimental.",
+                            "Identifier":  "{5cbe73db-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "REFERENCETIMESOURCE=PMTIMER"
+                                         }
+                        },
+                        {
+                            "Name":  "Windows - HV 18 SINCRONIZA TSC",
+                            "Purpose":  "Forca a sincronizacao de TSC entre LPs; opcao interna experimental.",
+                            "Identifier":  "{5cbe73dc-b469-11f0-9ffb-c2e7dda09ff1}",
+                            "Settings":  {
+                                             "hypervisorloadoptions":  "SYNCTSC"
+                                         }
+                        }
+                    ],
+    "PreTestEvidence":  {
+                            "LastBootUpTime":  "2026-08-25T14:57:26.5000000-03:00",
+                            "Ntbtlog":  {
+                                            "Exists":  true,
+                                            "Length":  732748,
+                                            "LastWriteTime":  "2026-08-25T12:24:21.9629702-03:00"
+                                        }
+                        }
+}
