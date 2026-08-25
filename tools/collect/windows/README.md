@@ -1,1 +1,9 @@
-﻿# Windows collectors`r`n`r`nCollectors should emit normalized JSON compatible with tools/schema.json.
+# Windows collectors
+
+These read-only collectors emit evidence for the normalized platform schema.
+
+The CPUID collector supports:
+
+```powershell
+python tools/collect/windows/dump_cpuid_windows.py --normalized platform.json
+```

@@ -1,1 +1,4 @@
-﻿# Linux collectors`r`n`r`nCollectors capture ACPI, CPUID and VMX/MSR evidence for later validation.
+# Linux collectors
+
+These read-only collectors capture ACPI, CPUID and VMX/MSR evidence for later
+normalization and validation.

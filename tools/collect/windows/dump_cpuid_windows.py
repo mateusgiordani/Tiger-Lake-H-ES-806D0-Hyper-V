@@ -9,10 +9,12 @@ collector for that separate step.
 from __future__ import annotations
 
 import ctypes
+import argparse
 import json
 import os
 import struct
 from collections import defaultdict
+from pathlib import Path
 
 
 kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -275,13 +277,55 @@ def timekeeping_consistency(cpuid: Cpuid) -> dict[str, object]:
     }
 
 
+def normalized_platform(report: dict[str, object]) -> dict[str, object]:
+    """Convert this collector's rich capture into the validator schema."""
+    leaves = report["leaves"]
+    leaf1 = leaves.get("0x00000001", {}).get("0x0", {})
+    eax = int(leaf1.get("eax", "0"), 16)
+    family = (eax >> 8) & 0xF
+    model = (eax >> 4) & 0xF
+    if family == 0xF:
+        family += (eax >> 20) & 0xFF
+    if family in (0x6, 0xF):
+        model |= ((eax >> 16) & 0xF) << 4
+    stepping = eax & 0xF
+    comparison = report["per_cpu_comparison"]
+    return {
+        "schema_version": 1,
+        "source": "Windows CPUID collector",
+        "cpu": {
+            "vendor": report["vendor"],
+            "brand": report["brand"],
+            "family": family,
+            "model": model,
+            "stepping": stepping,
+            "signature": f"{eax:08X}",
+            "logical_processors": comparison["logical_processors_checked"],
+        },
+        "cpuid": leaves,
+        "collection": {
+            "per_cpu_comparison": comparison,
+            "hyperv_relevant_consistency": report["hyperv_relevant_consistency"],
+            "timekeeping_consistency": report["timekeeping_consistency"],
+        },
+    }
+
+
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--normalized", type=Path, help="write validator-compatible platform JSON")
+    args = parser.parse_args()
     with Cpuid() as cpuid:
         report = enumerate_leaves(cpuid)
         report["hyperv_relevant_consistency"] = hyperv_relevant_consistency(cpuid)
         report["timekeeping_consistency"] = timekeeping_consistency(cpuid)
         report["per_cpu_comparison"] = per_cpu_fingerprint(cpuid)
-    print(json.dumps(report, indent=2, ensure_ascii=False))
+    if args.normalized:
+        normalized = normalized_platform(report)
+        args.normalized.write_text(json.dumps(normalized, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(json.dumps(normalized, indent=2, ensure_ascii=False))
+    else:
+        print(json.dumps(report, indent=2, ensure_ascii=False))
     return 0
 
 

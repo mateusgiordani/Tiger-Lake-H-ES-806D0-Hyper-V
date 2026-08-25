@@ -1,7 +1,7 @@
-# Firmware artifacts
+﻿# Firmware artifacts
 
-Esta área contém manifests, relatórios, patches pequenos e artefatos derivados.
+Esta Ã¡rea contÃ©m manifests, relatÃ³rios, patches pequenos e artefatos derivados.
 Dumps SPI integrais ficam fora do projeto, em armazenamento privado.
 
-`manifests/` identifica entradas e hashes; `patches/` contém experimentos
-reversíveis ou explicitamente rejeitados.
+`manifests/` identifica entradas e hashes; `patches/` contÃ©m experimentos
+reversÃ­veis ou explicitamente rejeitados.

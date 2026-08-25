@@ -1,4 +1,4 @@
-# Hyper-V MADT patch candidates
+﻿# Hyper-V MADT patch candidates
 
 ## Accepted for further hardware testing
 
@@ -25,4 +25,3 @@ The first old-engine rebuild is under
 evidence and must not be flashed. UEFIPatch 0.28 reconstructed the full nested
 volume and emitted a non-empty pad-file warning; the layout-preserved candidate
 supersedes it.
-

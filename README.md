@@ -32,21 +32,26 @@ O projeto separa coleta de análise. Coletores produzem JSON normalizado; o
 validador não depende de o dado ter vindo de Windows ou Linux.
 
 ```powershell
+python tools/collect/windows/collect_platform.py platform.json --madt-output evidence/acpi/apic.dat
+python tools/validate_platform.py platform.json --madt evidence/acpi/apic.dat --report-json report.json
 python tools/validate_platform.py
 python tools/validate_platform.py tests/fixtures/affected/platform.json --madt tests/fixtures/affected/madt-original.dat
+python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
-O comando sem argumentos usa o fixture afetado. Para uma coleta nova, converta
-os dados para o schema em [`tools/schema.json`](tools/schema.json) e passe o
-arquivo JSON como argumento.
+O comando sem argumentos usa o fixture afetado. O relatório JSON contém a
+classificação, checks, issues, valores CPUID relevantes, resumo MADT, versão
+do validator e recomendação. O workaround só aparece quando a assinatura
+`000806D0` coincide com a inconsistência CPUID/XSTATE conhecida.
 
 ## Documentação
 
 - [Hardware e evidências](docs/hardware.md)
 - [Falha do Hyper-V](docs/hyperv-failure.md)
 - [Findings consolidados](docs/findings.md)
-- [Workaround MADT/OpenCore](docs/workaround.md)
+- [Workaround comprovado](docs/workaround.md)
+- [Experimento MADT/OpenCore](docs/opencore-madt-experiment.md)
 - [Plano de correção de firmware](docs/firmware-fix.md)
 - [Log da investigação](docs/investigation-log.md)
 

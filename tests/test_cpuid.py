@@ -21,3 +21,17 @@ def test_affected_detects_orphan_vp2intersect():
 
 def test_known_good_has_no_cpuid_issues():
     assert validator.validate_cpuid(load("known-good")) == []
+
+
+def test_known_good_does_not_match_affected_signature():
+    result = validator.build_report(load("known-good"))
+    assert result["known_signature_match"] is False
+    assert result["platform_match"] is False
+    assert result["recommendation"] is None
+
+
+def test_affected_report_recommends_only_known_workaround():
+    result = validator.build_report(load("affected"))
+    assert result["known_signature_match"] is True
+    assert result["platform_match"] is True
+    assert "xsavedisable" in result["recommendation"]

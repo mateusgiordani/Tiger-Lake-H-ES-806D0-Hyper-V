@@ -1,4 +1,4 @@
-# Polestar HM570 - inventario inicial de firmware
+﻿# Polestar HM570 - inventario inicial de firmware
 
 Data da analise: 2026-08-24
 
