@@ -1,0 +1,14 @@
+﻿Timestamp: 2026-08-26T18:43:15.5091206-03:00
+Boot entry: Windows - HV 06 SEM MBEC HW
+HypervisorPresent: True
+
+AVX execution probe:
+AVX: PASS
+AVX2: PASS
+
+Windows processor features:
+PF_AVX_INSTRUCTIONS_AVAILABLE: True
+PF_AVX2_INSTRUCTIONS_AVAILABLE: True
+
+WSL2 probe:
+Linux Pc-Mateus 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 GNU/Linux

@@ -1,0 +1,12 @@
+﻿{
+    "captured_at":  "2026-08-26T18:43:15.5091206-03:00",
+    "boot_entry":  "Windows - HV 06 SEM MBEC HW",
+    "expected_isolator":  "DISABLEHARDWAREMBEC",
+    "hypervisor_present":  true,
+    "last_boot_up_time":  "2026-08-26T18:08:06.5000000-03:00",
+    "avx_execution":  "PASS",
+    "avx2_execution":  "PASS",
+    "wsl2_probe_exit_code":  0,
+    "normalized_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working.json",
+    "rich_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working-legacy-collector.json"
+}
