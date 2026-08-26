@@ -1,0 +1,29 @@
+﻿Experiment: HV06 -> HV01 -> HV06
+
+HV06 pass 1:
+  Result: PASS
+  Hypervisor: active
+  Isolator: DISABLEHARDWAREMBEC
+  XSAVE: enabled
+  AVX: PASS
+  AVX2: PASS
+  WSL2: PASS
+
+HV01 baseline:
+  Result: FAIL
+  Failure mode: early/silent reset
+  Event: Kernel-Power 41 at 2026-08-26 18:51:24
+  Persisted bugcheck/minidump: none observed
+
+HV06 pass 2:
+  Result: PASS
+  Hypervisor: active
+  Isolator: DISABLEHARDWAREMBEC
+  XSAVE: enabled
+  AVX: PASS
+  AVX2: PASS
+  WSL2: PASS
+
+Interpretation:
+Hardware MBEC usage is currently the strongest isolated condition associated with the Hyper-V boot failure.
+This experiment does not yet distinguish silicon erratum, microcode defect, firmware state, or a Hyper-V-specific MBEC interaction.

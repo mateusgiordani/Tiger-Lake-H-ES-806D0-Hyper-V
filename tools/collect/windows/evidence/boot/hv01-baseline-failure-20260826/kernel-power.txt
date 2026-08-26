@@ -1,0 +1,10 @@
+﻿
+
+TimeCreated  : 26/08/2026 18:51:24
+Id           : 41
+ProviderName : Microsoft-Windows-Kernel-Power
+Message      : O sistema foi reiniciado sem um desligamento correto primeiro. Esse erro pode ser causado quando o 
+               sistema para de responder, trava ou fica sem energia inesperadamente.
+
+
+
