@@ -61,6 +61,7 @@ assinatura `000806D0` coincide com a inconsistência CPUID/XSTATE conhecida.
 - [Workaround comprovado](docs/workaround.md)
 - [Experimento MADT/OpenCore](docs/opencore-madt-experiment.md)
 - [Plano de correção de firmware](docs/firmware-fix.md)
+- [Fontes e reprodução dos artefatos de firmware](firmware/sources.md)
 - [Log da investigação](docs/investigation-log.md)
 
 ## Organização
