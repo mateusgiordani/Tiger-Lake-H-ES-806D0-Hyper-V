@@ -52,14 +52,18 @@ ENV/
 # ==============================================================================
 *.dump/
 *.dump[0-9]*/
+
+# Firmware images are local inputs only.
+*.bin
+*.rom
+*.fd
+*.cap
 build/firmware/
 
 # ==============================================================================
 # Downloaded / Third-party Tools & Toolkits (unpacked binaries)
 # ==============================================================================
 archive/third-party/
-firmware/manifests/input-images/*.bin
-firmware/manifests/runtime-*/polestar_full_*.bin
 .tools/uefiextract-a75/
 .tools/MEAnalyzer/MEA.dat
 .tools/MEAnalyzer/FileTable.dat
