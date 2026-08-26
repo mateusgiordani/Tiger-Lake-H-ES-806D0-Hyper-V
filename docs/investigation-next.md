@@ -1,5 +1,10 @@
 # Próximos testes do Hyper-V
 
+> **Nota de estado:** este plano antecede o boot nativo bem-sucedido com
+> `xsavedisable=1`. Esse resultado desabilita XSAVE globalmente e remove
+> AVX/AVX2; use a configuração de duas entradas descrita em
+> [`workaround.md`](workaround.md), não a entrada diagnóstica como default.
+
 ## Situação
 
 Nenhuma alteração foi aplicada ao BCD, Registro ou firmware. A entrada atual continua intacta, `IgnoreMemPart` continua em `1` e não houve reinicialização.
@@ -89,11 +94,10 @@ Depois disso, a próxima prova é KDNET com um segundo PC. O plano está em `HIP
 
 ## Quando considerar a BIOS corrigida
 
-Somente após três leituras externas idênticas e recuperação testada. A candidata atual é:
-
-`firmware/patches/candidates/polestar-hyperv-madt-nmi-zero-based-layout-preserved.bin`
-
-Ela altera somente os 16 UIDs NMI `1..16` para `0..15`. SHA-256:
+Somente após três leituras externas idênticas e recuperação testada. A
+identidade e a receita da candidata removida da distribuição estão em
+`firmware/manifests/artifact-provenance.json`. Ela altera somente os 16 UIDs
+NMI `1..16` para `0..15`. SHA-256:
 
 `4F99E06399972E31D7D86383D8B81E451C7F75A5D5A00DB8CD8A34AFA25E8E73`
 

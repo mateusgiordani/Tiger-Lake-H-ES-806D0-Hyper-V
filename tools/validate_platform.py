@@ -9,7 +9,7 @@ import struct
 from pathlib import Path
 
 
-VALIDATOR_VERSION = "0.3.0"
+VALIDATOR_VERSION = "0.4.0"
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "tests" / "fixtures" / "affected" / "platform.json"
 KNOWN_FMS = 0x000806D0
@@ -140,6 +140,8 @@ def validate_madt(path: Path) -> list[tuple[str, str]]:
 
 
 def cpuid_values(data: dict) -> dict:
+    leaf1 = _leaf(data, "0x00000001")
+    leaf1_ecx = _int(leaf1["ecx"]) if "ecx" in leaf1 else None
     avx512f = bool(_bit(data, "0x00000007", "ebx", 16))
     avx512vl = bool(_bit(data, "0x00000007", "ebx", 31))
     vp2 = bool(_bit(data, "0x00000007", "edx", 8))
@@ -147,6 +149,10 @@ def cpuid_values(data: dict) -> dict:
     xstate = {str(state): bool(xstate_eax & (1 << state)) for state in (5, 6, 7)}
     return {
         "fms": f"{_fms(data):08X}" if _fms(data) is not None else None,
+        "cpuid_1_0": leaf1,
+        "xsave": bool(leaf1_ecx & (1 << 26)) if leaf1_ecx is not None else None,
+        "osxsave": bool(leaf1_ecx & (1 << 27)) if leaf1_ecx is not None else None,
+        "avx": bool(leaf1_ecx & (1 << 28)) if leaf1_ecx is not None else None,
         "cpuid_7_0": _leaf(data, "0x00000007"),
         "cpuid_d_0": _leaf(data, "0x0000000D"),
         "avx512f": avx512f,
@@ -165,6 +171,53 @@ def validate_cpuid(data: dict) -> list[tuple[str, str]]:
     if values["avx512_vp2intersect"] and values["missing_avx512_xstate"]:
         issues.append(("AVX512_XSTATE_UNAVAILABLE", f"missing XSTATE components={values['missing_avx512_xstate']}"))
     return issues
+
+
+def windows_processor_features(data: dict) -> dict[str, bool] | None:
+    raw = data.get("collection", {}).get("windows_processor_features", {}).get("features")
+    if not isinstance(raw, dict):
+        return None
+    result: dict[str, bool] = {}
+    for name, feature in raw.items():
+        if isinstance(feature, dict) and isinstance(feature.get("available"), bool):
+            result[name] = feature["available"]
+    return result or None
+
+
+def windows_xsave_bypass_active(data: dict, known_signature_match: bool) -> bool:
+    features = windows_processor_features(data)
+    return bool(
+        known_signature_match
+        and features
+        and features.get("xsave_enabled") is False
+        and features.get("avx") is False
+        and features.get("avx2") is False
+    )
+
+
+def diagnostic_mitigation(matches_affected_signature: bool, active: bool = False) -> dict | None:
+    if not matches_affected_signature and not active:
+        return None
+    return {
+        "command": 'bcdedit /set "{diagnostic-entry-guid}" xsavedisable 1',
+        "active": active,
+        "purpose": "Confirm XSAVE/XSTATE involvement in the early Hyper-V startup failure",
+        "suitable_for_daily_use": False,
+        "known_impact": [
+            "AVX unavailable",
+            "AVX2 unavailable",
+            "AVX-512 unavailable",
+        ],
+        "not_implied": [
+            "SSE unavailable",
+            "SSE2 unavailable",
+        ],
+        "causal_limit": (
+            "This globally disables kernel XSAVE handling; it localizes the failure to the "
+            "XSAVE/XSTATE path but does not identify VP2INTERSECT or any other single component "
+            "as the exact trigger."
+        ),
+    }
 
 
 def build_report(data: dict, madt: Path | None = None) -> dict:
@@ -188,19 +241,29 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         for code, message in madt_issues
     ]
     known_signature_match = _fms(data) == KNOWN_FMS
+    windows_features = windows_processor_features(data)
+    bypass_active = windows_xsave_bypass_active(data, known_signature_match)
+    windows_issues: list[tuple[str, str]] = []
+    if bypass_active:
+        windows_issues.append((
+            "WINDOWS_XSAVE_AVX_UNAVAILABLE",
+            "Windows reports XSAVE, AVX and AVX2 unavailable; diagnostic bypass is active",
+        ))
     xsave_hyperv_match = cpuid_complete and known_signature_match and any(
         issue[0] == "ORPHAN_AVX512_VP2INTERSECT" for issue in cpuid_issues
     ) and any(issue[0] == "AVX512_XSTATE_UNAVAILABLE" for issue in cpuid_issues)
-    cpuid_platform_match = xsave_hyperv_match
+    cpuid_platform_match = xsave_hyperv_match or bypass_active
     if not cpuid_complete:
         classification = "Unknown"
+    elif bypass_active:
+        classification = "Diagnostic bypass active"
     elif xsave_hyperv_match:
         classification = "Affected"
     elif known_signature_match:
         classification = "Not affected"
     else:
         classification = "Unknown"
-    xsave_status = (
+    xsave_status = "BYPASS ACTIVE" if bypass_active else (
         "MATCH" if xsave_hyperv_match else ("NO MATCH" if known_signature_match and cpuid_complete else "UNKNOWN")
     )
     madt_status = "NOT CHECKED" if madt is None else ("DETECTED" if madt_issues else "CLEAN")
@@ -212,8 +275,20 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
             "values": cpuid,
         },
     ]
+    if windows_features is not None:
+        checks.append({
+            "name": "WINDOWS",
+            "status": "FAIL" if windows_issues else "PASS",
+            "values": {"processor_features": windows_features},
+        })
     if madt:
         checks.append({"name": "MADT", "status": "FAIL" if madt_issues else "PASS", "summary": summary})
+    issues.extend(
+        {"code": code, "message": message, "source": "windows"}
+        for code, message in windows_issues
+    )
+    if windows_issues and cpuid_complete:
+        overall_status = "ISSUES DETECTED"
     return {
         "schema_version": 1,
         "validator_version": VALIDATOR_VERSION,
@@ -224,12 +299,17 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         "madt": summary,
         "known_signature_match": known_signature_match,
         "platform_match": cpuid_platform_match,
-        "xsave_hyperv_signature": {"status": xsave_status, "match": xsave_hyperv_match},
+        "xsave_hyperv_signature": {
+            "status": xsave_status,
+            "match": xsave_hyperv_match,
+            "diagnostic_bypass_active": bypass_active,
+        },
         "madt_firmware_anomaly": {"status": madt_status, "detected": bool(madt_issues)},
         "overall_status": overall_status,
         "cpuid_complete": cpuid_complete,
         "classification": classification,
-        "recommendation": 'bcdedit /set "{current}" xsavedisable 1' if xsave_hyperv_match else None,
+        "recommendation": None,
+        "diagnostic_mitigation": diagnostic_mitigation(xsave_hyperv_match, bypass_active),
     }
 
 
@@ -251,10 +331,15 @@ def print_report(result: dict) -> None:
     print(f"  Logical processors: {cpu.get('logical_processors', 'unknown')}")
     for check in result["checks"]:
         print(f"\n{check['name']}")
-        for issue in result["issues"]:
-            if issue["source"].lower() == check["name"].split("/")[0].lower() or issue["source"] == check["name"].lower():
-                print(f"  [FAIL] {issue['code']}: {issue['message']}")
-        if not any(issue["source"] == ("cpuid" if check["name"].startswith("CPUID") else "madt") for issue in result["issues"]):
+        check_source = (
+            "cpuid" if check["name"].startswith("CPUID")
+            else "madt" if check["name"] == "MADT"
+            else "windows"
+        )
+        check_issues = [issue for issue in result["issues"] if issue["source"] == check_source]
+        for issue in check_issues:
+            print(f"  [FAIL] {issue['code']}: {issue['message']}")
+        if not check_issues:
             print(f"  [{check['status']}] {check['name']}")
     print("\nClassification")
     xsave = result["xsave_hyperv_signature"]
@@ -262,10 +347,13 @@ def print_report(result: dict) -> None:
     print(f"  Known Hyper-V XSAVE signature: [{xsave['status']}]")
     print(f"  MADT firmware anomaly: [{madt['status']}]")
     print(f"  Overall platform status: {result['overall_status']}")
-    print(f"  Hyper-V xsavedisable classification: {result['classification']}")
-    if result["recommendation"]:
-        print("\nKnown workaround:")
-        print(f"  {result['recommendation']}")
+    print(f"  Hyper-V XSAVE classification: {result['classification']}")
+    mitigation = result["diagnostic_mitigation"]
+    if mitigation:
+        print("\nDiagnostic mitigation (not recommended for daily use):")
+        print(f"  {mitigation['command']}")
+        print(f"  Purpose: {mitigation['purpose']}")
+        print(f"  Known impact: {', '.join(mitigation['known_impact'])}")
 
 
 def main() -> int:

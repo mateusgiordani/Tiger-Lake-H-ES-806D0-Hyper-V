@@ -1,10 +1,12 @@
-# Relatório Final — Polestar HM570: do bootloop do Hyper-V ao workaround estável
+# Relatório Final — Polestar HM570: do bootloop ao bypass XSAVE diagnóstico
 
 **Placa:** Erying/Polestar HM570 \(família `HM570111`, BIOS AMI `THM570111` 06/08/2023\)  
 **CPU:** Tiger Lake-H Engineering Sample `806D0` \(family 6, model 0x8D, stepping 0, 8C/16T, microcode `0x50` de 17/12/2020\)  
 **GPU:** RX 7800 XT \(iGPU desabilitada, mas enumerada como `8086:9A60`\)  
 **Período:** 24–25/08/2026  
-**Estado atual:** `HV 07 SEM XSAVE` \(nativo, sem OpenCore\) boota com hipervisor ativo e libera `WSL2/Docker`
+**Estado atual:** `HV 07 SEM XSAVE` \(nativo, sem OpenCore\) boota com
+hipervisor ativo, mas desabilita XSAVE globalmente e remove AVX/AVX2 da visão
+do Windows. Não é a configuração recomendada para uso diário.
 
 ---
 
@@ -23,14 +25,18 @@ Hashes de referência:
 - `HM570111.bin`: `16529D3B622D150CB2E2EEDA95347C68A878532D39B8B3D9C1F4084A4CFFCCBE`
 - Candidata layout-preserved \(só 16 bytes NMI `1..16→0..15`\): `4F99E06399972E31D7D86383D8B81E451C7F75A5D5A00DB8CD8A34AFA25E8E73`
 
-### 2.2 Segundo defeito confirmado: CPUID/XSTATE órfão
+### 2.2 Inconsistência confirmada: CPUID/XSTATE AVX-512
 
 Dump `CPUID` nos 16 LPs:
 - `CPUID.7:EBX[16] AVX512F = 0`, `EBX[31] AVX512VL = 0`
 - `CPUID.7:EDX[8] AVX512_VP2INTERSECT = 1`
 - `CPUID.D.0:EAX = 0x207` \(XCR0 bits 5–7 de AVX-512 ausentes\)
 
-`NVRAM CpuSetup+0x22A = 1` \(AVX3 desabilitado\). A BIOS esconde AVX-512 pela metade e deixa o `VP2INTERSECT` órfão. Tentativa de ligar `AVX3` trava o POST neste `D0`, então não dá pra coerenciar por `Setup`.
+`NVRAM CpuSetup+0x22A = 1` \(AVX3 desabilitado\). A BIOS esconde AVX-512
+pela metade e deixa o `VP2INTERSECT` órfão. Tentativa de ligar `AVX3` trava o
+POST neste `D0`, então não dá para coerenciar por `Setup`. Essa combinação
+é anômala, mas o experimento XSAVE global ainda não prova que esse bit seja
+sozinho o gatilho do reset.
 
 ### 2.3 O que foi descartado
 
@@ -73,51 +79,50 @@ O `Recovery` do Windows atrapalhou \(exigiu `recoveryenabled No` / `bootstatuspo
 HypervisorPresent: True
 systeminfo: Hipervisor detectado
 ```
-Todos os boots via OpenCore falhavam; sem ele, o `xsavedisable` isolou o órfão e o hipervisor subiu.
+Todos os boots via OpenCore falhavam; sem ele, `xsavedisable=1` isolou o caminho
+global XSAVE/XSTATE e o hipervisor subiu. CPU-Z confirmou depois que AVX e AVX2
+também ficaram indisponíveis nesse boot.
 
 ## 6. Por que o bootloader do Windows conseguiu “patchear” fora da BIOS
 
-O `hvloader.dll` lê `hypervisorloadoptions`/`xsavedisable` do BCD antes de lançar o `hvix64.exe`. Com `xsavedisable=1` ele desliga `XSAVE/XSTATE` pro hipervisor e **ignora a validação incoerente** do `VP2INTERSECT` sem estado. É um *workaround* de bootloader — não conserta o `CPUID` do silício, só diz ao hipervisor pra não validar aquele contrato. Por isso funciona sem gravar nada.
+O `hvloader.dll` lê `hypervisorloadoptions`/`xsavedisable` do BCD antes de
+lançar o `hvix64.exe`. A Microsoft documenta que um valor não zero desabilita
+a funcionalidade XSAVE no kernel. O boot bem-sucedido demonstra que retirar
+esse caminho global permite a inicialização do hipervisor; não demonstra qual
+feature ou componente XSTATE individual falhava. O custo observado foi a perda
+de AVX/AVX2, portanto isso é bypass diagnóstico, não reparo.
 
 O OpenCore não consegue fazer isso: ele só entrega `ACPI`/mapa de memória. `CPUID/XSTATE` é lido direto da instrução, fora do alcance de patch `ACPI`.
 
-## 7. Solução do dia-a-dia adotada
+## 7. Configuração provisória segura
 
-O boot nativo bem-sucedido usou a entrada `HV 07 SEM XSAVE` da matriz BCD. Essa
-entrada isola causalmente o defeito CPUID/XSTATE com `xsavedisable=1`. O script
-da matriz também aplicou `vsmlaunchtype=off` a **todas** as entradas de teste,
-portanto VSM não foi isolado nesse boot positivo.
+Mantenha VT-x/VT-d ligados na BIOS e controle o lançamento do hipervisor por
+entrada BCD. `Windows - Normal` deve ser o default, com
+`hypervisorlaunchtype=off` e `xsavedisable` ausente. Uma segunda entrada
+`Windows - Hyper-V diagnostic` conserva `hypervisorlaunchtype=auto`,
+`xsavedisable=1` e `vsmlaunchtype=off` para uso deliberado. O script da matriz
+aplicou `vsmlaunchtype=off` a todas as entradas; VSM ainda não foi isolado.
 
-**Configuração causal comprovada para o bug XSAVE:**
-
-```powershell
-bcdedit /set "{current}" hypervisorlaunchtype auto
-bcdedit /set "{current}" xsavedisable 1
-```
-
-**Também presente no ambiente de teste observado:**
-
-```powershell
-bcdedit /set "{current}" vsmlaunchtype off
-```
-
-Não afirmar que `xsavedisable=1` sozinho basta até um boot confirmar Hyper-V
-com VSM padrão/auto. Até esse teste de isolamento, trate `vsmlaunchtype=off`
-como parte da configuração observada, não como extra opcional comprovado.
-
-Com `VirtualMachinePlatform` habilitado, `WSL2`/`Docker` voltam. `IOMMU` continua ligado, `x2APIC` continua ligado, performance de `EPT/MBEC` preservada — só o `XSAVE` do hipervisor fica desligado.
+O procedimento completo explica GUID, `{current}`, cópia da entrada, backup,
+default seguro e boot one-shot em [`workaround.md`](workaround.md). WSL2/Docker
+podem usar o hipervisor nesse modo, mas cargas que exigem AVX/AVX2 ficam
+degradadas ou indisponíveis.
 
 ## 8. Próximos passos e opção definitiva na BIOS
 
-- Manter `xsavedisable` como workaround reversível é o recomendado hoje.
-- Patch definitivo na flash exigiria esconder `VP2INTERSECT` no firmware \(módulo que monta `CPUID.7` ou microcode\), mais invasivo que a `MADT` e sem microcode público novo para `806D0` \(`0x50` é o único\). Com seu `CH341` já detectado (`ch341ser`/`ch341wdm`), a candidata `MADT` + eventual máscara de `CPUID` pode ser preparada, mas só com as 3 leituras externas idênticas, checagem de tensão `1.8V/3.3V` e validação de restauração.
+- Manter `xsavedisable` somente na entrada diagnóstica, nunca como default.
+- O alvo definitivo é iniciar Hyper-V com XSAVE, AVX e AVX2 ativos e uma
+  enumeração CPUID/XSTATE coerente. Ocultar seletivamente `VP2INTERSECT` é uma
+  hipótese de correção, não uma causa isolada comprovada.
+- Qualquer patch na flash continua exigindo 3 leituras externas idênticas,
+  checagem de tensão `1.8V/3.3V` e validação de restauração.
 - Para ir mais fundo sem flash, o próximo instrumento é `KDNET` no Realtek `10EC:8168` via segundo PC cabeado, agora pela cadeia **nativa** com `HV 07`.
 
 ---
 
 ### Artefatos
 
-- `firmware/patches/candidates/polestar-hyperv-madt-nmi-zero-based-layout-preserved.bin`
+- `firmware/manifests/artifact-provenance.json`
 - `evidence/msr/linux/ANALISE_LINUX_MSR.md`
 - `evidence/boot/control-run-20260825/ntbtlog.txt` e `system-events.json`
 - `evidence/boot/bcd-backups/hyperv-matrix-*.json`

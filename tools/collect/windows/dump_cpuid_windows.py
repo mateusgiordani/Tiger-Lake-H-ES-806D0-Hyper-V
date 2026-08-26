@@ -30,6 +30,8 @@ kernel32.VirtualFree.argtypes = (ctypes.c_void_p, ctypes.c_size_t, ctypes.c_ulon
 kernel32.GetCurrentThread.restype = ctypes.c_void_p
 kernel32.SetThreadAffinityMask.restype = ctypes.c_size_t
 kernel32.SetThreadAffinityMask.argtypes = (ctypes.c_void_p, ctypes.c_size_t)
+kernel32.IsProcessorFeaturePresent.restype = ctypes.c_int
+kernel32.IsProcessorFeaturePresent.argtypes = (ctypes.c_uint32,)
 
 
 # Windows x64 ABI: RCX=leaf, RDX=subleaf, R8=UINT32[4] output.
@@ -50,6 +52,15 @@ CODE = bytes.fromhex(
 MEM_COMMIT_RESERVE = 0x3000
 MEM_RELEASE = 0x8000
 PAGE_EXECUTE_READWRITE = 0x40
+
+PROCESSOR_FEATURES = {
+    "sse": (6, "PF_XMMI_INSTRUCTIONS_AVAILABLE"),
+    "sse2": (10, "PF_XMMI64_INSTRUCTIONS_AVAILABLE"),
+    "xsave_enabled": (17, "PF_XSAVE_ENABLED"),
+    "avx": (39, "PF_AVX_INSTRUCTIONS_AVAILABLE"),
+    "avx2": (40, "PF_AVX2_INSTRUCTIONS_AVAILABLE"),
+    "avx512f": (41, "PF_AVX512F_INSTRUCTIONS_AVAILABLE"),
+}
 
 
 class Cpuid:
@@ -85,6 +96,21 @@ class Cpuid:
 
 def regs(values: tuple[int, int, int, int]) -> dict[str, str]:
     return dict(zip(("eax", "ebx", "ecx", "edx"), (f"0x{x:08X}" for x in values)))
+
+
+def windows_processor_features() -> dict[str, object]:
+    """Report instruction availability as exposed by the running Windows kernel."""
+    return {
+        "api": "IsProcessorFeaturePresent",
+        "features": {
+            key: {
+                "id": feature_id,
+                "windows_name": windows_name,
+                "available": bool(kernel32.IsProcessorFeaturePresent(feature_id)),
+            }
+            for key, (feature_id, windows_name) in PROCESSOR_FEATURES.items()
+        },
+    }
 
 
 def vendor(values: tuple[int, int, int, int]) -> str:
@@ -299,6 +325,7 @@ def normalized_platform(report: dict[str, object]) -> dict[str, object]:
             "per_cpu_comparison": comparison,
             "hyperv_relevant_consistency": report["hyperv_relevant_consistency"],
             "timekeeping_consistency": report["timekeeping_consistency"],
+            "windows_processor_features": report["windows_processor_features"],
         },
     }
 
@@ -312,6 +339,7 @@ def main() -> int:
         report["hyperv_relevant_consistency"] = hyperv_relevant_consistency(cpuid)
         report["timekeeping_consistency"] = timekeeping_consistency(cpuid)
         report["per_cpu_comparison"] = per_cpu_fingerprint(cpuid)
+        report["windows_processor_features"] = windows_processor_features()
     if args.normalized:
         normalized = normalized_platform(report)
         args.normalized.write_text(json.dumps(normalized, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

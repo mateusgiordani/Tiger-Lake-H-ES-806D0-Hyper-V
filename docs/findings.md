@@ -1,6 +1,8 @@
 # Documentação Estável e Reprodutível — Polestar HM570 Hyper-V
 
-**Objetivo:** reativar `WSL2/Docker/Hyper-V` nesta placa de forma **reversível, sem gravar BIOS**, a partir do estado atual validado em 25/08/2026.
+**Objetivo:** manter um boot normal com AVX/AVX2 e um boot Hyper-V diagnóstico
+separados, de forma reversível e sem gravar BIOS, enquanto a causa XSTATE
+específica continua em investigação.
 
 ---
 
@@ -82,7 +84,7 @@ reagentc /disable
 
 | Ordem | Entrada | Isola | Esperado se for a causa |
 |---|---|---|---|
-| 1 | `HV 07 SEM XSAVE` | `VP2INTERSECT` órfão | **Boota com `HypervisorPresent: True`** \(foi o que bootou em 25/08 nativo\) |
+| 1 | `HV 07 SEM XSAVE` | caminho global XSAVE/XSTATE | **Boota com `HypervisorPresent: True`**, mas sem AVX/AVX2 |
 | 2 | `HV 03 xAPIC LEGADO` | `x2APIC` | `0x7E` vs reset |
 | 3 | `HV 05 MINIMO` | SMP+IOMMU+xAPIC | Se só ele bootar, falha é composta |
 
@@ -94,29 +96,18 @@ wsl --status
 ```
 Se cair no Recovery, escolha **Sair e continuar para o Windows**.
 
-### 5.4 Tornar o dia-a-dia estável \(quando `HV 07` for o vencedor\)
+### 5.4 Configuração segura de uso: duas entradas BCD
 
-A entrada `HV 07 SEM XSAVE` isola o defeito CPUID/XSTATE. O script da matriz
-também definiu `vsmlaunchtype=off` em todas as entradas; VSM não foi testado
-isoladamente no boot positivo.
+`HV 07 SEM XSAVE` é um bypass diagnóstico: desabilita XSAVE globalmente no
+kernel e torna AVX/AVX2 indisponíveis. O boot positivo localiza a falha no
+caminho XSAVE/XSTATE, mas não prova que `VP2INTERSECT` seja sozinho o gatilho.
 
-**Causal para o bug XSAVE:**
-
-```powershell
-bcdedit /set "{current}" hypervisorlaunchtype auto
-bcdedit /set "{current}" xsavedisable 1
-```
-
-**Também presente no ambiente observado:**
-
-```powershell
-bcdedit /set "{current}" vsmlaunchtype off
-bcdedit /set "{current}" description "Windows - HV07 XSAVE OFF (dia-a-dia)"
-bcdedit /default "{current}"
-bcdedit /timeout 5
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All
-```
-`WSL2/Docker` voltam sem pendrive. Mantenha `Hyper-V` instalado, `VirtualMachinePlatform` ligado, driver AMD `32.0.31035.1003` de `24/07/2026` \(evite a `32.0.31041.1004` de `17/08` que congelou o logon após o Reparo de Inicialização\).
+Mantenha VT-x/VT-d ligados na BIOS. Use `Windows - Normal` como default, com
+`hypervisorlaunchtype=off` e `xsavedisable` ausente. Preserve uma segunda
+entrada `Windows - Hyper-V diagnostic`, com `hypervisorlaunchtype=auto`,
+`xsavedisable=1` e `vsmlaunchtype=off`, somente para diagnóstico ou uso
+indispensável de WSL2/Docker sem AVX/AVX2. A montagem, validação e seleção
+one-shot por `bcdedit /bootsequence` estão em [`workaround.md`](workaround.md).
 
 ### 5.5 Limpeza e reversão
 
@@ -125,14 +116,18 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All
 bcdedit /set "{current}" recoveryenabled Yes
 bcdedit /set "{current}" bootstatuspolicy DisplayAllFailures
 reagentc /enable
-# se não quiser mais hipervisor no dia-a-dia:
+# restaurar a entrada atual como Windows normal:
 bcdedit /set "{current}" hypervisorlaunchtype off
 bcdedit /deletevalue "{current}" xsavedisable
 ```
 
 ### 5.6 Quando gravar BIOS
 
-Só se houver evidência causal clara e após: 3 leituras externas idênticas com `CH341` \(confirme `1.8V` vs `3.3V` no chip `EF4018`\), comparação com `68E9A811...`, e teste de restauração do dump original. A candidata `MADT` sozinha não resolveu; eventual patch definitivo teria que esconder também o `VP2INTERSECT`, mais invasivo que o BCD.
+Só se houver evidência causal clara e após: 3 leituras externas idênticas com
+`CH341` \(confirme `1.8V` vs `3.3V` no chip `EF4018`\), comparação com
+`68E9A811...` e teste de restauração do dump original. A correção MADT
+sozinha não resolveu. Ocultar seletivamente `VP2INTERSECT` permanece uma
+hipótese de correção, não requisito causal comprovado.
 
 ---
 
@@ -141,5 +136,5 @@ Só se houver evidência causal clara e após: 3 leituras externas idênticas co
 - `evidence/boot/control-run-20260825/RELATORIO.md` — controle OpenCore
 - `evidence/msr/linux/ANALISE_LINUX_MSR.md` — MSRs
 - `docs/hyperv-failure.md` — narrativa completa
-- `firmware/patches/candidates/...layout-preserved.bin` — candidata
-- `backup da bios que estava rodando/polestar_full_*.bin` — recuperação
+- `firmware/manifests/artifact-provenance.json` — hashes e receita da candidata
+- backups SPI integrais de recuperação — armazenamento privado, fora do repo

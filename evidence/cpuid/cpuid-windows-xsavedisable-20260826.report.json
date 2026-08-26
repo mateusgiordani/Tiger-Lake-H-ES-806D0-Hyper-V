@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "validator_version": "0.4.0",
+  "input": "Windows CPUID collector",
+  "cpu": {
+    "vendor": "GenuineIntel",
+    "brand": "Genuine Intel(R) CPU 0000 @ 2.60GHz",
+    "family": 6,
+    "model": 141,
+    "stepping": 0,
+    "signature": "000806D0",
+    "logical_processors": 16
+  },
+  "checks": [
+    {
+      "name": "CPUID/XSTATE",
+      "status": "PASS",
+      "values": {
+        "fms": "000806D0",
+        "cpuid_1_0": {
+          "eax": "0x000806D0",
+          "ebx": "0x01100800",
+          "ecx": "0xE3FAE38F",
+          "edx": "0xBFEBFBFF"
+        },
+        "xsave": false,
+        "osxsave": false,
+        "avx": false,
+        "cpuid_7_0": {
+          "eax": "0x00000000",
+          "ebx": "0x239CA789",
+          "ecx": "0x18402004",
+          "edx": "0xBC000410"
+        },
+        "cpuid_d_0": {
+          "eax": "0x00000000",
+          "ebx": "0x00000000",
+          "ecx": "0x00000000",
+          "edx": "0x00000000"
+        },
+        "avx512f": false,
+        "avx512vl": false,
+        "avx512_vp2intersect": false,
+        "xstate_components_5_6_7": {
+          "5": false,
+          "6": false,
+          "7": false
+        },
+        "missing_avx512_xstate": [
+          "5",
+          "6",
+          "7"
+        ]
+      }
+    },
+    {
+      "name": "WINDOWS",
+      "status": "FAIL",
+      "values": {
+        "processor_features": {
+          "sse": true,
+          "sse2": true,
+          "xsave_enabled": false,
+          "avx": false,
+          "avx2": false,
+          "avx512f": false
+        }
+      }
+    }
+  ],
+  "issues": [
+    {
+      "code": "WINDOWS_XSAVE_AVX_UNAVAILABLE",
+      "message": "Windows reports XSAVE, AVX and AVX2 unavailable; diagnostic bypass is active",
+      "source": "windows"
+    }
+  ],
+  "madt": null,
+  "known_signature_match": true,
+  "platform_match": true,
+  "xsave_hyperv_signature": {
+    "status": "BYPASS ACTIVE",
+    "match": false,
+    "diagnostic_bypass_active": true
+  },
+  "madt_firmware_anomaly": {
+    "status": "NOT CHECKED",
+    "detected": false
+  },
+  "overall_status": "ISSUES DETECTED",
+  "cpuid_complete": true,
+  "classification": "Diagnostic bypass active",
+  "recommendation": null,
+  "diagnostic_mitigation": {
+    "command": "bcdedit /set \"{diagnostic-entry-guid}\" xsavedisable 1",
+    "active": true,
+    "purpose": "Confirm XSAVE/XSTATE involvement in the early Hyper-V startup failure",
+    "suitable_for_daily_use": false,
+    "known_impact": [
+      "AVX unavailable",
+      "AVX2 unavailable",
+      "AVX-512 unavailable"
+    ],
+    "not_implied": [
+      "SSE unavailable",
+      "SSE2 unavailable"
+    ],
+    "causal_limit": "This globally disables kernel XSAVE handling; it localizes the failure to the XSAVE/XSTATE path but does not identify VP2INTERSECT or any other single component as the exact trigger."
+  }
+}

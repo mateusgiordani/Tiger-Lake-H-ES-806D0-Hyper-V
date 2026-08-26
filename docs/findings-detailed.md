@@ -222,9 +222,9 @@ O patch modifica somente os 16 bytes de Processor UID das entradas Local APIC NM
 00,01,02,03,04,05,06,07,08,09,0A,0B,0C,0D,0E,0F
 ```
 
-Foi construído um candidato layout-preserved diretamente sobre o dump validado:
-
-`firmware/patches/candidates/polestar-hyperv-madt-nmi-zero-based-layout-preserved.bin`
+Foi construído um candidato layout-preserved diretamente sobre o dump
+validado. O binário derivado não é redistribuído; sua identidade e receita estão
+em `firmware/manifests/artifact-provenance.json`.
 
 SHA-256:
 
@@ -401,7 +401,9 @@ O protocolo completo está em `docs/hyperv-test-matrix.md`. O script `archive/ex
 4. apenas um processador lógico iniciado pelo hipervisor;
 5. combinação mínima de um CPU + xAPIC legado + IOMMU desligada;
 6. MBEC por hardware desabilitado pelo load option encontrado no `hvloader`.
-7. XSAVE desabilitado para isolar a combinação CPUID/XSTATE incoerente.
+7. XSAVE desabilitado globalmente para isolar o caminho de inicialização
+   XSAVE/XSTATE; um resultado positivo não identifica sozinho qual componente
+   incoerente é o gatilho e deixa AVX/AVX2 indisponíveis.
 8. captura de `ntbtlog.txt`, nomes de drivers na tela e bugcheck sem reinício automático;
 9. vAPIC desabilitado pelo elemento BCD `hypervisorusevapic` (`0x26000116`);
 10. interrupções postadas desabilitadas;
@@ -464,14 +466,19 @@ Entre 111 e 307, o único módulo alterado que participa claramente do pré-memo
 
 ## Possibilidades restantes, em ordem técnica
 
-1. **MADT/AP startup/APIC:** defeito confirmado na tabela e compatível com os caminhos `MinimalLoop`, NMI e AP que reiniciam dentro de `hvix64.exe`. É o candidato firmware principal.
-2. **Máscara AVX3/CPUID/XSTATE:** segundo defeito confirmado, com teste de BIOS reversível e barato antes de flash.
-3. **Capacidades VMX/MSRs específicas do D0:** Linux/KVM provar VMX/EPT básico não garante que todos os controles exigidos pelo Hyper-V sejam idênticos em todos os LPs. O coletor Linux criado lê `IA32_VMX_*` em cada CPU.
-4. **x2APIC/APIC virtualization fora da MADT:** o Windows reporta APIC virtualization disponível, mas a transição ainda pode falhar no ES ou no firmware. A entrada xAPIC legado isola isso.
-5. **DMAR/VT-d/interrupt remapping:** a tabela é internamente coerente, mas o caminho de ativação continua testável com IOMMU desligada.
-6. **Drivers `.sys` da partição raiz:** probabilidade muito baixa para este sintoma, porque a falha reproduz em instalação limpa e pode ocorrer antes que esses drivers executem.
-7. **`IgnoreMemPart=1`:** configuração Microsoft confirmada no caminho de preload e memória do hipervisor; plausível como desvio específico desta instalação, porém de prioridade baixa e sem documentação pública. O teste `0` deve ser isolado e revertido.
-8. **Compatibilidade por geração do Hyper-V:** o WinSxS atual só permite comparar revisões do mesmo ramo 26100, e ambas contêm as rotas suspeitas. Se o hardware continuar falhando após todos os isoladores, um Windows 10 22H2 ou Windows 11 23H2 oficial em SSD separado pode servir como bisect de versão. Ele não deve substituir nem alterar a instalação atual; se uma geração antiga iniciar, o alvo passa a ser uma diferença de validação do `hvix64`, não um driver físico.
+1. **Inicialização XSAVE/XSTATE:** `xsavedisable=1` permite o boot, mas
+   desabilita XSAVE globalmente e remove AVX/AVX2. Isso confirma o caminho
+   causal geral, não o componente exato.
+2. **MADT/AP startup/APIC:** defeito confirmado na tabela; corrigi-lo muda o
+   modo de falha, mas não basta para iniciar o Hyper-V.
+3. **Máscara AVX3/CPUID/XSTATE:** `VP2INTERSECT` órfão é uma inconsistência
+   confirmada e um gatilho candidato, ainda não isolado.
+4. **Capacidades VMX/MSRs específicas do D0:** Linux/KVM provar VMX/EPT básico não garante que todos os controles exigidos pelo Hyper-V sejam idênticos em todos os LPs. O coletor Linux criado lê `IA32_VMX_*` em cada CPU.
+5. **x2APIC/APIC virtualization fora da MADT:** o Windows reporta APIC virtualization disponível, mas a transição ainda pode falhar no ES ou no firmware. A entrada xAPIC legado isola isso.
+6. **DMAR/VT-d/interrupt remapping:** a tabela é internamente coerente, mas o caminho de ativação continua testável com IOMMU desligada.
+7. **Drivers `.sys` da partição raiz:** probabilidade muito baixa para este sintoma, porque a falha reproduz em instalação limpa e pode ocorrer antes que esses drivers executem.
+8. **`IgnoreMemPart=1`:** configuração Microsoft confirmada no caminho de preload e memória do hipervisor; plausível como desvio específico desta instalação, porém de prioridade baixa e sem documentação pública. O teste `0` deve ser isolado e revertido.
+9. **Compatibilidade por geração do Hyper-V:** o WinSxS atual só permite comparar revisões do mesmo ramo 26100, e ambas contêm as rotas suspeitas. Se o hardware continuar falhando após todos os isoladores, um Windows 10 22H2 ou Windows 11 23H2 oficial em SSD separado pode servir como bisect de versão. Ele não deve substituir nem alterar a instalação atual; se uma geração antiga iniciar, o alvo passa a ser uma diferença de validação do `hvix64`, não um driver físico.
 
 Não é tecnicamente razoável “mascarar D0 como D1” por ACPI. Family/model/stepping vêm da instrução CPUID. Um spoof real exigiria microcode compatível ou outra camada de virtualização anterior ao Hyper-V e poderia induzir o Windows a tocar MSRs/erratas do D1 que não existem no D0. As correções aceitáveis são, em ordem: ajustar configuração existente, corrigir ACPI/DMAR, e só então modificar código de firmware com uma diferença mínima e verificável.
 
@@ -491,9 +498,15 @@ O coletor `dump_acpi_windows.py` usa `GetSystemFirmwareTable` e, no boot atual s
 4. **Patch alterar apenas a MADT lógica: confirmado por extração e hashes.**
 5. **CPUID expor VP2INTERSECT sem AVX512F/VL/XSTATE: confirmado nos 16 LPs.**
 6. **O reset ocorrer antes dos drivers `.sys` normais: compatível com toda a evidência, ainda sem trace de depuração.**
-7. **A MADT ser sozinha a causa do bootloop: hipótese principal, mas não provada; agora há isoladores para distinguir APIC, IOMMU, SMP, MBEC e CPUID.**
+7. **A MADT ser sozinha a causa do bootloop: refutado pelo teste; a correção
+   muda o modo de falha, mas não inicia o Hyper-V.**
+8. **Desabilitar XSAVE globalmente permitir o boot: confirmado, junto com a
+   perda de AVX/AVX2; isso localiza o caminho XSTATE sem identificar o gatilho
+   individual.**
 
-A candidata MADT continua válida como experimento mínimo de firmware, mas não deve ser tratada como solução garantida. O próximo passo lógico antes de gravá-la é testar a opção AVX3 e executar a matriz BCD; em paralelo, a coleta VMX/MSR no Linux fecha a principal lacuna que análise estática não consegue observar.
+A candidata MADT permanece apenas como experimento mínimo reproduzível. Não
+deve ser gravada nem tratada como solução. O próximo objetivo é obter Hyper-V
+com XSAVE/AVX/AVX2 ativos e isolar seletivamente o contrato XSTATE que falha.
 
 Se todos os isoladores falharem, `docs/hyperv-debugging.md` descreve a captura do hipervisor com um segundo PC. A NIC cabeada Realtek `10EC:8168` do alvo está na lista oficial de dispositivos KDNET, mas `kdnet.exe`/WinDbg ainda não estão instalados e nada foi habilitado. Essa captura é o caminho para distinguir definitivamente VM-entry/MSR, AP startup, APIC, IOMMU, EPT e machine check sem inferir pela ausência de minidump.
 

@@ -106,7 +106,7 @@ Esse experimento é global para o carregador, não por entrada BCD. A proteção
 - `SEM IOMMU` inicia: produzir uma variante de BIOS que omita/corrija DMAR ou desabilite VT-d, em vez de tocar no microcode.
 - `SEM SLAT EPT` inicia: coletar `IA32_VMX_EPT_VPID_CAP` no Linux e comparar com Tiger Lake D1; não usar o modo sem EPT como solução de desempenho sem medir.
 - `SEM MBEC HW` inicia: coletar os MSRs VMX e comparar com Tiger Lake-H D1; não mascarar CPUID ainda.
-- `SEM XSAVE` inicia: priorizar a opção AVX3 e a máscara CPUID/XSTATE do firmware; não manter XSAVE desabilitado como solução permanente.
+- `SEM XSAVE` inicia: isso localiza a falha no caminho XSAVE/XSTATE, mas não identifica sozinho o componente exato. AVX/AVX2 ficam indisponíveis; não manter esse modo como solução permanente.
 - `SCHED CLASSICO` inicia: repetir com Hyper-Threading desligado; o problema é topologia/scheduler, não um driver físico.
 - `TEMPO PMTIMER` ou `SINCRONIZA TSC` inicia: medir TSC por LP no Linux e capturar o diagnóstico `TscSync` pelo depurador antes de qualquer patch.
 - Nem `MINIMO` inicia: a falha é compatível com VMX/MSR do stepping ES, estado de CPU no BSP ou MADT usada antes do kernel. Nesse caso o próximo dado obrigatório é a coleta de MSRs no Linux e, se possível, depuração do hipervisor por KDNET/serial.
