@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "validator_version": "0.4.0",
+  "validator_version": "0.5.0",
   "input": "Windows CPUID collector",
   "cpu": {
     "vendor": "GenuineIntel",
@@ -64,14 +64,15 @@
           "avx": false,
           "avx2": false,
           "avx512f": false
-        }
+        },
+        "bcd_xsavedisable_confirmed": false
       }
     }
   ],
   "issues": [
     {
       "code": "WINDOWS_XSAVE_AVX_UNAVAILABLE",
-      "message": "Windows reports XSAVE, AVX and AVX2 unavailable; diagnostic bypass is active",
+      "message": "Windows reports XSAVE, AVX and AVX2 unavailable; cause is not confirmed because BCD does not confirm xsavedisable",
       "source": "windows"
     }
   ],
@@ -79,9 +80,11 @@
   "known_signature_match": true,
   "platform_match": true,
   "xsave_hyperv_signature": {
-    "status": "BYPASS ACTIVE",
+    "status": "XSAVE UNAVAILABLE (BCD UNCONFIRMED)",
     "match": false,
-    "diagnostic_bypass_active": true
+    "windows_xsave_disabled_state": true,
+    "bcd_xsavedisable_confirmed": false,
+    "diagnostic_bypass_active": false
   },
   "madt_firmware_anomaly": {
     "status": "NOT CHECKED",
@@ -89,22 +92,7 @@
   },
   "overall_status": "ISSUES DETECTED",
   "cpuid_complete": true,
-  "classification": "Diagnostic bypass active",
+  "classification": "Windows XSAVE/AVX unavailable",
   "recommendation": null,
-  "diagnostic_mitigation": {
-    "command": "bcdedit /set \"{diagnostic-entry-guid}\" xsavedisable 1",
-    "active": true,
-    "purpose": "Confirm XSAVE/XSTATE involvement in the early Hyper-V startup failure",
-    "suitable_for_daily_use": false,
-    "known_impact": [
-      "AVX unavailable",
-      "AVX2 unavailable",
-      "AVX-512 unavailable"
-    ],
-    "not_implied": [
-      "SSE unavailable",
-      "SSE2 unavailable"
-    ],
-    "causal_limit": "This globally disables kernel XSAVE handling; it localizes the failure to the XSAVE/XSTATE path but does not identify VP2INTERSECT or any other single component as the exact trigger."
-  }
+  "diagnostic_mitigation": null
 }
