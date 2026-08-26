@@ -132,21 +132,49 @@ def windows_bcd_current_entry() -> dict[str, object]:
             check=False,
         )
     except OSError as error:
-        return {"available": False, "error": f"bcdedit could not be started: {error}"}
-    if completed.returncode != 0:
         return {
             "available": False,
+            "command": "bcdedit /enum {current} /v",
+            "failure_kind": "start_failed",
+            "error": f"bcdedit could not be started: {error}",
+        }
+    if completed.returncode != 0:
+        combined = f"{completed.stdout}\n{completed.stderr}".lower()
+        permission_markers = (
+            "access is denied",
+            "access denied",
+            "acesso negado",
+            "acesso foi negado",
+        )
+        return {
+            "available": False,
+            "command": "bcdedit /enum {current} /v",
+            "exit_code": completed.returncode,
+            "failure_kind": (
+                "permission_denied"
+                if any(marker in combined for marker in permission_markers)
+                else "bcdedit_failed"
+            ),
+            "stdout": completed.stdout,
+            "stderr": completed.stderr,
             "error": f"bcdedit returned exit code {completed.returncode}",
         }
 
     elements: dict[str, str] = {}
-    wanted = {"hypervisorlaunchtype", "vsmlaunchtype", "xsavedisable"}
+    wanted = {
+        "hypervisorlaunchtype",
+        "hypervisorloadoptions",
+        "vsmlaunchtype",
+        "xsavedisable",
+    }
     for line in completed.stdout.splitlines():
         fields = line.strip().split(None, 1)
         if len(fields) == 2 and fields[0].lower() in wanted:
             elements[fields[0].lower()] = fields[1].strip()
     return {
         "available": True,
+        "command": "bcdedit /enum {current} /v",
+        "exit_code": completed.returncode,
         "current_entry": {"elements": elements},
     }
 
@@ -388,6 +416,7 @@ def normalized_platform(report: dict[str, object]) -> dict[str, object]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--normalized", type=Path, help="write validator-compatible platform JSON")
+    parser.add_argument("--output", type=Path, help="write the complete collector JSON")
     args = parser.parse_args()
     with Cpuid() as cpuid:
         report = enumerate_leaves(cpuid)
@@ -396,11 +425,16 @@ def main() -> int:
         report["per_cpu_comparison"] = per_cpu_fingerprint(cpuid)
         report["windows_processor_features"] = windows_processor_features()
         report["windows_bcd"] = windows_bcd_current_entry()
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"Wrote {args.output}")
     if args.normalized:
         normalized = normalized_platform(report)
+        args.normalized.parent.mkdir(parents=True, exist_ok=True)
         args.normalized.write_text(json.dumps(normalized, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(json.dumps(normalized, indent=2, ensure_ascii=False))
-    else:
+        print(f"Wrote {args.normalized}")
+    if not args.output and not args.normalized:
         print(json.dumps(report, indent=2, ensure_ascii=False))
     return 0
 

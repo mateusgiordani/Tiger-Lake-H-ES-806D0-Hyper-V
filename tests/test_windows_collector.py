@@ -43,22 +43,51 @@ def test_windows_bcd_collection_is_read_only_and_selective(monkeypatch):
             stdout=(
                 "identifier {11111111-1111-1111-1111-111111111111}\n"
                 "description Private machine name\n"
+                "hypervisorloadoptions DISABLEHARDWAREMBEC\n"
                 "hypervisorlaunchtype Auto\n"
                 "xsavedisable 1\n"
             ),
+            stderr="",
         )
 
     monkeypatch.setattr(module.subprocess, "run", fake_run)
     result = module.windows_bcd_current_entry()
     assert result == {
         "available": True,
+        "command": "bcdedit /enum {current} /v",
+        "exit_code": 0,
         "current_entry": {
             "elements": {
+                "hypervisorloadoptions": "DISABLEHARDWAREMBEC",
                 "hypervisorlaunchtype": "Auto",
                 "xsavedisable": "1",
             }
         },
     }
+
+
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows API collector")
+def test_windows_bcd_permission_failure_is_explicit(monkeypatch):
+    script = ROOT / "tools" / "collect" / "windows" / "dump_cpuid_windows.py"
+    spec = importlib.util.spec_from_file_location("dump_cpuid_windows_denied", script)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    monkeypatch.setattr(
+        module.subprocess,
+        "run",
+        lambda *args, **kwargs: SimpleNamespace(
+            returncode=1,
+            stdout="",
+            stderr="The boot configuration data store could not be opened. Access is denied.",
+        ),
+    )
+
+    result = module.windows_bcd_current_entry()
+    assert result["available"] is False
+    assert result["exit_code"] == 1
+    assert result["failure_kind"] == "permission_denied"
+    assert "Access is denied" in result["stderr"]
 
 
 @pytest.mark.skipif(sys.platform != "win32", reason="Windows API collector")
