@@ -1,4 +1,4 @@
-﻿Timestamp: 2026-08-26T20:10:42.2665375-03:00
+﻿Timestamp: 2026-08-26T18:43:15.5091206-03:00
 Boot entry: Windows - HV 06 SEM MBEC HW
 HypervisorPresent: True
 

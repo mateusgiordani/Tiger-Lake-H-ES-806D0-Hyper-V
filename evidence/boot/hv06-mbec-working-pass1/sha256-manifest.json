@@ -7,7 +7,7 @@
     {
         "path":  "evidence/boot/hv06-mbec-working/capture-metadata.json",
         "bytes":  534,
-        "sha256":  "DC0AEAB5E7D75011B7EEE4BA34CADAEE964B7AD8A74F644A26D5F4D5E8D46735"
+        "sha256":  "9EED4632818BB6F8AF9DCE95C0B328802D293E49C14D8C0CE1D97BA93E60C9B4"
     },
     {
         "path":  "evidence/boot/hv06-mbec-working/current-bcd.txt",
@@ -16,13 +16,8 @@
     },
     {
         "path":  "evidence/boot/hv06-mbec-working/runtime-validation.txt",
-        "bytes":  402,
-        "sha256":  "2914C6056BB37B87276D5AAC75BB7DD5B22948272A00833CC223F04E26446149"
-    },
-    {
-        "path":  "evidence/boot/hv06-mbec-working/sha256-manifest.json",
-        "bytes":  1422,
-        "sha256":  "5EFE54F1C6CA2A27DD391754BB8F4AE8BE59BA53143D1F2BA20C4433DC67D6E4"
+        "bytes":  389,
+        "sha256":  "F68A1A1D7CC07C18AD8FC6BCCEAB519B636EE3F7548F412531512461B05F1334"
     },
     {
         "path":  "evidence/boot/hv06-mbec-working/wsl-uname.txt",
@@ -32,7 +27,7 @@
     {
         "path":  "evidence/cpuid/cpuid-windows-hv06-mbec-working.json",
         "bytes":  26312,
-        "sha256":  "6C072D3B5C49780F1F3F13E1C21BD3F9E20727148B71686DA7859B5D4C535100"
+        "sha256":  "986EC53B082F2EF1C475DD1ADAAE20026DF148D2A9AA3AFCD8DDBE6AC69C818F"
     },
     {
         "path":  "evidence/cpuid/cpuid-windows-hv06-mbec-working-legacy-collector.json",
