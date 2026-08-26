@@ -38,6 +38,12 @@ POST neste `D0`, então não dá para coerenciar por `Setup`. Essa combinação
 é anômala, mas o experimento XSAVE global ainda não prova que esse bit seja
 sozinho o gatilho do reset.
 
+Esse dump de referência foi obtido em Windows nativo com o hipervisor
+desligado. Já a captura feita no boot `xsavedisable=1`, com Hyper-V ativo,
+representa o CPUID visível à root partition e pode ser interceptada. O
+desaparecimento de XSAVE, AVX e VP2INTERSECT nessa segunda captura não significa
+que o CPUID físico da CPU tenha sido corrigido.
+
 ### 2.3 O que foi descartado
 
 `IA32_VMX_*` idênticos nos 16 LPs \(coleta Ubuntu 25/08, `tgl-vmx-msrs.json` `34B6B668...` vs `D084D8F4...`\), `EPT/VPID/APICv/MBEC/XSaves` completos, `DMAR` 80 bytes com 1× `DRHD Include-All` em `FED91000` coerente. O silício tem tudo que o `hvix64.exe` exige.
@@ -98,10 +104,12 @@ O OpenCore não consegue fazer isso: ele só entrega `ACPI`/mapa de memória. `C
 
 Mantenha VT-x/VT-d ligados na BIOS e controle o lançamento do hipervisor por
 entrada BCD. `Windows - Normal` deve ser o default, com
-`hypervisorlaunchtype=off` e `xsavedisable` ausente. Uma segunda entrada
+`hypervisorlaunchtype=off`, `xsavedisable` ausente e sem override explícito de
+`vsmlaunchtype`. Uma segunda entrada
 `Windows - Hyper-V diagnostic` conserva `hypervisorlaunchtype=auto`,
 `xsavedisable=1` e `vsmlaunchtype=off` para uso deliberado. O script da matriz
-aplicou `vsmlaunchtype=off` a todas as entradas; VSM ainda não foi isolado.
+aplicou `vsmlaunchtype=off` a todas as entradas; VSM ainda não foi isolado, por
+isso esse override fica restrito ao modo diagnóstico comprovado.
 
 O procedimento completo explica GUID, `{current}`, cópia da entrada, backup,
 default seguro e boot one-shot em [`workaround.md`](workaround.md). WSL2/Docker

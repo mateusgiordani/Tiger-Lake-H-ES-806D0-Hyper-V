@@ -16,3 +16,14 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
+
+  powershell-bcd:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pester
+        shell: pwsh
+        run: Install-Module Pester -RequiredVersion 6.1.0 -Force -SkipPublisherCheck -Scope CurrentUser
+      - name: Test BCD scripts with mocked BCDEdit
+        shell: pwsh
+        run: Invoke-Pester -Path tests/powershell -CI

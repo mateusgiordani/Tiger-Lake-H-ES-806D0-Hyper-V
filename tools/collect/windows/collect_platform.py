@@ -22,6 +22,7 @@ def main() -> int:
         report["timekeeping_consistency"] = dump_cpuid_windows.timekeeping_consistency(cpuid)
         report["per_cpu_comparison"] = dump_cpuid_windows.per_cpu_fingerprint(cpuid)
         report["windows_processor_features"] = dump_cpuid_windows.windows_processor_features()
+        report["windows_bcd"] = dump_cpuid_windows.windows_bcd_current_entry()
     normalized = dump_cpuid_windows.normalized_platform(report)
     if args.madt_output:
         args.madt_output.parent.mkdir(parents=True, exist_ok=True)

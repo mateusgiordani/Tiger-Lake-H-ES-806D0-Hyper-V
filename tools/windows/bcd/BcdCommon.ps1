@@ -97,3 +97,79 @@ function Remove-BcdValueIfPresent {
 
     return Invoke-BcdEdit -BcdArguments @('/deletevalue', $Identifier, $Element) -AllowFailure
 }
+
+function Find-UnsafeInheritedBcdOverrides {
+    param([Parameter(Mandatory)] [string]$EntryOutput)
+
+    $unsafeElements = @(
+        'bootlog',
+        'bootdebug',
+        'bootstatuspolicy',
+        'configaccesspolicy',
+        'debug',
+        'disabledynamictick',
+        'firstmegabytepolicy',
+        'groupaware',
+        'groupsize',
+        'hypervisordisableslat',
+        'hypervisoriommupolicy',
+        'hypervisorloadoptions',
+        'hypervisornumproc',
+        'hypervisorschedulertype',
+        'hypervisorusevapic',
+        'maxmem',
+        'nocrashautoreboot',
+        'nointegritychecks',
+        'nolowmem',
+        'numproc',
+        'onecpu',
+        'removememory',
+        'safeboot',
+        'sos',
+        'testsigning',
+        'truncatememory',
+        'tscsyncpolicy',
+        'usefirmwarepcisettings',
+        'uselegacyapicmode',
+        'usephysicaldestination',
+        'useplatformclock',
+        'useplatformtick',
+        'x2apicpolicy',
+        'xsaveremovefeature'
+    )
+    $found = @()
+    foreach ($element in $unsafeElements) {
+        $match = [regex]::Match(
+            $EntryOutput,
+            '(?im)^\s*' + [regex]::Escape($element) + '\s+(.+?)\s*$'
+        )
+        if ($match.Success) {
+            $found += [pscustomobject]@{
+                Element = $element
+                Value = $match.Groups[1].Value
+            }
+        }
+    }
+    $disabledRecovery = [regex]::Match(
+        $EntryOutput,
+        '(?im)^\s*recoveryenabled\s+(No|Off|False|0)\s*$'
+    )
+    if ($disabledRecovery.Success) {
+        $found += [pscustomobject]@{
+            Element = 'recoveryenabled'
+            Value = $disabledRecovery.Groups[1].Value
+        }
+    }
+    return $found
+}
+
+function Assert-NoUnsafeInheritedBcdOverrides {
+    param([Parameter(Mandatory)] [string]$Identifier)
+
+    $entry = Invoke-BcdEdit -BcdArguments @('/enum', $Identifier, '/v')
+    $overrides = @(Find-UnsafeInheritedBcdOverrides -EntryOutput $entry.Output)
+    if ($overrides.Count -gt 0) {
+        $rendered = ($overrides | ForEach-Object { "$($_.Element)=$($_.Value)" }) -join ', '
+        throw "A entrada-base contem overrides experimentais: $rendered. Remova-os ou escolha uma entrada limpa antes do setup."
+    }
+}

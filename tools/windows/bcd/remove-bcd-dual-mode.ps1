@@ -6,6 +6,12 @@ param(
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'BcdCommon.ps1')
 
+function Remove-BcdDualMode {
+param(
+    [switch]$Apply,
+    [string]$StatePath
+)
+
 if (-not $StatePath) {
     $StatePath = Get-BcdStatePath
 }
@@ -14,7 +20,7 @@ if (-not $Apply) {
     Write-Host 'DRY RUN: nenhuma entrada foi removida.'
     Write-Host "Com -Apply, o script usara $StatePath, fara backup e removera somente a entrada diagnostica gerenciada."
     Write-Host 'A entrada normal sera preservada como default, com Hyper-V desligado e XSAVE normal.'
-    exit 0
+    return
 }
 
 Assert-IsAdministrator
@@ -34,7 +40,7 @@ if ($currentIdentifier -ne $normalIdentifier) {
 $backupPath = New-BcdBackup -Label 'before-dual-mode-removal'
 [void](Invoke-BcdEdit -BcdArguments @('/set', $normalIdentifier, 'hypervisorlaunchtype', 'off'))
 [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'xsavedisable')
-[void](Invoke-BcdEdit -BcdArguments @('/set', $normalIdentifier, 'vsmlaunchtype', 'off'))
+[void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'vsmlaunchtype')
 [void](Invoke-BcdEdit -BcdArguments @('/default', $normalIdentifier))
 [void](Remove-BcdValueIfPresent -Identifier '{bootmgr}' -Element 'bootsequence')
 [void](Invoke-BcdEdit -BcdArguments @('/delete', $diagnosticIdentifier))
@@ -47,3 +53,8 @@ Write-Host 'Entrada diagnostica removida; nenhum reinicio foi iniciado.'
 Write-Host "Backup: $backupPath"
 Write-Host "Estado arquivado: $archivedStatePath"
 Write-Host "Entrada normal/default preservada: $normalIdentifier"
+}
+
+if ($MyInvocation.InvocationName -ne '.') {
+    Remove-BcdDualMode @PSBoundParameters
+}

@@ -36,19 +36,21 @@ Mantenha VMX/VT-x e VT-d habilitados na BIOS nos dois modos.
 | VMX/VT-d na BIOS | ON | ON |
 | `hypervisorlaunchtype` | `off` | `auto` |
 | `xsavedisable` | ausente | `1` |
-| `vsmlaunchtype` | `off` | `off` |
+| `vsmlaunchtype` | ausente (padrão do Windows) | `off` |
 | XSAVE do Windows | normal | desabilitado globalmente |
 | AVX/AVX2 | disponíveis | indisponíveis |
 | Hyper-V | não inicia | inicia no teste observado |
 | Uso | default diário | diagnóstico, WSL2/Docker quando indispensável |
 
 `vsmlaunchtype=off` estava presente em todas as entradas da matriz, inclusive
-no boot positivo. Seu efeito ainda não foi isolado. O modo diagnóstico não
-garante toda carga: AVX/AVX2 ficam indisponíveis.
+no boot positivo. Por isso ele é preservado somente na entrada diagnóstica. A
+entrada normal restaura o comportamento padrão do Windows, sem um override VSM
+explícito. O modo diagnóstico não garante toda carga: AVX/AVX2 ficam
+indisponíveis.
 
 ## Montagem segura a partir do boot diagnóstico atual
 
-Execute em PowerShell ou Terminal elevado. Primeiro exporte o BCD:
+Execute em PowerShell ou Terminal elevado.
 
 ### Scripts recomendados
 
@@ -75,6 +77,11 @@ O backup é salvo em `C:\BcdBackups\BiosInterposer`. Se o BitLocker estiver
 protegido, o setup para sem alterar o BCD; preserve a chave de recuperação e
 suspenda a proteção antes de continuar. O script também cancela uma sequência
 one-shot antiga, mantém a entrada normal como default e deixa o menu visível.
+Antes do backup e da cópia, ele recusa entradas-base que contenham overrides
+experimentais conhecidos, como `hypervisornumproc`, `hypervisorusevapic`,
+`x2apicpolicy`, `numproc`, `onecpu`, `hypervisorloadoptions`,
+`bootstatuspolicy` ou `recoveryenabled=No`. Isso evita propagar silenciosamente
+opções da antiga matriz para os dois modos novos.
 
 Depois de confirmar um boot normal, agende o modo diagnóstico somente para a
 próxima inicialização:
@@ -130,14 +137,15 @@ Agora transforme a entrada em uso (`{current}`) no modo normal:
 ```powershell
 bcdedit /set "{current}" hypervisorlaunchtype off
 bcdedit /deletevalue "{current}" xsavedisable
-bcdedit /set "{current}" vsmlaunchtype off
+bcdedit /deletevalue "{current}" vsmlaunchtype
 bcdedit /set "{current}" description "Windows - Normal (AVX, Hyper-V off)"
 bcdedit /default "{current}"
 bcdedit /timeout 8
 ```
 
-Se `xsavedisable` já estiver ausente, `/deletevalue` pode informar que o
-elemento não existe; isso é seguro. Confira tudo antes de reiniciar:
+Se `xsavedisable` ou `vsmlaunchtype` já estiver ausente, `/deletevalue` pode
+informar que o elemento não existe; isso é seguro. Confira tudo antes de
+reiniciar:
 
 ```powershell
 bcdedit /enum "{current}"
@@ -198,7 +206,11 @@ hardware.
 A captura confirmada deste estado está em
 [`evidence/cpuid/cpuid-windows-xsavedisable-20260826.json`](../evidence/cpuid/cpuid-windows-xsavedisable-20260826.json).
 Ela registrou `CPUID.1.ECX=0xE3FAE38F`, XSAVE/AVX/AVX2 indisponíveis e
-SSE/SSE2 disponíveis.
+SSE/SSE2 disponíveis. Como o Hyper-V estava ativo, esse CPUID é o que a root
+partition enxergou e pode ter sido mascarado pelo hipervisor; não é uma segunda
+leitura bare-metal da CPU. A captura histórica também não coletou o BCD, então
+o validator atual descreve sua causa como não confirmada até uma nova coleta
+registrar `xsavedisable=1` na entrada em uso.
 
 ## Limite causal e alvo definitivo
 

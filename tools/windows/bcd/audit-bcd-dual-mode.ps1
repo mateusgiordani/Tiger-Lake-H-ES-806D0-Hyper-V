@@ -5,6 +5,11 @@ param(
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'BcdCommon.ps1')
 
+function Invoke-BcdDualModeAudit {
+param(
+    [string]$StatePath
+)
+
 Assert-IsAdministrator
 if (-not $StatePath) {
     $StatePath = Get-BcdStatePath
@@ -21,8 +26,8 @@ $checks = @(
         Passed = $normal.Output -match '(?im)^hypervisorlaunchtype\s+Off\s*$'
     },
     [pscustomobject]@{
-        Name = 'Normal: VSM desligado'
-        Passed = $normal.Output -match '(?im)^vsmlaunchtype\s+Off\s*$'
+        Name = 'Normal: vsmlaunchtype ausente'
+        Passed = $normal.Output -notmatch '(?im)^vsmlaunchtype\s+'
     },
     [pscustomobject]@{
         Name = 'Normal: xsavedisable ausente'
@@ -65,8 +70,12 @@ if ($failed.Count -gt 0) {
     Write-Host $diagnostic.Output
     Write-Host '--- BOOT MANAGER ---'
     Write-Host $bootManager.Output
-    Write-Error "$($failed.Count) verificacao(oes) falharam. Nao reinicie ate revisar a saida acima."
-    exit 1
+    throw "$($failed.Count) verificacao(oes) falharam. Nao reinicie ate revisar a saida acima."
 }
 
 Write-Host 'Auditoria aprovada. A entrada normal continuara sendo o default.'
+}
+
+if ($MyInvocation.InvocationName -ne '.') {
+    Invoke-BcdDualModeAudit @PSBoundParameters
+}

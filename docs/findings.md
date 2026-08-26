@@ -56,6 +56,11 @@ Evidências em `evidence/msr/linux/vmx-ON` \(`34B6B668...`\) e `vmx-OFF` \(`D084
 - **CPUID:** `VP2INTERSECT=1` sem `AVX512F/VL/XSTATE 5-7` em todos os LPs
 - **Hyper-V:** `hvix64.exe 10.0.26100.9168` com caminhos de `MinimalLoop/NMI/MachineCheck` que reiniciam sem bugcheck
 
+O CPUID acima é a referência do boot Windows nativo com o hipervisor desligado.
+No boot Hyper-V com `xsavedisable=1`, a root partition vê XSAVE, AVX e
+VP2INTERSECT mascarados. Essa segunda visão não é bare-metal e não demonstra
+mudança no CPUID físico.
+
 ## 5. Guia reprodutível — ativar Hyper-V de forma segura
 
 > **Princípio:** nada é gravado na flash. Tudo é BCD reversível, `{current}` permanece padrão seguro até você decidir tornar permanente.
@@ -103,7 +108,8 @@ kernel e torna AVX/AVX2 indisponíveis. O boot positivo localiza a falha no
 caminho XSAVE/XSTATE, mas não prova que `VP2INTERSECT` seja sozinho o gatilho.
 
 Mantenha VT-x/VT-d ligados na BIOS. Use `Windows - Normal` como default, com
-`hypervisorlaunchtype=off` e `xsavedisable` ausente. Preserve uma segunda
+`hypervisorlaunchtype=off`, `xsavedisable` ausente e `vsmlaunchtype` ausente.
+Preserve uma segunda
 entrada `Windows - Hyper-V diagnostic`, com `hypervisorlaunchtype=auto`,
 `xsavedisable=1` e `vsmlaunchtype=off`, somente para diagnóstico ou uso
 indispensável de WSL2/Docker sem AVX/AVX2. A montagem, validação e seleção

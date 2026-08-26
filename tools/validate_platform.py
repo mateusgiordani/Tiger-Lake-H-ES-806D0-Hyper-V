@@ -9,7 +9,7 @@ import struct
 from pathlib import Path
 
 
-VALIDATOR_VERSION = "0.4.0"
+VALIDATOR_VERSION = "0.5.0"
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "tests" / "fixtures" / "affected" / "platform.json"
 KNOWN_FMS = 0x000806D0
@@ -184,7 +184,7 @@ def windows_processor_features(data: dict) -> dict[str, bool] | None:
     return result or None
 
 
-def windows_xsave_bypass_active(data: dict, known_signature_match: bool) -> bool:
+def windows_xsave_disabled_state(data: dict, known_signature_match: bool) -> bool:
     features = windows_processor_features(data)
     return bool(
         known_signature_match
@@ -193,6 +193,19 @@ def windows_xsave_bypass_active(data: dict, known_signature_match: bool) -> bool
         and features.get("avx") is False
         and features.get("avx2") is False
     )
+
+
+def bcd_xsavedisable_enabled(data: dict) -> bool:
+    bcd = data.get("collection", {}).get("windows_bcd", {})
+    if not isinstance(bcd, dict) or bcd.get("available") is not True:
+        return False
+    elements = bcd.get("current_entry", {}).get("elements", {})
+    if not isinstance(elements, dict) or "xsavedisable" not in elements:
+        return False
+    try:
+        return _int(elements["xsavedisable"]) != 0
+    except (TypeError, ValueError):
+        return False
 
 
 def diagnostic_mitigation(matches_affected_signature: bool, active: bool = False) -> dict | None:
@@ -242,30 +255,46 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
     ]
     known_signature_match = _fms(data) == KNOWN_FMS
     windows_features = windows_processor_features(data)
-    bypass_active = windows_xsave_bypass_active(data, known_signature_match)
+    xsave_disabled_state = windows_xsave_disabled_state(data, known_signature_match)
+    bcd_xsavedisable = bcd_xsavedisable_enabled(data)
+    bypass_active = xsave_disabled_state and bcd_xsavedisable
     windows_issues: list[tuple[str, str]] = []
-    if bypass_active:
+    if xsave_disabled_state:
         windows_issues.append((
             "WINDOWS_XSAVE_AVX_UNAVAILABLE",
-            "Windows reports XSAVE, AVX and AVX2 unavailable; diagnostic bypass is active",
+            (
+                "Windows reports XSAVE, AVX and AVX2 unavailable; BCD confirms "
+                "xsavedisable is active"
+                if bypass_active
+                else "Windows reports XSAVE, AVX and AVX2 unavailable; cause is not "
+                     "confirmed because BCD does not confirm xsavedisable"
+            ),
         ))
     xsave_hyperv_match = cpuid_complete and known_signature_match and any(
         issue[0] == "ORPHAN_AVX512_VP2INTERSECT" for issue in cpuid_issues
     ) and any(issue[0] == "AVX512_XSTATE_UNAVAILABLE" for issue in cpuid_issues)
-    cpuid_platform_match = xsave_hyperv_match or bypass_active
+    cpuid_platform_match = xsave_hyperv_match or xsave_disabled_state
     if not cpuid_complete:
         classification = "Unknown"
     elif bypass_active:
         classification = "Diagnostic bypass active"
+    elif xsave_disabled_state:
+        classification = "Windows XSAVE/AVX unavailable"
     elif xsave_hyperv_match:
         classification = "Affected"
     elif known_signature_match:
         classification = "Not affected"
     else:
         classification = "Unknown"
-    xsave_status = "BYPASS ACTIVE" if bypass_active else (
-        "MATCH" if xsave_hyperv_match else ("NO MATCH" if known_signature_match and cpuid_complete else "UNKNOWN")
-    )
+    if bypass_active:
+        xsave_status = "BYPASS ACTIVE"
+    elif xsave_disabled_state:
+        xsave_status = "XSAVE UNAVAILABLE (BCD UNCONFIRMED)"
+    else:
+        xsave_status = (
+            "MATCH" if xsave_hyperv_match
+            else ("NO MATCH" if known_signature_match and cpuid_complete else "UNKNOWN")
+        )
     madt_status = "NOT CHECKED" if madt is None else ("DETECTED" if madt_issues else "CLEAN")
     overall_status = "INCOMPLETE" if not cpuid_complete else ("ISSUES DETECTED" if issues else "CLEAN")
     checks = [
@@ -279,7 +308,10 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         checks.append({
             "name": "WINDOWS",
             "status": "FAIL" if windows_issues else "PASS",
-            "values": {"processor_features": windows_features},
+            "values": {
+                "processor_features": windows_features,
+                "bcd_xsavedisable_confirmed": bcd_xsavedisable,
+            },
         })
     if madt:
         checks.append({"name": "MADT", "status": "FAIL" if madt_issues else "PASS", "summary": summary})
@@ -302,6 +334,8 @@ def build_report(data: dict, madt: Path | None = None) -> dict:
         "xsave_hyperv_signature": {
             "status": xsave_status,
             "match": xsave_hyperv_match,
+            "windows_xsave_disabled_state": xsave_disabled_state,
+            "bcd_xsavedisable_confirmed": bcd_xsavedisable,
             "diagnostic_bypass_active": bypass_active,
         },
         "madt_firmware_anomaly": {"status": madt_status, "detected": bool(madt_issues)},

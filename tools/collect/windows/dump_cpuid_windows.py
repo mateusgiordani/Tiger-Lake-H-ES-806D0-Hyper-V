@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Dump raw CPUID leaves on Windows, including a per-logical-CPU comparison.
+"""Dump CPUID visible to the current Windows execution context.
 
 This is read-only and uses the unprivileged CPUID instruction.  It does not
 install a driver and cannot read VMX capability MSRs; use the Linux MSR
-collector for that separate step.
+collector for that separate step.  When Hyper-V is active, these values are
+visible to the root partition and must not be described as bare-metal CPUID.
 """
 
 from __future__ import annotations
@@ -12,6 +13,7 @@ import ctypes
 import argparse
 import json
 import os
+import subprocess
 import struct
 from collections import defaultdict
 from pathlib import Path
@@ -110,6 +112,42 @@ def windows_processor_features() -> dict[str, object]:
             }
             for key, (feature_id, windows_name) in PROCESSOR_FEATURES.items()
         },
+    }
+
+
+def windows_bcd_current_entry() -> dict[str, object]:
+    """Read only the BCD elements needed to identify the diagnostic bypass."""
+    command = [
+        str(Path(os.environ.get("SystemRoot", r"C:\Windows")) / "System32" / "bcdedit.exe"),
+        "/enum",
+        "{current}",
+        "/v",
+    ]
+    try:
+        completed = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            errors="replace",
+            check=False,
+        )
+    except OSError as error:
+        return {"available": False, "error": f"bcdedit could not be started: {error}"}
+    if completed.returncode != 0:
+        return {
+            "available": False,
+            "error": f"bcdedit returned exit code {completed.returncode}",
+        }
+
+    elements: dict[str, str] = {}
+    wanted = {"hypervisorlaunchtype", "vsmlaunchtype", "xsavedisable"}
+    for line in completed.stdout.splitlines():
+        fields = line.strip().split(None, 1)
+        if len(fields) == 2 and fields[0].lower() in wanted:
+            elements[fields[0].lower()] = fields[1].strip()
+    return {
+        "available": True,
+        "current_entry": {"elements": elements},
     }
 
 
@@ -236,7 +274,7 @@ def hyperv_relevant_consistency(cpuid: Cpuid) -> dict[str, object]:
         related_xstate["cet_user_xss_bit_11"] and related_xstate["cet_supervisor_xss_bit_12"]
     )
     return {
-        "raw": {
+        "registers_visible_to_current_context": {
             "cpuid_7_0": regs((leaf7_eax, leaf7_ebx, leaf7_ecx, leaf7_edx)),
             "cpuid_d_0": regs((xstate_eax, xstate_ebx, xstate_ecx, xstate_edx)),
             "cpuid_d_1": regs((xss_eax, xss_ebx, xss_ecx, xss_edx)),
@@ -252,7 +290,8 @@ def hyperv_relevant_consistency(cpuid: Cpuid) -> dict[str, object]:
         "inconsistent_pku_state": inconsistent_pku_state,
         "inconsistent_cet_state": inconsistent_cet_state,
         "interpretation": (
-            "Raw AVX-512/VP2INTERSECT and XCR0 components 5-7 are reported above; "
+            "CPUID register values visible to the current execution context and "
+            "XCR0 components 5-7 are reported above; "
             "use validate_platform.py for Hyper-V classification. "
             f"PKU/PKRU consistency={not inconsistent_pku_state}; "
             f"CET/XSS consistency={not inconsistent_cet_state}."
@@ -308,9 +347,20 @@ def normalized_platform(report: dict[str, object]) -> dict[str, object]:
         model |= ((eax >> 16) & 0xF) << 4
     stepping = eax & 0xF
     comparison = report["per_cpu_comparison"]
+    hypervisor_present = bool(int(leaf1.get("ecx", "0"), 16) & (1 << 31))
+    visibility = {
+        "scope": "windows_root_partition" if hypervisor_present else "native_windows_boot",
+        "hypervisor_present": hypervisor_present,
+        "bare_metal_cpuid_claimed": False,
+        "interpretation": (
+            "CPUID may be intercepted or virtualized by Hyper-V; values are root-partition-visible."
+            if hypervisor_present
+            else "CPUID is from a native Windows boot with no hypervisor bit visible."
+        ),
+    }
     return {
         "schema_version": 1,
-        "source": "Windows CPUID collector",
+        "source": "Windows CPUID collector (current execution context)",
         "cpu": {
             "vendor": report["vendor"],
             "brand": report["brand"],
@@ -322,10 +372,15 @@ def normalized_platform(report: dict[str, object]) -> dict[str, object]:
         },
         "cpuid": leaves,
         "collection": {
+            "cpuid_visibility": visibility,
             "per_cpu_comparison": comparison,
             "hyperv_relevant_consistency": report["hyperv_relevant_consistency"],
             "timekeeping_consistency": report["timekeeping_consistency"],
             "windows_processor_features": report["windows_processor_features"],
+            "windows_bcd": report.get(
+                "windows_bcd",
+                {"available": False, "error": "not collected"},
+            ),
         },
     }
 
@@ -340,6 +395,7 @@ def main() -> int:
         report["timekeeping_consistency"] = timekeeping_consistency(cpuid)
         report["per_cpu_comparison"] = per_cpu_fingerprint(cpuid)
         report["windows_processor_features"] = windows_processor_features()
+        report["windows_bcd"] = windows_bcd_current_entry()
     if args.normalized:
         normalized = normalized_platform(report)
         args.normalized.write_text(json.dumps(normalized, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

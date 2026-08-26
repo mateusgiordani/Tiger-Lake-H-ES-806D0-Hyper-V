@@ -32,6 +32,11 @@ one-shot por `/bootsequence`.
 2. Exposição CPUID/XSTATE incoerente: `AVX512_VP2INTERSECT=1` sem o conjunto
    AVX-512 correspondente.
 
+As capturas CPUID são sempre rotuladas pelo contexto de execução. Com Hyper-V
+ativo, elas representam o CPUID visível à root partition e podem ter sido
+interceptadas ou virtualizadas; somente o boot Windows nativo com o hipervisor
+desligado serve como referência bare-metal deste projeto.
+
 ## Validação
 
 O projeto separa coleta de análise. Coletores produzem JSON normalizado e
@@ -52,6 +57,11 @@ classificação, checks, issues, valores CPUID, resumo MADT, versão do validato
 e, quando aplicável, uma mitigação estritamente diagnóstica. Códigos de saída:
 `0` limpo, `1` anomalias detectadas, `2` dados insuficientes. O validator nunca
 recomenda `xsavedisable=1` para uso diário.
+
+O validator só afirma `Diagnostic bypass active` quando a coleta Windows reúne
+as duas evidências: XSAVE/AVX/AVX2 indisponíveis e `xsavedisable` diferente de
+zero na entrada BCD atual. Sem leitura BCD, ele registra apenas o estado XSAVE
+indisponível, sem atribuir sua causa.
 
 ## Documentação
 

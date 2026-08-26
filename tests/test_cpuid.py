@@ -1,4 +1,5 @@
 import importlib.util
+import copy
 import json
 from pathlib import Path
 
@@ -37,6 +38,8 @@ def test_diagnostic_bypass_is_not_false_clean():
     assert result["platform_match"] is True
     assert result["overall_status"] == "ISSUES DETECTED"
     assert result["xsave_hyperv_signature"]["match"] is False
+    assert result["xsave_hyperv_signature"]["windows_xsave_disabled_state"] is True
+    assert result["xsave_hyperv_signature"]["bcd_xsavedisable_confirmed"] is True
     assert result["xsave_hyperv_signature"]["diagnostic_bypass_active"] is True
     assert result["recommendation"] is None
     assert result["diagnostic_mitigation"]["active"] is True
@@ -44,6 +47,22 @@ def test_diagnostic_bypass_is_not_false_clean():
     assert result["checks"][0]["values"]["avx"] is False
     assert any(issue["code"] == "WINDOWS_XSAVE_AVX_UNAVAILABLE" for issue in result["issues"])
     assert validator.report_exit_code(result) == 1
+
+
+def test_xsave_unavailable_without_bcd_is_not_claimed_as_active_bypass():
+    data = copy.deepcopy(load("diagnostic-bypass"))
+    data["collection"]["windows_bcd"] = {
+        "available": False,
+        "error": "access denied",
+    }
+    result = validator.build_report(data)
+    assert result["classification"] == "Windows XSAVE/AVX unavailable"
+    assert result["platform_match"] is True
+    assert result["xsave_hyperv_signature"]["windows_xsave_disabled_state"] is True
+    assert result["xsave_hyperv_signature"]["bcd_xsavedisable_confirmed"] is False
+    assert result["xsave_hyperv_signature"]["diagnostic_bypass_active"] is False
+    assert result["diagnostic_mitigation"] is None
+    assert "cause is not confirmed" in result["issues"][0]["message"]
 
 
 def test_known_good_does_not_match_affected_signature():
@@ -60,7 +79,7 @@ def test_affected_report_exposes_only_degraded_diagnostic_mitigation():
     assert result["platform_match"] is True
     assert result["xsave_hyperv_signature"]["match"] is True
     assert result["classification"] == "Affected"
-    assert result["validator_version"] == "0.4.0"
+    assert result["validator_version"] == "0.5.0"
     assert result["recommendation"] is None
     mitigation = result["diagnostic_mitigation"]
     assert "xsavedisable" in mitigation["command"]

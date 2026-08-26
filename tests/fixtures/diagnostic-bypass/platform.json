@@ -15,6 +15,21 @@
     "0x0000000D": {"0": {"eax": "0x00000000", "ebx": "0x00000000", "ecx": "0x00000000", "edx": "0x00000000"}}
   },
   "collection": {
+    "cpuid_visibility": {
+      "scope": "windows_root_partition",
+      "hypervisor_present": true,
+      "bare_metal_cpuid_claimed": false
+    },
+    "windows_bcd": {
+      "available": true,
+      "current_entry": {
+        "elements": {
+          "hypervisorlaunchtype": "Auto",
+          "vsmlaunchtype": "Off",
+          "xsavedisable": "1"
+        }
+      }
+    },
     "windows_processor_features": {
       "api": "IsProcessorFeaturePresent",
       "features": {
