@@ -50,6 +50,63 @@ garante toda carga: AVX/AVX2 ficam indisponíveis.
 
 Execute em PowerShell ou Terminal elevado. Primeiro exporte o BCD:
 
+### Scripts recomendados
+
+O repositório inclui scripts conservadores em `tools/windows/bcd/`. Todos os
+scripts que alteram o BCD fazem apenas uma simulação por padrão; a mudança real
+exige `-Apply`. O setup exporta o BCD antes de alterar qualquer entrada, não
+reinicia o computador e registra os GUIDs em
+`C:\ProgramData\BiosInterposer\bcd-dual-mode.json`.
+
+Em um PowerShell elevado, a partir da raiz do repositório:
+
+```powershell
+# 1. Mostrar o plano sem alterar nada
+.\tools\windows\bcd\setup-bcd-dual-mode.ps1
+
+# 2. Criar as duas entradas e o backup
+.\tools\windows\bcd\setup-bcd-dual-mode.ps1 -Apply
+
+# 3. Auditar o resultado antes de reiniciar
+.\tools\windows\bcd\audit-bcd-dual-mode.ps1
+```
+
+O backup é salvo em `C:\BcdBackups\BiosInterposer`. Se o BitLocker estiver
+protegido, o setup para sem alterar o BCD; preserve a chave de recuperação e
+suspenda a proteção antes de continuar. O script também cancela uma sequência
+one-shot antiga, mantém a entrada normal como default e deixa o menu visível.
+
+Depois de confirmar um boot normal, agende o modo diagnóstico somente para a
+próxima inicialização:
+
+```powershell
+# Simulação
+.\tools\windows\bcd\schedule-hyperv-diagnostic-once.ps1
+
+# Agendar sem reiniciar automaticamente
+.\tools\windows\bcd\schedule-hyperv-diagnostic-once.ps1 -Apply
+
+# Ou agendar e reiniciar imediatamente
+.\tools\windows\bcd\schedule-hyperv-diagnostic-once.ps1 -Apply -Restart
+```
+
+Para remover somente a entrada diagnóstica gerenciada, primeiro inicialize pela
+entrada normal e execute:
+
+```powershell
+.\tools\windows\bcd\remove-bcd-dual-mode.ps1
+.\tools\windows\bcd\remove-bcd-dual-mode.ps1 -Apply
+```
+
+O script de remoção também cria um novo backup e se recusa a apagar a entrada
+diagnóstica enquanto ela for a entrada em uso. Os scripts não removem entradas
+experimentais antigas que não tenham sido criadas por este setup.
+
+### Procedimento manual equivalente
+
+Se os scripts não puderem ser usados, aplique manualmente o procedimento
+equivalente abaixo. Primeiro exporte o BCD:
+
 ```powershell
 bcdedit /export C:\bcd-before-dual-mode.bak
 ```
