@@ -2,7 +2,12 @@
 
 ## Estado atual
 
-Nenhum teste desta matriz foi aplicado. Os scripts são `dry-run` por padrão e não habilitam recursos opcionais do Windows, não alteram a BIOS e não reiniciam a máquina.
+> Plano histórico concluído. O resultado decisivo foi o A/B/A
+> `HV06 PASS / HV01 FAIL / HV06 PASS`; consulte
+> [`findings.md`](findings.md). Esta matriz não é mais a sequência operacional
+> recomendada.
+
+O texto abaixo preserva o plano anterior à execução para rastreabilidade.
 
 O objetivo é descobrir em qual contrato de plataforma o hipervisor falha antes de gravar uma BIOS modificada. A entrada atual do Windows permanece como padrão, com `hypervisorlaunchtype off`; todas as entradas perigosas exigem escolha manual no menu.
 

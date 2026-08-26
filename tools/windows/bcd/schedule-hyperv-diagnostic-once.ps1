@@ -23,7 +23,7 @@ if (-not $StatePath) {
 
 if (-not $Apply) {
     Write-Host 'DRY RUN: nenhum boot foi agendado.'
-    Write-Host "O script lera o GUID diagnostico de $StatePath e usara /bootsequence somente para o proximo boot."
+    Write-Host "O script lera o GUID do fallback Hyper-V em $StatePath e usara /bootsequence somente para o proximo boot."
     Write-Host 'Para agendar sem reiniciar:'
     Write-Host '  .\tools\windows\bcd\schedule-hyperv-diagnostic-once.ps1 -Apply'
     Write-Host 'Para agendar e reiniciar imediatamente:'

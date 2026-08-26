@@ -20,7 +20,7 @@ if (-not $Apply) {
     Write-Host '  1. exigir PowerShell elevado e BitLocker suspenso;'
     Write-Host '  2. recusar uma entrada-base com overrides experimentais conhecidos;'
     Write-Host '  3. exportar um backup integral do BCD;'
-    Write-Host '  4. copiar a entrada atual para Windows - Hyper-V diagnostic (XSAVE off);'
+    Write-Host '  4. copiar a entrada atual para Windows - Hyper-V MBEC fallback;'
     Write-Host '  5. tornar a entrada atual Windows - Normal (AVX, Hyper-V off);'
     Write-Host "  6. manter a entrada normal como default e usar timeout de $TimeoutSeconds segundos;"
     Write-Host '  7. cancelar qualquer /bootsequence antigo;'
@@ -45,7 +45,7 @@ $diagnosticIdentifier = $null
 try {
     $copy = Invoke-BcdEdit -BcdArguments @(
         '/copy', $normalIdentifier,
-        '/d', 'Windows - Hyper-V diagnostic (XSAVE off)'
+        '/d', 'Windows - Hyper-V MBEC fallback'
     )
     $match = [regex]::Match($copy.Output, '\{[0-9A-Fa-f-]{36}\}')
     if (-not $match.Success) {
@@ -54,12 +54,14 @@ try {
     $diagnosticIdentifier = $match.Value
 
     [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'hypervisorlaunchtype', 'auto'))
-    [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'xsavedisable', '1'))
+    [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'hypervisorloadoptions', 'DISABLEHARDWAREMBEC'))
+    [void](Remove-BcdValueIfPresent -Identifier $diagnosticIdentifier -Element 'xsavedisable')
     [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'vsmlaunchtype', 'off'))
-    [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'description', 'Windows - Hyper-V diagnostic (XSAVE off)'))
+    [void](Invoke-BcdEdit -BcdArguments @('/set', $diagnosticIdentifier, 'description', 'Windows - Hyper-V MBEC fallback'))
     [void](Invoke-BcdEdit -BcdArguments @('/displayorder', $diagnosticIdentifier, '/addlast'))
 
     [void](Invoke-BcdEdit -BcdArguments @('/set', $normalIdentifier, 'hypervisorlaunchtype', 'off'))
+    [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'hypervisorloadoptions')
     [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'xsavedisable')
     [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'vsmlaunchtype')
     [void](Invoke-BcdEdit -BcdArguments @('/set', $normalIdentifier, 'description', 'Windows - Normal (AVX, Hyper-V off)'))
@@ -77,7 +79,7 @@ try {
         NormalIdentifier = $normalIdentifier
         DiagnosticIdentifier = $diagnosticIdentifier
         NormalDescription = 'Windows - Normal (AVX, Hyper-V off)'
-        DiagnosticDescription = 'Windows - Hyper-V diagnostic (XSAVE off)'
+        DiagnosticDescription = 'Windows - Hyper-V MBEC fallback'
         TimeoutSeconds = $TimeoutSeconds
     }
     $state | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $statePath -Encoding UTF8

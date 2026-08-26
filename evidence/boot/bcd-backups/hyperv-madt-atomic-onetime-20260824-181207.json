@@ -1,7 +1,7 @@
 ﻿{
     "CreatedAt":  "2026-08-24T18:12:08.2112041-03:00",
-    "BcdBackupBefore":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-atomic-hyperv-20260824-181207.bcd",
-    "BcdExportAfter":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-after-atomic-hyperv-20260824-181207.bcd",
+    "BcdBackupBefore":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-before-atomic-hyperv-20260824-181207.bcd",
+    "BcdExportAfter":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-after-atomic-hyperv-20260824-181207.bcd",
     "SafeDefault":  "{current}",
     "OneTimeEntry":  "{5cbe73ca-b469-11f0-9ffb-c2e7dda09ff1}",
     "OneTimeDescription":  "Windows - HYPERV MADT ONETIME",

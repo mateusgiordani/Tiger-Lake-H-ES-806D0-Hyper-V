@@ -7,6 +7,6 @@
     "avx_execution":  "PASS",
     "avx2_execution":  "PASS",
     "wsl2_probe_exit_code":  0,
-    "normalized_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working.json",
-    "rich_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working-legacy-collector.json"
+    "normalized_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working-pass1.json",
+    "rich_cpuid":  "evidence/cpuid/cpuid-windows-hv06-mbec-working-pass1-rich.json"
 }

@@ -1,5 +1,9 @@
 # Análise aprofundada — Polestar/Interposer HM570
 
+> Documento histórico anterior ao controle A/B/A de MBEC. Para a conclusão e
+> o workaround atuais, consulte [`findings.md`](findings.md) e
+> [`workaround.md`](workaround.md).
+
 Data da análise: 24/08/2026
 
 ## Escopo e segurança

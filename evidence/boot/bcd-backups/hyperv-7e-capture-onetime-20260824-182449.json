@@ -1,9 +1,9 @@
 ﻿{
     "CreatedAt":  "2026-08-24T18:24:50.2728034-03:00",
-    "SourceAtomicManifest":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
-    "BcdBackupBefore":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-7e-capture-20260824-182449.bcd",
-    "BcdExportAfter":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-after-7e-capture-20260824-182449.bcd",
-    "CrashControlBackup":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\registry-backups\\crashcontrol-before-7e-capture-20260824-182449.reg",
+    "SourceAtomicManifest":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
+    "BcdBackupBefore":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-before-7e-capture-20260824-182449.bcd",
+    "BcdExportAfter":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-after-7e-capture-20260824-182449.bcd",
+    "CrashControlBackup":  "<PROJECT_ROOT>\\analysis\\registry-backups\\crashcontrol-before-7e-capture-20260824-182449.reg",
     "CrashControlPrior":  {
                               "DisplayParametersExisted":  false,
                               "DisplayParameters":  null,

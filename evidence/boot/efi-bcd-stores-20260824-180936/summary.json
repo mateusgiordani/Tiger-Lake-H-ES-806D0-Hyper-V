@@ -2,9 +2,9 @@
     "CreatedAt":  "2026-08-24T18:09:38.5510191-03:00",
     "ReadOnlySourceOperations":  true,
     "DefaultStoreExitCode":  0,
-    "DefaultStoreText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\efi-bcd-stores-20260824-180936\\default-store.txt",
+    "DefaultStoreText":  "<PROJECT_ROOT>\\analysis\\efi-bcd-stores-20260824-180936\\default-store.txt",
     "FirmwareEntriesExitCode":  0,
-    "FirmwareEntriesText":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\efi-bcd-stores-20260824-180936\\firmware-entries.txt",
+    "FirmwareEntriesText":  "<PROJECT_ROOT>\\analysis\\efi-bcd-stores-20260824-180936\\firmware-entries.txt",
     "Stores":  [
                    {
                        "DiskNumber":  2,

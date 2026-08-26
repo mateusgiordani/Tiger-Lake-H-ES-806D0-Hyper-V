@@ -1,5 +1,9 @@
 # Teste reversível da MADT com OpenCore
 
+> Experimento histórico concluído: a tabela corrigida chegou ao Windows, mas não
+> resolveu a falha do Hyper-V. O resultado atual está em
+> [`findings.md`](findings.md).
+
 ## Objetivo
 
 Testar a correção mais promissora sem gravar a BIOS. O OpenCore substitui em memória somente a sequência dos 16 registros `Local APIC NMI` da MADT:
@@ -62,7 +66,7 @@ O pendrive atual tem duas partições no mesmo SanDisk:
 O script aceita somente a raiz com label `BIOS_BACKUP` e somente se os três dumps tiverem o hash conhecido. Primeiro faça a simulação:
 
 ```powershell
-Set-Location 'C:\Users\estum\OneDrive\Área de Trabalho\projeto conserto bios'
+Set-Location '<repository-parent>'
 python .\analysis\scripts\deploy_opencore_madt_usb.py --destination G:\
 ```
 
@@ -172,4 +176,3 @@ Se o patch em memória não resolver, preservar a BIOS original e avançar para 
 - [Manual de configuração do OpenCore](https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/Configuration.tex)
 - [Implementação oficial do patch e recálculo de checksum](https://raw.githubusercontent.com/acidanthera/OpenCorePkg/1.0.7/Library/OcAcpiLib/OcAcpiLib.c)
 - [Microsoft GetSystemFirmwareTable](https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemfirmwaretable)
-

@@ -1,6 +1,6 @@
 ﻿{
     "CreatedAt":  "2026-08-25T15:05:34.5889426-03:00",
-    "BcdBackup":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\bios-interposer\\analysis\\bcd-backups\\bcd-before-hyperv-matrix-20260825-150526.bcd",
+    "BcdBackup":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-before-hyperv-matrix-20260825-150526.bcd",
     "SafeDefault":  "{current}",
     "SafeDefaultHypervisor":  "off",
     "TimeoutSeconds":  15,

@@ -39,6 +39,7 @@ if ($currentIdentifier -ne $normalIdentifier) {
 
 $backupPath = New-BcdBackup -Label 'before-dual-mode-removal'
 [void](Invoke-BcdEdit -BcdArguments @('/set', $normalIdentifier, 'hypervisorlaunchtype', 'off'))
+[void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'hypervisorloadoptions')
 [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'xsavedisable')
 [void](Remove-BcdValueIfPresent -Identifier $normalIdentifier -Element 'vsmlaunchtype')
 [void](Invoke-BcdEdit -BcdArguments @('/default', $normalIdentifier))

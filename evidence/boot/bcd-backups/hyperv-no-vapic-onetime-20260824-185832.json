@@ -1,8 +1,8 @@
 ﻿{
     "CreatedAt":  "2026-08-24T18:58:33.2144357-03:00",
-    "SourceAtomicManifest":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
-    "BcdBackupBefore":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-hyperv-no-vapic-20260824-185832.bcd",
-    "BcdExportAfter":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-after-hyperv-no-vapic-20260824-185832.bcd",
+    "SourceAtomicManifest":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
+    "BcdBackupBefore":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-before-hyperv-no-vapic-20260824-185832.bcd",
+    "BcdExportAfter":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-after-hyperv-no-vapic-20260824-185832.bcd",
     "SafeDefault":  "{current}",
     "OneTimeEntry":  "{5cbe73ca-b469-11f0-9ffb-c2e7dda09ff1}",
     "OneTimeDescription":  "Windows - HYPERV MADT NO vAPIC",

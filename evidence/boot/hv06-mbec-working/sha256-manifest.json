@@ -16,18 +16,13 @@
     },
     {
         "path":  "evidence/boot/hv06-mbec-working/runtime-validation.txt",
-        "bytes":  402,
-        "sha256":  "2914C6056BB37B87276D5AAC75BB7DD5B22948272A00833CC223F04E26446149"
-    },
-    {
-        "path":  "evidence/boot/hv06-mbec-working/sha256-manifest.json",
-        "bytes":  1422,
-        "sha256":  "5EFE54F1C6CA2A27DD391754BB8F4AE8BE59BA53143D1F2BA20C4433DC67D6E4"
+        "bytes":  405,
+        "sha256":  "9D2E599113698FEFEE748D9900EE47F5675ECF84AE9A0A73BA35DEF0AF52AADF"
     },
     {
         "path":  "evidence/boot/hv06-mbec-working/wsl-uname.txt",
-        "bytes":  122,
-        "sha256":  "A564A0B73910A1E01D024A042F5CDC9469B86E63EAD180C5F345FF98B129A59A"
+        "bytes":  125,
+        "sha256":  "065F2EFFF2692311ED85A0B224E90FBD1F3561AE676261B2E4E64C082FBF7359"
     },
     {
         "path":  "evidence/cpuid/cpuid-windows-hv06-mbec-working.json",

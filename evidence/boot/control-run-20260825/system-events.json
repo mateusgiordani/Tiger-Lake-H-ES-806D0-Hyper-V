@@ -1803,14 +1803,14 @@
         "Id":  16,
         "LevelDisplayName":  "Informações",
         "ProviderName":  "Microsoft-Windows-Kernel-General",
-        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\estum\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\UserClasses.dat foi limpo, atualizando 12 chaves e criando 1 páginas modificadas."
+        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\<REDACTED>\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\UserClasses.dat foi limpo, atualizando 12 chaves e criando 1 páginas modificadas."
     },
     {
         "TimeCreated":  "\/Date(1787666560203)\/",
         "Id":  16,
         "LevelDisplayName":  "Informações",
         "ProviderName":  "Microsoft-Windows-Kernel-General",
-        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\estum\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\User.dat foi limpo, atualizando 11 chaves e criando 1 páginas modificadas."
+        "Msg":  "O histórico de acesso no hive \\??\\C:\\Users\\<REDACTED>\\AppData\\Local\\Packages\\Microsoft.GetHelp_8wekyb3d8bbwe\\SystemAppData\\Helium\\User.dat foi limpo, atualizando 11 chaves e criando 1 páginas modificadas."
     },
     {
         "TimeCreated":  "\/Date(1787666560188)\/",

@@ -2,7 +2,11 @@
 
 ## Quando usar
 
-Usar esta etapa somente se nenhuma entrada da matriz BCD iniciar. Nesse ponto, testes de configuração já terão separado AP/SMP, x2APIC, IOMMU, MBEC, XSAVE e a partição de metadados; o dado que falta será o último ponto executado dentro de `hvloader.dll`/`hvix64.exe`.
+Use esta etapa somente para localizar a divergência entre o baseline que falha
+com MBEC por hardware ativo e o boot que passa com
+`DISABLEHARDWAREMBEC`. A matriz BCD já isolou MBEC; o dado que falta é o último
+ponto executado dentro de `hvloader.dll`/`hvix64.exe` e os controles VMX
+efetivamente selecionados.
 
 Nada desta preparação foi aplicado. A máquina não possui `kdnet.exe` nem WinDbg instalados neste momento.
 

@@ -1,91 +1,76 @@
-# Erying / Polestar HM570 Tiger Lake-H ES Hyper-V Fix
+# Erying / Polestar HM570 Tiger Lake-H ES Hyper-V investigation
 
-Investigação reproduzível de incompatibilidades de firmware/CPU em placas
-Erying/Polestar HM570 com Tiger Lake-H Engineering Sample.
+Investigação reproduzível da falha de inicialização do Hyper-V em placas
+Erying/Polestar HM570 com Tiger Lake-H ES (`CPUID 806D0`, `Genuine Intel CPU
+0000`). Linux/KVM funciona; o Hyper-V reinicia o Windows durante o boot quando
+o caminho de MBEC por hardware está ativo.
 
-**Affected**
+## Resultado atual
 
-- HM570111
-- Tiger Lake-H ES CPUID `806D0`
-- `Genuine Intel CPU 0000`
+O controle A/B/A de 26/08/2026 isolou o comportamento:
 
-**Symptom**
+| Configuração | Resultado |
+|---|---|
+| MBEC por hardware ativo + XSAVE ativo | falha de boot |
+| `DISABLEHARDWAREMBEC` + XSAVE ativo | Hyper-V, AVX, AVX2 e WSL2 funcionam |
+| MBEC por hardware ativo + `xsavedisable=1` | Hyper-V funciona, mas AVX/AVX2 somem |
 
-Hyper-V causa reset/bootloop precoce, enquanto Linux/KVM funciona.
+Os dois boots com `DISABLEHARDWAREMBEC`, separados por um retorno à configuração
+baseline que falhou, tornam o caminho de MBEC por hardware o isolador mais forte
+até agora. Isso não determina se a causa final está no silício ES, microcode,
+firmware ou na interação com a implementação do Hyper-V.
 
-**Diagnostic bypass, not a daily-use fix**
+Evidência primária:
 
-Desabilitar globalmente o XSAVE do kernel permitiu o boot nativo do Hyper-V,
-localizando fortemente a falha no caminho de inicialização XSAVE/XSTATE. O
-mesmo boot tornou AVX e AVX2 indisponíveis para aplicativos Windows. Isso não
-prova que o bit órfão `AVX512_VP2INTERSECT` seja sozinho o gatilho exato.
+- [`HV06 PASS 1`](evidence/boot/hv06-mbec-working-pass1/)
+- [`HV01 baseline failure`](evidence/boot/hv01-baseline-failure-20260826/)
+- [`HV06 PASS 2`](evidence/boot/hv06-mbec-working/)
 
-Mantenha VT-x/VT-d habilitados na BIOS e use duas entradas BCD: uma entrada
-normal como default, com Hyper-V desligado e AVX disponível, e uma entrada
-diagnóstica não default, com Hyper-V ligado e `xsavedisable=1`. Consulte
-[workaround.md](docs/workaround.md) para o procedimento com backup e o fluxo
-one-shot por `/bootsequence`.
+## Workaround atual
 
-**Root findings**
+Mantenha VT-x/VT-d habilitados na BIOS. A configuração gerenciada cria:
 
-1. MADT com mapeamento inconsistente de UID nas entradas Local APIC NMI.
-2. Exposição CPUID/XSTATE incoerente: `AVX512_VP2INTERSECT=1` sem o conjunto
-   AVX-512 correspondente.
+- `Windows - Normal (AVX, Hyper-V off)`, como entrada padrão;
+- `Windows - Hyper-V MBEC fallback`, com Hyper-V ligado,
+  `hypervisorloadoptions DISABLEHARDWAREMBEC`, XSAVE normal e AVX/AVX2 ativos.
 
-As capturas CPUID são sempre rotuladas pelo contexto de execução. Com Hyper-V
-ativo, elas representam o CPUID visível à root partition e podem ter sido
-interceptadas ou virtualizadas; somente o boot Windows nativo com o hipervisor
-desligado serve como referência bare-metal deste projeto.
+O antigo bypass `xsavedisable=1` permanece apenas como evidência histórica e
+isolador diagnóstico. Ele não deve ser usado como solução diária. O procedimento
+seguro, com backup, auditoria e boot one-shot, está em
+[`docs/workaround.md`](docs/workaround.md).
 
 ## Validação
-
-O projeto separa coleta de análise. Coletores produzem JSON normalizado e
-podem incluir diagnósticos auxiliares (PKU/CET, TSC e disponibilidade efetiva
-de XSAVE/AVX no Windows); a classificação é responsabilidade do validator.
 
 ```powershell
 python tools/collect/windows/collect_platform.py platform.json --madt-output evidence/acpi/apic.dat
 python tools/validate_platform.py platform.json --madt evidence/acpi/apic.dat --report-json report.json
-python tools/validate_platform.py
-python tools/validate_platform.py tests/fixtures/affected/platform.json --madt tests/fixtures/affected/madt-original.dat
 python -m pip install -r requirements-dev.txt
 python -m pytest
 ```
 
-O comando sem argumentos usa o fixture afetado. O relatório JSON contém
-classificação, checks, issues, valores CPUID, resumo MADT, versão do validator
-e, quando aplicável, uma mitigação estritamente diagnóstica. Códigos de saída:
-`0` limpo, `1` anomalias detectadas, `2` dados insuficientes. O validator nunca
-recomenda `xsavedisable=1` para uso diário.
+O validator separa o estado observado da causa atribuída. Ele só classifica um
+bypass XSAVE como confirmado quando a própria coleta contém o estado BCD
+correspondente.
 
-O validator só afirma `Diagnostic bypass active` quando a coleta Windows reúne
-as duas evidências: XSAVE/AVX/AVX2 indisponíveis e `xsavedisable` diferente de
-zero na entrada BCD atual. Sem leitura BCD, ele registra apenas o estado XSAVE
-indisponível, sem atribuir sua causa.
+## Próxima investigação
+
+Comparar os controles VMX secundários efetivamente usados no lançamento do
+Hyper-V, especialmente a combinação entre MBEC e VMX XSAVES/XRSTORS. Nenhuma
+imagem de firmware modificada é considerada solução comprovada.
 
 ## Documentação
 
-- [Hardware e evidências](docs/hardware.md)
-- [Falha do Hyper-V](docs/hyperv-failure.md)
+- [Workaround BCD atual](docs/workaround.md)
 - [Findings consolidados](docs/findings.md)
-- [Modo BCD normal e bypass diagnóstico](docs/workaround.md)
-- [Experimento MADT/OpenCore](docs/opencore-madt-experiment.md)
-- [Plano de correção de firmware](docs/firmware-fix.md)
-- [Fontes e reprodução dos artefatos de firmware](firmware/sources.md)
+- [Próxima investigação](docs/investigation-next.md)
+- [Narrativa da falha do Hyper-V](docs/hyperv-failure.md)
+- [Hardware e evidências](docs/hardware.md)
+- [Fontes e reprodução de artefatos de firmware](firmware/sources.md)
 - [Log da investigação](docs/investigation-log.md)
 
-## Organização
+## Segurança e privacidade
 
-- `tools/collect/`: coletores por sistema operacional.
-- `tools/validate_platform.py`: validação determinística.
-- `tests/`: testes e fixtures de regressão.
-- `evidence/`: tabelas e resultados normalizados, sem dumps SPI integrais.
-- `firmware/`: manifests e patches pequenos/reproduzíveis.
-- `archive/experiments/`: hipóteses, scripts antigos e artefatos rejeitados.
-
-## Segurança de firmware
-
-Não publique dumps SPI completos: eles podem conter NVRAM, UUID, serial e MAC.
-Os backups integrais de recuperação ficam fora deste projeto, em armazenamento
-privado. Nenhuma BIOS modificada é considerada solução comprovada neste
-repositório.
+Dumps SPI completos não são publicados: podem conter NVRAM, UUID, serial e MAC.
+Os backups integrais ficam em armazenamento privado. Caminhos locais e nomes de
+host são removidos dos artefatos publicados; use caminhos relativos à raiz do
+repositório ao reproduzir os procedimentos.

@@ -52,7 +52,7 @@ if (($probe.results.avx.status -ne 'PASS') -or ($probe.results.avx2.status -ne '
 }
 $probeJsonText | Set-Content -LiteralPath (Join-Path $bootDirectory 'avx-execution-probe.json') -Encoding UTF8
 
-$wslOutput = (& wsl.exe -d Ubuntu -- uname -a 2>&1) -join "`n"
+$wslOutput = (& wsl.exe -d Ubuntu -- uname -srvm 2>&1) -join "`n"
 if ($LASTEXITCODE -ne 0) {
     throw "WSL2 probe falhou:`n$wslOutput"
 }
@@ -108,7 +108,8 @@ $metadata | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (
 ) -Encoding UTF8
 
 $evidenceFiles = @(
-    Get-ChildItem -LiteralPath $bootDirectory -File
+    Get-ChildItem -LiteralPath $bootDirectory -File |
+        Where-Object { $_.Name -ne 'sha256-manifest.json' }
     Get-Item -LiteralPath $normalizedPath
     Get-Item -LiteralPath $richPath
 )

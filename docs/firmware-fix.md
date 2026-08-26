@@ -1,5 +1,9 @@
 # Firmware fix
 
+> Estado atual: nenhum firmware candidato é uma correção aprovada. O controle
+> A/B/A posterior isolou o caminho de MBEC por hardware; a candidata MADT abaixo
+> é preservada apenas como experimento histórico reproduzível.
+
 A candidata MADT em `firmware/patches/candidates/` altera somente os UIDs das
 entradas Local APIC NMI de `1..16` para `0..15`, preservando o restante da
 imagem e recalculando o checksum.

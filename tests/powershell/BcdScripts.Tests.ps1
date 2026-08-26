@@ -49,7 +49,7 @@ Describe 'BCD dual-mode scripts' {
             $BcdArguments -join ' ' -eq "/deletevalue $script:NormalId vsmlaunchtype"
         }
         Should -Invoke Invoke-BcdEdit -ParameterFilter {
-            $BcdArguments -join ' ' -eq "/set $script:DiagnosticId xsavedisable 1"
+            $BcdArguments -join ' ' -eq "/set $script:DiagnosticId hypervisorloadoptions DISABLEHARDWAREMBEC"
         }
         Should -Invoke Invoke-BcdEdit -ParameterFilter {
             $BcdArguments -join ' ' -eq "/default $script:NormalId"
@@ -82,7 +82,7 @@ Describe 'BCD dual-mode scripts' {
         Mock Invoke-BcdEdit {
             throw 'simulated set failure'
         } -ParameterFilter {
-            $BcdArguments -join ' ' -eq "/set $script:DiagnosticId xsavedisable 1"
+            $BcdArguments -join ' ' -eq "/set $script:DiagnosticId hypervisorloadoptions DISABLEHARDWAREMBEC"
         }
 
         { Invoke-BcdDualModeSetup -Apply } | Should -Throw '*simulated set failure*'
@@ -106,7 +106,7 @@ Describe 'BCD dual-mode scripts' {
             if ($BcdArguments[1] -eq $script:DiagnosticId) {
                 return [pscustomobject]@{
                     ExitCode = 0
-                    Output = "hypervisorlaunchtype Auto`nvsmlaunchtype Off`nxsavedisable 1"
+                    Output = "hypervisorlaunchtype Auto`nvsmlaunchtype Off`nhypervisorloadoptions DISABLEHARDWAREMBEC"
                 }
             }
             return [pscustomobject]@{

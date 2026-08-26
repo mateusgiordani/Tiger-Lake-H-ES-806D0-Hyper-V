@@ -22,6 +22,10 @@ $bootManager = Invoke-BcdEdit -BcdArguments @('/enum', '{bootmgr}', '/v')
 
 $checks = @(
     [pscustomobject]@{
+        Name = 'Normal: hypervisorloadoptions ausente'
+        Passed = $normal.Output -notmatch '(?im)^hypervisorloadoptions\s+'
+    },
+    [pscustomobject]@{
         Name = 'Normal: Hyper-V desligado'
         Passed = $normal.Output -match '(?im)^hypervisorlaunchtype\s+Off\s*$'
     },
@@ -42,8 +46,12 @@ $checks = @(
         Passed = $diagnostic.Output -match '(?im)^vsmlaunchtype\s+Off\s*$'
     },
     [pscustomobject]@{
-        Name = 'Diagnostico: xsavedisable=1'
-        Passed = $diagnostic.Output -match '(?im)^xsavedisable\s+1\s*$'
+        Name = 'Fallback: MBEC por hardware desabilitado'
+        Passed = $diagnostic.Output -match '(?im)^hypervisorloadoptions\s+DISABLEHARDWAREMBEC\s*$'
+    },
+    [pscustomobject]@{
+        Name = 'Fallback: xsavedisable ausente'
+        Passed = $diagnostic.Output -notmatch '(?im)^xsavedisable\s+'
     },
     [pscustomobject]@{
         Name = 'Boot Manager: normal e o default'

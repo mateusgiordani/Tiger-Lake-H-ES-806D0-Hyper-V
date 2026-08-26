@@ -86,24 +86,20 @@ Conclusões adicionais:
 
 ## Impacto nas hipóteses do projeto
 
-| Hipótese (README) | Status após esta coleta |
+Esta seção foi atualizada após o A/B/A de 26/08/2026:
+
+| Hipótese | Estado atual |
 |---|---|
-| 3. Capacidades VMX/MSRs específicas do D0 insuficientes | **Refutada** para tudo que o Hyper-V consome no lançamento |
-| Divergência entre APs durante MP launch | **Refutada** |
-| 1. Defeito MADT/AP startup/APIC como causa primária | Segue principal; agora com detalhe: o Linux roda x2APIC+IR ignorando o campo UID dos NMIs, enquanto o Hyper-V consome esse mapeamento durante a própria transição APICv/x2APIC |
-| 2. Máscara AVX3/CPUID/XSTATE | Continua segunda hipótese confirmada, teste ainda pendente |
+| Divergência dos MSRs VMX entre LPs | refutada pela coleta homogênea |
+| Ausência arquitetural de EPT/APICv/MBEC/XSAVES | refutada como simples ausência de bits |
+| MADT como causa suficiente | refutada pelo experimento OpenCore |
+| Caminho de MBEC por hardware | **condição reproduzida da falha no A/B/A** |
+| CPUID/XSTATE anômalo | confirmado como anomalia, causalidade isolada ainda não provada |
 
-A combinação "MADT corrigida entregue + Hyper-V ainda falhando com
-`C0000005` no mesmo deslocamento" sugere um segundo contrato violado. Os
-candidatos naturais, em ordem:
+O próximo passo é interpretar a combinação efetiva dos controles secundários,
+especialmente MBEC com VMX XSAVES/XRSTORS. O fato de o MSR anunciar um bit
+allowed-1 não comprova o funcionamento correto da combinação neste stepping ES.
+Consulte [`investigation-next.md`](investigation-next.md).
 
-1. **Controle OpenCore pendente** (entrada one-shot armada): separa efeito da
-   correção MADT de efeito genérico da cadeia UEFI/memory map.
-2. **Teste BIOS AVX3 isolado** + repetir `dump_cpuid_windows.py`.
-3. **Matriz BCD**, priorizando `HV 03 xAPIC LEGADO` (força caminho sem x2APIC,
-   onde as entradas LAPIC NMI legadas são consumidas diretamente), depois
-   `HV 05 MINIMO` e `HV 07 SEM XSAVE`.
-4. KDNET conforme `HIPER_V_DEPURACAO_FUTURA.md` se todos falharem.
-
-Nada aqui altera as regras de gravação: a candidata continua proibida até os
-controles causais e a validação de programador externo.
+Nada aqui altera as regras de gravação: nenhuma candidata de firmware está
+aprovada para flash.

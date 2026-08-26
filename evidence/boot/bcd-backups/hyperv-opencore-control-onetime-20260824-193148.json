@@ -1,8 +1,8 @@
 ﻿{
     "CreatedAt":  "2026-08-24T19:31:49.5383985-03:00",
-    "SourceAtomicManifest":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
-    "BcdBackupBefore":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-before-opencore-control-20260824-193148.bcd",
-    "BcdExportAfter":  "C:\\Users\\estum\\OneDrive\\Área de Trabalho\\projeto conserto bios\\analysis\\bcd-backups\\bcd-after-opencore-control-20260824-193148.bcd",
+    "SourceAtomicManifest":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\hyperv-madt-atomic-onetime-20260824-181207.json",
+    "BcdBackupBefore":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-before-opencore-control-20260824-193148.bcd",
+    "BcdExportAfter":  "<PROJECT_ROOT>\\analysis\\bcd-backups\\bcd-after-opencore-control-20260824-193148.bcd",
     "SafeDefault":  "{current}",
     "OneTimeEntry":  "{5cbe73ca-b469-11f0-9ffb-c2e7dda09ff1}",
     "OneTimeDescription":  "Windows - HYPERV OPENCORE CONTROL",
