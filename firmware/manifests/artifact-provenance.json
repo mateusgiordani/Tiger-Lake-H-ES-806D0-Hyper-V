@@ -1,13 +1,16 @@
 {
   "schema_version": 1,
+  "source_page": "https://www.erying.cc/sys-pd/14.html",
   "sources": {
     "HM570111": {
+      "package_filename": "Polestar M-ATX G613 HM570111 .zip",
       "official_zip_sha256": "8561544D6094FD03C44EAD25520D4638F3B0EF5234881811F41E4E1048BF05FB",
       "firmware_filename": "HM570111.bin",
       "firmware_bytes": 16777216,
       "firmware_sha256": "16529D3B622D150CB2E2EEDA95347C68A878532D39B8B3D9C1F4084A4CFFCCBE"
     },
     "HM570307": {
+      "package_filename": "Polestar M-ATX G613 HM570307.zip",
       "official_zip_sha256": "72303BFBFBABC1138DB2C3EA938837726AA4679AA81D54896B344EE578F260D8",
       "firmware_filename": "HM570307.bin",
       "firmware_bytes": 16777216,
@@ -21,15 +24,44 @@
     }
   },
   "tools": {
-    "UEFIExtract_NE_A75_win64.zip": "20FF18208913D32C99E3B002717ABEDDAA3B6509AC62E6699E462B0F533BE646",
-    "UEFIExtract.exe": "E372554C8EC1C8F1AD123D739072EB699CF011D12D2D71954BCDB63C79812FB0",
-    "ifrextractor_1.6.1_windows.zip": "3A0D93ECD3A4CB092D210C499D125FFD782982311F5F8DC40A8B180B58C4FFE7",
-    "ifrextractor.exe": "01B50D394A93EDAD8299207AE0C88577D65DB5FC86280467AFAB55E486D62C1C",
-    "LzmaCompress.exe": "AFA25C0D24EB12A30E6D4CCBB6262CE7444EBBD93A64A208AA2E17C931900093"
+    "uefi_extract": {
+      "name": "UEFIExtract NE",
+      "version": "A75",
+      "release_url": "https://github.com/LongSoft/UEFITool/releases/tag/A75",
+      "archive_filename": "UEFIExtract_NE_A75_win64.zip",
+      "archive_sha256": "20FF18208913D32C99E3B002717ABEDDAA3B6509AC62E6699E462B0F533BE646",
+      "executable_filename": "UEFIExtract.exe",
+      "executable_sha256": "E372554C8EC1C8F1AD123D739072EB699CF011D12D2D71954BCDB63C79812FB0"
+    },
+    "ifr_extractor": {
+      "name": "IFRExtractor-RS",
+      "version": "1.6.1",
+      "release_url": "https://github.com/LongSoft/IFRExtractor-RS/releases/tag/v1.6.1",
+      "archive_filename": "ifrextractor_1.6.1_windows.zip",
+      "archive_sha256": "3A0D93ECD3A4CB092D210C499D125FFD782982311F5F8DC40A8B180B58C4FFE7",
+      "executable_filename": "ifrextractor.exe",
+      "executable_sha256": "01B50D394A93EDAD8299207AE0C88577D65DB5FC86280467AFAB55E486D62C1C"
+    },
+    "lzma_compress": {
+      "name": "TianoCore EDK II BaseTools LzmaCompress",
+      "version": "0.2 Build 28123",
+      "upstream_url": "https://github.com/tianocore/edk2",
+      "upstream_source_path": "BaseTools/Source/C/LzmaCompress",
+      "binary_repository_url": "https://github.com/tianocore/edk2-BaseTools-win32",
+      "binary_revision": "dc6be144884230c92390f529efdacf36aabbb8a5",
+      "binary_revision_url": "https://github.com/tianocore/edk2-BaseTools-win32/commit/dc6be144884230c92390f529efdacf36aabbb8a5",
+      "archive_filename": "edk2-BaseTools-win32-dc6be144884230c92390f529efdacf36aabbb8a5.zip",
+      "archive_url": "https://github.com/tianocore/edk2-BaseTools-win32/archive/dc6be144884230c92390f529efdacf36aabbb8a5.zip",
+      "archive_bytes": 17923887,
+      "archive_sha256": "D9CEABA7509E5F7BF8DC0BEBEAA185BCF9720293BCA8EFBD261B05F7F396A970",
+      "executable_filename": "LzmaCompress.exe",
+      "executable_sha256": "AFA25C0D24EB12A30E6D4CCBB6262CE7444EBBD93A64A208AA2E17C931900093"
+    }
   },
   "derived_from_HM570111": {
     "setup_ffs_guid": "899407D7-99FE-43D8-9A21-79EC328CAC21",
-    "section_type": "0x10 PE32",
+    "section_type": "10",
+    "section_description": "PE32",
     "setup_pe32_bytes": 908320,
     "setup_pe32_sha256": "BBB280F2B2F2F927A94BCFA8F29F79752FA68A19665F0962D29C523DABA34837",
     "ifr_bytes": 1842633,

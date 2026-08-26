@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import lzma
 import subprocess
 import struct
@@ -18,15 +19,23 @@ import tempfile
 from pathlib import Path
 
 
-EXPECTED_FIRMWARE_SIZE = 0x1000000
-EXPECTED_FIRMWARE_SHA256 = "68E9A8113DDDA6E192AA72417E69BD83A3E37DC10D4F1421F0D3B282E49231BD"
+ROOT = Path(__file__).resolve().parents[3]
+PROVENANCE_PATH = ROOT / "firmware" / "manifests" / "artifact-provenance.json"
+PROVENANCE = json.loads(PROVENANCE_PATH.read_text(encoding="utf-8"))
+PRIVATE_SOURCE = PROVENANCE["sources"]["runtime_private"]
+LZMA_TOOL = PROVENANCE["tools"]["lzma_compress"]
+PRIVATE_DERIVED = PROVENANCE["derived_from_private_runtime"]
+
+EXPECTED_FIRMWARE_SIZE = PRIVATE_SOURCE["firmware_bytes"]
+EXPECTED_FIRMWARE_SHA256 = PRIVATE_SOURCE["firmware_sha256"]
 PAYLOAD_OFFSET = 0x5710A8
 PAYLOAD_LENGTH = 0x2E49E8
 EXPECTED_PAYLOAD_SHA256 = "2A16026C955EC62DC01CF4F082D6E92065B9B463DFDBF1E82AB0B3BCBCFB9DF3"
 EXPECTED_UNCOMPRESSED_SIZE = 0xBC0010
 EXPECTED_UNCOMPRESSED_SHA256 = "47CFEEBE52060A76DE7A7F140039CA35A06D20BBB3D73BCA5021A294A5F6961B"
 EXPECTED_PATTERN_OFFSET = 0xA571B4
-EXPECTED_LZMA_TOOL_SHA256 = "AFA25C0D24EB12A30E6D4CCBB6262CE7444EBBD93A64A208AA2E17C931900093"
+EXPECTED_LZMA_TOOL_SHA256 = LZMA_TOOL["executable_sha256"]
+EXPECTED_OUTPUT_SHA256 = PRIVATE_DERIVED["madt_candidate_sha256"]
 
 FIND = bytes.fromhex(
     "040601050001040602050001040603050001040604050001"
@@ -49,6 +58,12 @@ def sha256(data: bytes) -> str:
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise SystemExit(f"SAFETY CHECK FAILED: {message}")
+
+
+def validate_candidate_hash(candidate: bytes | bytearray) -> str:
+    candidate_hash = sha256(candidate)
+    require(candidate_hash == EXPECTED_OUTPUT_SHA256, "candidate SHA-256 mismatch")
+    return candidate_hash
 
 
 def compress_lzma_alone(data: bytes, tool: Path) -> bytes:
@@ -114,13 +129,14 @@ def main() -> int:
     require(candidate[:0x500000] == firmware[:0x500000], "Descriptor or CSME changed")
     require(candidate[0x500000:PAYLOAD_OFFSET] == firmware[0x500000:PAYLOAD_OFFSET], "BIOS prefix changed")
     require(candidate[PAYLOAD_OFFSET + PAYLOAD_LENGTH :] == firmware[PAYLOAD_OFFSET + PAYLOAD_LENGTH :], "BIOS suffix changed")
+    candidate_hash = validate_candidate_hash(candidate)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(candidate)
     print(f"Input SHA256:       {sha256(firmware)}")
     print(f"Patched data SHA256:{sha256(patched_uncompressed)}")
     print(f"LZMA bytes:         {len(encoded)} / {PAYLOAD_LENGTH} (padding {PAYLOAD_LENGTH - len(encoded)})")
-    print(f"Output SHA256:      {sha256(candidate)}")
+    print(f"Output SHA256:      {candidate_hash}")
     print(f"Output:             {args.output}")
     return 0
 

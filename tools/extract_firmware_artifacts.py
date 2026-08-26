@@ -14,39 +14,13 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SETUP_GUID = "899407D7-99FE-43D8-9A21-79EC328CAC21"
-PE32_SECTION_TYPE = "10"
-
-SOURCES = {
-    "HM570111": {
-        "zip_sha256": "8561544D6094FD03C44EAD25520D4638F3B0EF5234881811F41E4E1048BF05FB",
-        "firmware_sha256": "16529D3B622D150CB2E2EEDA95347C68A878532D39B8B3D9C1F4084A4CFFCCBE",
-        "firmware_size": 0x1000000,
-    },
-    "HM570307": {
-        "zip_sha256": "72303BFBFBABC1138DB2C3EA938837726AA4679AA81D54896B344EE578F260D8",
-        "firmware_sha256": "BBB237F0D1FC85BC44B674BB138F6C8AD0646F8D38AF6576F521AEF8FB3EDCF1",
-        "firmware_size": 0x1000000,
-    },
-}
-
-TOOLS = {
-    "uefi_extract": {
-        "version": "UEFIExtract NE A75",
-        "sha256": "E372554C8EC1C8F1AD123D739072EB699CF011D12D2D71954BCDB63C79812FB0",
-    },
-    "ifr_extractor": {
-        "version": "IFRExtractor-RS 1.6.1",
-        "sha256": "01B50D394A93EDAD8299207AE0C88577D65DB5FC86280467AFAB55E486D62C1C",
-    },
-}
-
-DERIVED = {
-    "setup_size": 908320,
-    "setup_sha256": "BBB280F2B2F2F927A94BCFA8F29F79752FA68A19665F0962D29C523DABA34837",
-    "ifr_size": 1842633,
-    "ifr_sha256": "0F668F6D080F009BC82BB6B7AD82CFB08BBD8F7651AC4DA6477C019A05596465",
-}
+PROVENANCE_PATH = ROOT / "firmware" / "manifests" / "artifact-provenance.json"
+PROVENANCE = json.loads(PROVENANCE_PATH.read_text(encoding="utf-8"))
+SOURCES = {model: PROVENANCE["sources"][model] for model in ("HM570111", "HM570307")}
+TOOLS = PROVENANCE["tools"]
+DERIVED = PROVENANCE["derived_from_HM570111"]
+SETUP_GUID = DERIVED["setup_ffs_guid"]
+PE32_SECTION_TYPE = DERIVED["section_type"]
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -70,7 +44,7 @@ def identify_firmware(data: bytes) -> str:
     digest = sha256_bytes(data)
     for model, expected in SOURCES.items():
         if digest == expected["firmware_sha256"]:
-            require(len(data) == expected["firmware_size"], f"{model} size mismatch")
+            require(len(data) == expected["firmware_bytes"], f"{model} size mismatch")
             return model
     raise SystemExit(f"VALIDATION FAILED: unrecognized firmware SHA-256 {digest}")
 
@@ -83,7 +57,7 @@ def read_source(path: Path) -> tuple[str, bytes, dict]:
         return model, data, {"kind": "firmware", "sha256": sha256_bytes(data)}
 
     package_hash = sha256_file(path)
-    models = [model for model, expected in SOURCES.items() if package_hash == expected["zip_sha256"]]
+    models = [model for model, expected in SOURCES.items() if package_hash == expected["official_zip_sha256"]]
     require(len(models) == 1, f"unrecognized official ZIP SHA-256 {package_hash}")
     model = models[0]
     with zipfile.ZipFile(path) as package:
@@ -95,9 +69,10 @@ def read_source(path: Path) -> tuple[str, bytes, dict]:
 
 
 def validate_tool(path: Path, key: str) -> None:
-    require(path.is_file(), f"{TOOLS[key]['version']} not found: {path}")
+    label = f"{TOOLS[key]['name']} {TOOLS[key]['version']}"
+    require(path.is_file(), f"{label} not found: {path}")
     actual = sha256_file(path)
-    require(actual == TOOLS[key]["sha256"], f"{TOOLS[key]['version']} SHA-256 mismatch: {actual}")
+    require(actual == TOOLS[key]["executable_sha256"], f"{label} SHA-256 mismatch: {actual}")
 
 
 def run_checked(command: list[str], label: str) -> None:
@@ -118,14 +93,14 @@ def extract_setup(firmware: Path, output_dir: Path, uefi_extract: Path, ifr_extr
         )
         body = extract_dir / "body.bin"
         require(body.is_file(), "UEFIExtract did not create body.bin")
-        require(body.stat().st_size == DERIVED["setup_size"], "Setup PE32 size mismatch")
-        require(sha256_file(body) == DERIVED["setup_sha256"], "Setup PE32 SHA-256 mismatch")
+        require(body.stat().st_size == DERIVED["setup_pe32_bytes"], "Setup PE32 size mismatch")
+        require(sha256_file(body) == DERIVED["setup_pe32_sha256"], "Setup PE32 SHA-256 mismatch")
         shutil.copyfile(body, setup_path)
 
     run_checked([str(ifr_extractor.resolve()), str(setup_path.resolve())], "IFRExtractor-RS")
     ifr_path = Path(str(setup_path) + ".0.0.en-US.uefi.ifr.txt")
     require(ifr_path.is_file(), "IFRExtractor-RS did not create the expected en-US IFR")
-    require(ifr_path.stat().st_size == DERIVED["ifr_size"], "IFR output size mismatch")
+    require(ifr_path.stat().st_size == DERIVED["ifr_bytes"], "IFR output size mismatch")
     require(sha256_file(ifr_path) == DERIVED["ifr_sha256"], "IFR output SHA-256 mismatch")
     return {
         "setup": {"path": str(setup_path), "bytes": setup_path.stat().st_size, "sha256": sha256_file(setup_path)},

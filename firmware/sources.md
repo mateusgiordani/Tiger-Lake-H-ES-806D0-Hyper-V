@@ -30,6 +30,10 @@ Required tools:
 | UEFIExtract NE A75, Windows x64 | <https://github.com/LongSoft/UEFITool/releases/tag/A75> | `20FF18208913D32C99E3B002717ABEDDAA3B6509AC62E6699E462B0F533BE646` | `E372554C8EC1C8F1AD123D739072EB699CF011D12D2D71954BCDB63C79812FB0` |
 | IFRExtractor-RS 1.6.1, Windows | <https://github.com/LongSoft/IFRExtractor-RS/releases/tag/v1.6.1> | `3A0D93ECD3A4CB092D210C499D125FFD782982311F5F8DC40A8B180B58C4FFE7` | `01B50D394A93EDAD8299207AE0C88577D65DB5FC86280467AFAB55E486D62C1C` |
 
+Hashes and location metadata in
+[`manifests/artifact-provenance.json`](manifests/artifact-provenance.json) are
+the machine-readable source of truth used by the reproduction scripts.
+
 Run the pinned Python wrapper against the downloaded ZIP or its extracted BIN:
 
 ```powershell
@@ -75,3 +79,40 @@ The builder requires `LzmaCompress.exe` SHA-256
 and must produce candidate SHA-256
 `4F99E06399972E31D7D86383D8B81E451C7F75A5D5A00DB8CD8A34AFA25E8E73`.
 This candidate remains an experiment and is not authorized for flashing.
+
+### Exact LzmaCompress binary
+
+`LzmaCompress` is developed in TianoCore EDK II under
+[`BaseTools/Source/C/LzmaCompress`](https://github.com/tianocore/edk2/tree/master/BaseTools/Source/C/LzmaCompress).
+The exact Windows executable used here is the official prebuilt BaseTools copy,
+not a locally rebuilt executable:
+
+| Property | Pinned value |
+|---|---|
+| Binary repository | <https://github.com/tianocore/edk2-BaseTools-win32> |
+| Commit | [`dc6be144884230c92390f529efdacf36aabbb8a5`](https://github.com/tianocore/edk2-BaseTools-win32/commit/dc6be144884230c92390f529efdacf36aabbb8a5) |
+| Version recorded by bundled `Readme.txt` | `LzmaCompress 0.2 Build 28123` |
+| Commit ZIP | `edk2-BaseTools-win32-dc6be144884230c92390f529efdacf36aabbb8a5.zip` |
+| ZIP SHA-256 | `D9CEABA7509E5F7BF8DC0BEBEAA185BCF9720293BCA8EFBD261B05F7F396A970` |
+| Executable | `LzmaCompress.exe` |
+| Executable SHA-256 | `AFA25C0D24EB12A30E6D4CCBB6262CE7444EBBD93A64A208AA2E17C931900093` |
+
+Download and validate it on Windows:
+
+```powershell
+$revision = 'dc6be144884230c92390f529efdacf36aabbb8a5'
+$archive = "edk2-BaseTools-win32-$revision.zip"
+Invoke-WebRequest `
+  "https://github.com/tianocore/edk2-BaseTools-win32/archive/$revision.zip" `
+  -OutFile $archive
+(Get-FileHash -Algorithm SHA256 $archive).Hash
+Expand-Archive $archive -DestinationPath .\edk2-basetools
+(Get-FileHash -Algorithm SHA256 `
+  ".\edk2-basetools\edk2-BaseTools-win32-$revision\LzmaCompress.exe").Hash
+```
+
+The two printed hashes must match the ZIP and executable hashes above. GitHub
+commit archives are generated artifacts, so the immutable commit and the
+executable hash remain the decisive identity if GitHub ever regenerates ZIP
+metadata. No Internet Archive mirror is recorded until an exact item URL is
+verified.
