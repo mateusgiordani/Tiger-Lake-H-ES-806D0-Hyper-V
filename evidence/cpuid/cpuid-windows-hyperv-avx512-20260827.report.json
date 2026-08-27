@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "validator_version": "0.5.0",
+  "input": "Windows CPUID collector (current execution context)",
+  "cpu": {
+    "vendor": "GenuineIntel",
+    "brand": "Genuine Intel(R) CPU 0000 @ 2.60GHz",
+    "family": 6,
+    "model": 141,
+    "stepping": 0,
+    "signature": "000806D0",
+    "logical_processors": 16
+  },
+  "checks": [
+    {
+      "name": "CPUID/XSTATE",
+      "status": "PASS",
+      "values": {
+        "fms": "000806D0",
+        "cpuid_1_0": {
+          "eax": "0x000806D0",
+          "ebx": "0x0A100800",
+          "ecx": "0xFFFAF38F",
+          "edx": "0xBFEBFBFF"
+        },
+        "xsave": true,
+        "osxsave": true,
+        "avx": true,
+        "cpuid_7_0": {
+          "eax": "0x00000000",
+          "ebx": "0xF3BFA7A9",
+          "ecx": "0x18407F46",
+          "edx": "0xBC000510"
+        },
+        "cpuid_d_0": {
+          "eax": "0x000000E7",
+          "ebx": "0x00000A80",
+          "ecx": "0x00000A80",
+          "edx": "0x00000000"
+        },
+        "avx512f": true,
+        "avx512vl": true,
+        "avx512_vp2intersect": true,
+        "xstate_components_5_6_7": {
+          "5": true,
+          "6": true,
+          "7": true
+        },
+        "missing_avx512_xstate": []
+      }
+    },
+    {
+      "name": "WINDOWS",
+      "status": "PASS",
+      "values": {
+        "processor_features": {
+          "sse": true,
+          "sse2": true,
+          "xsave_enabled": true,
+          "avx": true,
+          "avx2": true,
+          "avx512f": true
+        },
+        "bcd_xsavedisable_confirmed": false
+      }
+    }
+  ],
+  "issues": [],
+  "madt": null,
+  "known_signature_match": true,
+  "platform_match": false,
+  "xsave_hyperv_signature": {
+    "status": "NO MATCH",
+    "match": false,
+    "windows_xsave_disabled_state": false,
+    "bcd_xsavedisable_confirmed": false,
+    "diagnostic_bypass_active": false
+  },
+  "madt_firmware_anomaly": {
+    "status": "NOT CHECKED",
+    "detected": false
+  },
+  "overall_status": "CLEAN",
+  "cpuid_complete": true,
+  "classification": "Not affected",
+  "recommendation": null,
+  "diagnostic_mitigation": null
+}

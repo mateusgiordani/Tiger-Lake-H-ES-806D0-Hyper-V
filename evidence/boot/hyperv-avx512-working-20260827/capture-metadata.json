@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "captured_at_local": "2026-08-27T01:04:00-03:00",
+  "boot_entry": "Windows - HV 06 SEM MBEC HW",
+  "hypervisor_present": true,
+  "bcd": {
+    "hypervisorlaunchtype": "Auto",
+    "hypervisorloadoptions": "DISABLEHARDWAREMBEC",
+    "vsmlaunchtype": "Off",
+    "xsavedisable_present": false
+  },
+  "execution_probes": {
+    "avx": "PASS",
+    "avx2": "PASS",
+    "avx512f": "PASS"
+  },
+  "root_partition_cpuid": {
+    "logical_processors_checked": 16,
+    "identical_feature_groups": 1,
+    "avx512f": true,
+    "avx512vl": true,
+    "avx512_vp2intersect": true,
+    "xstate_components_5_6_7": true
+  },
+  "validator": {
+    "version": "0.5.0",
+    "exit_code": 0,
+    "classification": "Not affected",
+    "overall_platform_status": "CLEAN"
+  },
+  "configuration_change": "User reported making AVX-512 work; exact firmware or BIOS procedure is pending documentation.",
+  "interpretation": "This capture proves simultaneous Hyper-V, XSAVE, AVX, AVX2 and AVX-512F in the MBEC-disabled boot. It does not yet prove which configuration change enabled AVX-512 or whether that change is causal without an A/B control."
+}

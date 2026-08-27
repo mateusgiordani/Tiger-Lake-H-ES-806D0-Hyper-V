@@ -32,6 +32,20 @@ função nem que uma inconsistência CPUID isolada já esteja provada como causa
 - [`evidence/cpuid/`](../evidence/cpuid/)
 - [`evidence/msr/linux/`](../evidence/msr/linux/)
 
+## Observação posterior: AVX-512 funcional
+
+No boot de 27/08/2026, a entrada `HV 06 SEM MBEC HW` apresentou
+`HypervisorPresent=True` e executou instruções AVX, AVX2 e AVX-512F em processos
+isolados. O CPUID visível à root partition anunciou AVX512F, AVX512VL,
+VP2INTERSECT e componentes XSTATE 5–7 coerentes e idênticos nos 16 LPs. O
+validator 0.5.0 classificou essa captura como `Not affected`/`CLEAN`.
+
+Esse resultado prova que Hyper-V e AVX-512 podem coexistir nesta plataforma
+quando MBEC por hardware está desabilitado. A mudança exata que tornou AVX-512
+visível e seu controle A/B ainda precisam ser documentados antes de atribuir
+causalidade. Evidência em
+[`hyperv-avx512-working-20260827`](../evidence/boot/hyperv-avx512-working-20260827/).
+
 ## Findings anteriores que continuam válidos
 
 - A MADT original tem UIDs de Local APIC NMI inconsistentes; a correção entregue

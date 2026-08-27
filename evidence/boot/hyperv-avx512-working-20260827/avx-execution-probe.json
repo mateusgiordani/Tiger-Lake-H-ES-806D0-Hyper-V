@@ -1,0 +1,21 @@
+﻿{
+  "platform": "Windows",
+  "probe_isolation": "one child process per instruction set",
+  "results": {
+    "avx": {
+      "status": "PASS",
+      "exit_code": 0,
+      "windows_feature_available": true
+    },
+    "avx2": {
+      "status": "PASS",
+      "exit_code": 0,
+      "windows_feature_available": true
+    },
+    "avx512f": {
+      "status": "PASS",
+      "exit_code": 0,
+      "windows_feature_available": true
+    }
+  }
+}

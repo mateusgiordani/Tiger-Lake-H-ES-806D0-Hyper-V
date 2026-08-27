@@ -1,0 +1,37 @@
+﻿[
+    {
+        "path":  "evidence/boot/hyperv-avx512-working-20260827/avx-execution-probe.json",
+        "bytes":  456,
+        "sha256":  "7DF2A0D466B08C3BF07FE2127734095E9D4E8279089C0916EE1238C386068F38"
+    },
+    {
+        "path":  "evidence/boot/hyperv-avx512-working-20260827/capture-metadata.json",
+        "bytes":  1139,
+        "sha256":  "BD803F2DCCCDDD6E32D1E6B555DF5FAE0AA1AE982C1794139D63664A1C6E7194"
+    },
+    {
+        "path":  "evidence/boot/hyperv-avx512-working-20260827/current-bcd.txt",
+        "bytes":  825,
+        "sha256":  "B80C522B947150351D6D735888D955EB246EE24040E4D6AE97CBAE1075B74618"
+    },
+    {
+        "path":  "evidence/boot/hyperv-avx512-working-20260827/hypervisor-state.json",
+        "bytes":  41,
+        "sha256":  "63AE47F21E58456F032E7CC80FD23D40C2B046D174E6D0F7625DA8924ED1C0B8"
+    },
+    {
+        "path":  "evidence/cpuid/cpuid-windows-hyperv-avx512-20260827.json",
+        "bytes":  26812,
+        "sha256":  "8DFC8ABA5CB495F0522897CA851DDE95A4E3474C82CFB111808B3BECB7C2D12B"
+    },
+    {
+        "path":  "evidence/cpuid/cpuid-windows-hyperv-avx512-20260827-rich.json",
+        "bytes":  24881,
+        "sha256":  "896790F8EBD0403C05E9D98B6EF8C627C727FB6AC610F1F23594C1CA5E840DC4"
+    },
+    {
+        "path":  "evidence/cpuid/cpuid-windows-hyperv-avx512-20260827.report.json",
+        "bytes":  2192,
+        "sha256":  "CE6D11BB2AB99153A246DCD7A63063A5B51AF99A4132E1FC721BC6F4CD0CE0F3"
+    }
+]

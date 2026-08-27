@@ -20,11 +20,19 @@ baseline que falhou, tornam o caminho de MBEC por hardware o isolador mais forte
 até agora. Isso não determina se a causa final está no silício ES, microcode,
 firmware ou na interação com a implementação do Hyper-V.
 
+Em 27/08/2026, um novo boot `HV06` também comprovou execução simultânea de
+Hyper-V, XSAVE, AVX, AVX2 e AVX-512F. Nesse estado, AVX512F, AVX512VL,
+VP2INTERSECT e XSTATE 5–7 aparecem de forma coerente nos 16 LPs visíveis à root
+partition. A alteração exata que habilitou AVX-512 e o controle A/B ainda estão
+pendentes; portanto este resultado é uma observação confirmada, não uma
+atribuição causal final.
+
 Evidência primária:
 
 - [`HV06 PASS 1`](evidence/boot/hv06-mbec-working-pass1/)
 - [`HV01 baseline failure`](evidence/boot/hv01-baseline-failure-20260826/)
 - [`HV06 PASS 2`](evidence/boot/hv06-mbec-working/)
+- [`HV06 com AVX-512`](evidence/boot/hyperv-avx512-working-20260827/)
 
 ## Workaround atual
 
