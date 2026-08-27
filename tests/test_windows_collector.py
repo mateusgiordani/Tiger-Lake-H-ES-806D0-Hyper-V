@@ -9,6 +9,18 @@ import pytest
 ROOT = Path(__file__).parents[1]
 
 
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows AVX execution probe")
+def test_avx_execution_probe_includes_avx512f():
+    script = ROOT / "tools" / "collect" / "windows" / "probe_avx_execution.py"
+    spec = importlib.util.spec_from_file_location("probe_avx_execution", script)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+
+    assert module.PROBES["avx512f"] == bytes.fromhex("62F17D48EFC0 C5F877 C3")
+    assert module.PROCESSOR_FEATURE_IDS["avx512f"] == 41
+
+
 @pytest.mark.skipif(sys.platform != "win32", reason="Windows API collector")
 def test_windows_processor_feature_ids_and_shape():
     script = ROOT / "tools" / "collect" / "windows" / "dump_cpuid_windows.py"

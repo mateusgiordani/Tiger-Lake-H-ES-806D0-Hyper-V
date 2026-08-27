@@ -31,6 +31,12 @@ O primeiro comando é apenas uma simulação. O segundo exporta um backup integr
 do BCD, cria a entrada fallback e grava os GUIDs no estado gerenciado. O terceiro
 confirma os elementos esperados antes do reboot.
 
+O setup também aceita ser executado enquanto o Windows foi iniciado pela antiga
+entrada `DISABLEHARDWAREMBEC`. Nesse caso ele copia essa entrada para preservar o
+fallback e transforma a entrada atual na normal/default. Somente esse override
+exato é aceito na migração; qualquer opção experimental adicional ainda aborta
+antes do backup e das alterações.
+
 Para usar a entrada Hyper-V apenas na próxima inicialização:
 
 ```powershell

@@ -18,7 +18,7 @@ if (-not $Apply) {
     Write-Host 'DRY RUN: nenhuma alteracao foi feita no BCD.'
     Write-Host 'Com -Apply, o script ira:'
     Write-Host '  1. exigir PowerShell elevado e BitLocker suspenso;'
-    Write-Host '  2. recusar uma entrada-base com overrides experimentais conhecidos;'
+    Write-Host '  2. aceitar uma base limpa ou o fallback MBEC atual e recusar outros overrides;'
     Write-Host '  3. exportar um backup integral do BCD;'
     Write-Host '  4. copiar a entrada atual para Windows - Hyper-V MBEC fallback;'
     Write-Host '  5. tornar a entrada atual Windows - Normal (AVX, Hyper-V off);'
@@ -38,7 +38,7 @@ if (Test-Path -LiteralPath $statePath) {
 }
 
 $normalIdentifier = Get-CurrentBcdIdentifier
-[void](Assert-NoUnsafeInheritedBcdOverrides -Identifier $normalIdentifier)
+[void](Assert-NoUnsafeInheritedBcdOverrides -Identifier $normalIdentifier -AllowMbecFallback)
 $backupPath = New-BcdBackup -Label 'before-dual-mode-setup'
 $diagnosticIdentifier = $null
 

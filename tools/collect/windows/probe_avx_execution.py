@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Execute one AVX and one AVX2 instruction in isolated child processes."""
+"""Execute AVX, AVX2 and AVX-512F instructions in isolated child processes."""
 
 from __future__ import annotations
 
@@ -16,11 +16,14 @@ PROBES = {
     "avx": bytes.fromhex("C5FC57C0 C5F877 C3"),
     # vpaddd ymm0, ymm0, ymm0; vzeroupper; ret
     "avx2": bytes.fromhex("C5FDFEC0 C5F877 C3"),
+    # vpxord zmm0, zmm0, zmm0; vzeroupper; ret
+    "avx512f": bytes.fromhex("62F17D48EFC0 C5F877 C3"),
 }
 
 PROCESSOR_FEATURE_IDS = {
     "avx": 39,   # PF_AVX_INSTRUCTIONS_AVAILABLE
     "avx2": 40,  # PF_AVX2_INSTRUCTIONS_AVAILABLE
+    "avx512f": 41,  # PF_AVX512F_INSTRUCTIONS_AVAILABLE
 }
 
 

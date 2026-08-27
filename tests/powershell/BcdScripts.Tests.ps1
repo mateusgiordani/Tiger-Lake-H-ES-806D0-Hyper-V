@@ -69,6 +69,30 @@ Describe 'BCD dual-mode scripts' {
         Should -Invoke Invoke-BcdEdit -Times 0 -ParameterFilter { $BcdArguments[0] -eq '/copy' }
     }
 
+    It 'accepts the current MBEC fallback as a migration source' {
+        Mock Invoke-BcdEdit {
+            [pscustomobject]@{
+                ExitCode = 0
+                Output = "identifier $script:NormalId`nhypervisorloadoptions DISABLEHARDWAREMBEC"
+            }
+        } -ParameterFilter { $BcdArguments[0] -eq '/enum' }
+
+        { Assert-NoUnsafeInheritedBcdOverrides -Identifier $script:NormalId -AllowMbecFallback } |
+            Should -Not -Throw
+    }
+
+    It 'rejects extra overrides even when the MBEC fallback is present' {
+        Mock Invoke-BcdEdit {
+            [pscustomobject]@{
+                ExitCode = 0
+                Output = "identifier $script:NormalId`nhypervisorloadoptions DISABLEHARDWAREMBEC`nhypervisornumproc 1"
+            }
+        } -ParameterFilter { $BcdArguments[0] -eq '/enum' }
+
+        { Assert-NoUnsafeInheritedBcdOverrides -Identifier $script:NormalId -AllowMbecFallback } |
+            Should -Throw '*hypervisornumproc=1*'
+    }
+
     It 'detects disabled recovery and legacy boot status policy' {
         $found = @(Find-UnsafeInheritedBcdOverrides -EntryOutput (
             "recoveryenabled No`nbootstatuspolicy IgnoreAllFailures"

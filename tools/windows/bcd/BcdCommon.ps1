@@ -164,12 +164,22 @@ function Find-UnsafeInheritedBcdOverrides {
 }
 
 function Assert-NoUnsafeInheritedBcdOverrides {
-    param([Parameter(Mandatory)] [string]$Identifier)
+    param(
+        [Parameter(Mandatory)] [string]$Identifier,
+        [switch]$AllowMbecFallback
+    )
 
     $entry = Invoke-BcdEdit -BcdArguments @('/enum', $Identifier, '/v')
     $overrides = @(Find-UnsafeInheritedBcdOverrides -EntryOutput $entry.Output)
-    if ($overrides.Count -gt 0) {
-        $rendered = ($overrides | ForEach-Object { "$($_.Element)=$($_.Value)" }) -join ', '
+    $disallowed = @($overrides | Where-Object {
+        -not (
+            $AllowMbecFallback -and
+            $_.Element -ieq 'hypervisorloadoptions' -and
+            $_.Value.Trim() -ieq 'DISABLEHARDWAREMBEC'
+        )
+    })
+    if ($disallowed.Count -gt 0) {
+        $rendered = ($disallowed | ForEach-Object { "$($_.Element)=$($_.Value)" }) -join ', '
         throw "A entrada-base contem overrides experimentais: $rendered. Remova-os ou escolha uma entrada limpa antes do setup."
     }
 }
