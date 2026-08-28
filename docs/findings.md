@@ -29,6 +29,7 @@ função nem que uma inconsistência CPUID isolada já esteja provada como causa
 - [`evidence/boot/hv06-mbec-working-pass1/`](../evidence/boot/hv06-mbec-working-pass1/)
 - [`evidence/boot/hv01-baseline-failure-20260826/`](../evidence/boot/hv01-baseline-failure-20260826/)
 - [`evidence/boot/hv06-mbec-working/`](../evidence/boot/hv06-mbec-working/)
+- [`evidence/boot/hyperv-avx512-working-20260827/`](../evidence/boot/hyperv-avx512-working-20260827/)
 - [`evidence/cpuid/`](../evidence/cpuid/)
 - [`evidence/msr/linux/`](../evidence/msr/linux/)
 
@@ -41,18 +42,22 @@ VP2INTERSECT e componentes XSTATE 5–7 coerentes e idênticos nos 16 LPs. O
 validator 0.5.0 classificou essa captura como `Not affected`/`CLEAN`.
 
 Esse resultado prova que Hyper-V e AVX-512 podem coexistir nesta plataforma
-quando MBEC por hardware está desabilitado. A mudança exata que tornou AVX-512
-visível e seu controle A/B ainda precisam ser documentados antes de atribuir
-causalidade. Evidência em
-[`hyperv-avx512-working-20260827`](../evidence/boot/hyperv-avx512-working-20260827/).
+quando MBEC por hardware está desabilitado. A comparação do SPI runtime isolou
+`CpuSetup+0x22A: 1 → 0` (AVX3 habilitado) como a mudança decisiva para a
+enumeração AVX-512; outras opções BIOS também mudaram, então não houve A/B de
+variável única. O boot continua com `DISABLEHARDWAREMBEC`. AVX3 sozinho não foi
+testado como correção do boot Hyper-V com MBEC por hardware. Evidência em
+[`hyperv-avx512-working-20260827`](../evidence/boot/hyperv-avx512-working-20260827/)
+e [`avx512-runtime-firmware-diff.md`](avx512-runtime-firmware-diff.md).
 
 ## Findings anteriores que continuam válidos
 
 - A MADT original tem UIDs de Local APIC NMI inconsistentes; a correção entregue
   por OpenCore chegou ao Windows, mas não eliminou a falha.
-- O CPUID bare-metal expõe `AVX512_VP2INTERSECT` sem o conjunto AVX-512/XSTATE
-  correspondente. É uma anomalia real, mas ainda não foi demonstrada como o
-  gatilho único do reset.
+- Com AVX3 desabilitado, o CPUID bare-metal expunha `AVX512_VP2INTERSECT` sem
+  o conjunto AVX-512/XSTATE correspondente. Habilitar AVX3 restaurou enumeração
+  coerente. A anomalia era real, mas ainda não foi demonstrada como o gatilho
+  único do reset do Hyper-V.
 - Os controles VMX coletados são homogêneos entre os processadores lógicos e
   anunciam EPT, VPID, APICv, MBEC e XSAVES.
 - Capturas feitas com Hyper-V ativo representam a visão da root partition e não

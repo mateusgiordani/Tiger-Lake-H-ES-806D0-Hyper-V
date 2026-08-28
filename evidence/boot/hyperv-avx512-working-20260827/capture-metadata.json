@@ -28,6 +28,17 @@
     "classification": "Not affected",
     "overall_platform_status": "CLEAN"
   },
-  "configuration_change": "User reported making AVX-512 work; exact firmware or BIOS procedure is pending documentation.",
-  "interpretation": "This capture proves simultaneous Hyper-V, XSAVE, AVX, AVX2 and AVX-512F in the MBEC-disabled boot. It does not yet prove which configuration change enabled AVX-512 or whether that change is causal without an A/B control."
+  "configuration_change": {
+    "confirmed_from_runtime_spi_diff": true,
+    "avx3_disable_flag": {
+      "variable": "CpuSetup",
+      "offset": "0x22A",
+      "before": 1,
+      "after": 0,
+      "meaning": "AVX3 enabled"
+    },
+    "confounding_bios_changes_present": true,
+    "details": "See docs/avx512-runtime-firmware-diff.md"
+  },
+  "interpretation": "This capture proves simultaneous Hyper-V, XSAVE, AVX, AVX2 and AVX-512F in the MBEC-disabled boot. The runtime SPI comparison confirms the AVX3 disable flag changed from 1 to 0, restoring coherent AVX-512 CPUID/XSTATE. It does not prove that AVX3 alone fixes boot with hardware MBEC enabled."
 }

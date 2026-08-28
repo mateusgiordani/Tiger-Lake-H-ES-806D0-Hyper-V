@@ -2,7 +2,10 @@
 
 > Documento histórico anterior ao controle A/B/A de MBEC. Para a conclusão e
 > o workaround atuais, consulte [`findings.md`](findings.md) e
-> [`workaround.md`](workaround.md).
+> [`workaround.md`](workaround.md). A incoerência AVX-512/VP2INTERSECT descrita
+> abaixo foi depois resolvida ao habilitar AVX3; ver
+> [`avx512-runtime-firmware-diff.md`](avx512-runtime-firmware-diff.md). AVX3
+> ainda não foi testado sozinho com MBEC por hardware ativo.
 
 Data da análise: 24/08/2026
 

@@ -61,9 +61,17 @@ IFR output. It refuses unknown hashes.
 ## Runtime dump and MADT candidate
 
 The tested system's runtime SPI dump is not obtainable from the public BIOS:
-it contains board-specific NVRAM and persistent CSME data. Its private
-reference SHA-256 is
+it contains board-specific NVRAM and persistent CSME data. The 24 August 2026
+private reference SHA-256 is
 `68E9A8113DDDA6E192AA72417E69BD83A3E37DC10D4F1421F0D3B282E49231BD`.
+
+A later private snapshot, captured 27 August 2026 after enabling AVX3, is
+documented in
+[`manifests/runtime-2026-08-27-avx512/MANIFEST.md`](manifests/runtime-2026-08-27-avx512/MANIFEST.md).
+Canonical reads 1 and 2 share SHA-256
+`1115251F5F9A28DB65ABA69F5393280372AF2F4015F5C363C028703EC4AE33C6`.
+Read 3 differs only by mutable CSME state and must not replace them. The 24
+August dump remains the pinned source for the MADT candidate.
 
 The layout-preserving MADT candidate is reproduced only from that exact private
 dump:

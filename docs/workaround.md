@@ -1,7 +1,9 @@
 # Workaround BCD: Hyper-V sem MBEC por hardware
 
 O workaround reproduzido pelo controle A/B/A mantém XSAVE, AVX e AVX2 ativos e
-desabilita somente o uso de MBEC por hardware no lançamento do Hyper-V.
+desabilita somente o uso de MBEC por hardware no lançamento do Hyper-V. Com
+AVX3 habilitado na BIOS, o mesmo fallback também preserva AVX-512; o BCD não é
+o que habilita AVX-512.
 
 | Propriedade | Windows normal | Hyper-V MBEC fallback |
 |---|---|---|

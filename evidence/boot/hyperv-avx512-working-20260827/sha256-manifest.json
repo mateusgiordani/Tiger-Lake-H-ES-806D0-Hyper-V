@@ -6,8 +6,8 @@
     },
     {
         "path":  "evidence/boot/hyperv-avx512-working-20260827/capture-metadata.json",
-        "bytes":  1139,
-        "sha256":  "BD803F2DCCCDDD6E32D1E6B555DF5FAE0AA1AE982C1794139D63664A1C6E7194"
+        "bytes":  1427,
+        "sha256":  "E706FA9C6C730F3C11CB4F8F7F383187B30C8FE5D588A34ABB194C55EEA09A52"
     },
     {
         "path":  "evidence/boot/hyperv-avx512-working-20260827/current-bcd.txt",

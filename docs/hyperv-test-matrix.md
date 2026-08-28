@@ -124,13 +124,13 @@ Como bisect final de software, pode-se usar um SSD separado com imagem oficial d
 
 Fazer um por vez, sempre restaurando o valor anterior:
 
-1. `AVX3 disable flag = 0` (habilitar AVX-512) e repetir o dump CPUID. Hoje o firmware deixa AVX-512 desabilitado, mas preserva isoladamente `AVX512_VP2INTERSECT`, combinação incoerente.
+1. `AVX3 disable flag = 0` (habilitar AVX-512) e repetir o dump CPUID. Executado em 27/08/2026, com outras opções BIOS também alteradas; ver [`avx512-runtime-firmware-diff.md`](avx512-runtime-firmware-diff.md). Resultado: enumeração AVX-512 coerente no boot com `DISABLEHARDWAREMBEC`. Não testa sozinho o boot com MBEC por hardware.
 2. `VT-d global = 0`.
 3. `X2APIC Opt Out = 1`.
 4. Hyper-Threading desligado.
 5. Um núcleo ativo.
 
-O teste AVX3 precisa vir acompanhado de novo CPUID. O resultado esperado para uma enumeração coerente é: ou AVX-512F/VL, estados XCR0 5–7 e VP2INTERSECT aparecem juntos, ou todos os bits AVX-512 ficam ocultos.
+O teste AVX3 precisava vir acompanhado de novo CPUID. O resultado coerente observado em 27/08/2026 foi AVX-512F/VL, estados XCR0 5–7 e VP2INTERSECT aparecendo juntos; o boot Hyper-V correspondente ainda usava `DISABLEHARDWAREMBEC`.
 
 ## Coleta VMX no Linux
 

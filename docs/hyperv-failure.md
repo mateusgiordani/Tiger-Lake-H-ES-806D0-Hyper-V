@@ -36,9 +36,10 @@ global de XSTATE evita a falha, porém não identifica sozinho o gatilho. Como
 
 - O firmware contém uma inconsistência MADT nos UIDs de Local APIC NMI. A tabela
   corrigida foi entregue ao Windows por OpenCore e não resolveu a falha.
-- O CPUID bare-metal anuncia `AVX512_VP2INTERSECT` sem AVX512F/VL e sem os
-  componentes XSTATE correspondentes. A anomalia existe, mas não foi provada
-  como causa única.
+- Com AVX3 desabilitado, o CPUID bare-metal anunciava `AVX512_VP2INTERSECT`
+  sem AVX512F/VL e sem os componentes XSTATE correspondentes. Habilitar AVX3
+  restaurou enumeração coerente. Isso não prova que AVX3 permita o boot com
+  MBEC por hardware.
 - Os MSRs VMX coletados anunciam MBEC e XSAVES de forma homogênea entre LPs. Um
   bit permitido não comprova, por si só, que a combinação usada pelo Hyper-V
   funciona corretamente neste ES.

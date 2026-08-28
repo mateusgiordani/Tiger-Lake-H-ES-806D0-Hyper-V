@@ -4,6 +4,11 @@ O A/B/A já separou configuração de resultado. O próximo objetivo não é pro
 mais combinações BCD: é explicar por que o lançamento do Hyper-V falha somente
 quando o caminho de MBEC por hardware está ativo.
 
+A incoerência CPUID/XSTATE de AVX-512 foi corrigida no firmware ao habilitar
+AVX3 (`CpuSetup+0x22A = 0`). Isso é independente do isolador MBEC: os boots
+Hyper-V bem-sucedidos ainda usam `DISABLEHARDWAREMBEC`. AVX3 não substitui esse
+teste e ainda não foi experimentado sozinho com MBEC por hardware ativo.
+
 ## Pergunta principal
 
 Qual combinação efetiva de `IA32_VMX_PROCBASED_CTLS2` o Hyper-V tenta habilitar

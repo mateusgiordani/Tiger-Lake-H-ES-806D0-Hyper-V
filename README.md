@@ -20,12 +20,15 @@ baseline que falhou, tornam o caminho de MBEC por hardware o isolador mais forte
 até agora. Isso não determina se a causa final está no silício ES, microcode,
 firmware ou na interação com a implementação do Hyper-V.
 
-Em 27/08/2026, um novo boot `HV06` também comprovou execução simultânea de
-Hyper-V, XSAVE, AVX, AVX2 e AVX-512F. Nesse estado, AVX512F, AVX512VL,
-VP2INTERSECT e XSTATE 5–7 aparecem de forma coerente nos 16 LPs visíveis à root
-partition. A alteração exata que habilitou AVX-512 e o controle A/B ainda estão
-pendentes; portanto este resultado é uma observação confirmada, não uma
-atribuição causal final.
+Em 27/08/2026, um novo boot `HV06` comprovou execução simultânea de Hyper-V,
+XSAVE, AVX, AVX2 e AVX-512F. Nesse estado, AVX512F, AVX512VL, VP2INTERSECT e
+XSTATE 5–7 aparecem de forma coerente nos 16 LPs visíveis à root partition. A
+comparação do dump SPI runtime mostra código UEFI executável idêntico ao
+baseline; a mudança decisiva para AVX-512 foi `CpuSetup+0x22A: 1 → 0` (AVX3
+habilitado). Outras opções BIOS também mudaram, portanto isso não foi um A/B
+de variável única. O boot bem-sucedido continua usando `DISABLEHARDWAREMBEC`:
+AVX3 corrige CPUID/XSTATE, mas ainda não foi testado sozinho com MBEC por
+hardware ativo.
 
 Evidência primária:
 
@@ -33,6 +36,8 @@ Evidência primária:
 - [`HV01 baseline failure`](evidence/boot/hv01-baseline-failure-20260826/)
 - [`HV06 PASS 2`](evidence/boot/hv06-mbec-working/)
 - [`HV06 com AVX-512`](evidence/boot/hyperv-avx512-working-20260827/)
+- [Comparação do firmware runtime com AVX-512](docs/avx512-runtime-firmware-diff.md)
+- [Manifest sanitizado do dump AVX-512](firmware/manifests/runtime-2026-08-27-avx512/MANIFEST.md)
 
 ## Workaround atual
 
@@ -74,6 +79,8 @@ imagem de firmware modificada é considerada solução comprovada.
 - [Narrativa da falha do Hyper-V](docs/hyperv-failure.md)
 - [Hardware e evidências](docs/hardware.md)
 - [Fontes e reprodução de artefatos de firmware](firmware/sources.md)
+- [Comparação do firmware runtime com AVX-512](docs/avx512-runtime-firmware-diff.md)
+- [Manifest sanitizado do dump AVX-512](firmware/manifests/runtime-2026-08-27-avx512/MANIFEST.md)
 - [Log da investigação](docs/investigation-log.md)
 
 ## Segurança e privacidade

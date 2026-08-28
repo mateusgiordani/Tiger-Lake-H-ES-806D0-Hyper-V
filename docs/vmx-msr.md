@@ -80,7 +80,7 @@ da máscara AVX-512 incompleta já documentada.
 Conclusões adicionais:
 
 1. A opção de Setup testada altera exatamente o prometido e restaura de forma
-   confiável (base segura para o teste AVX3 isolado).
+   confiável. AVX3 foi habilitado depois, mas não como um A/B de variável única.
 2. As capacidades VMX não dependem do toggle — a avaliação acima vale
    permanentemente para esta peça.
 
@@ -94,7 +94,7 @@ Esta seção foi atualizada após o A/B/A de 26/08/2026:
 | Ausência arquitetural de EPT/APICv/MBEC/XSAVES | refutada como simples ausência de bits |
 | MADT como causa suficiente | refutada pelo experimento OpenCore |
 | Caminho de MBEC por hardware | **condição reproduzida da falha no A/B/A** |
-| CPUID/XSTATE anômalo | confirmado como anomalia, causalidade isolada ainda não provada |
+| CPUID/XSTATE anômalo | incoerência AVX3/VP2INTERSECT resolvida ao habilitar AVX3; boot Hyper-V com MBEC por hardware ainda não testado nesse estado |
 
 O próximo passo é interpretar a combinação efetiva dos controles secundários,
 especialmente MBEC com VMX XSAVES/XRSTORS. O fato de o MSR anunciar um bit
